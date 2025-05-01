@@ -53,7 +53,7 @@ def get_families():
         index = str(index)
         #print(f"index not in numbers_processed: {index} = {index not in numbers_processed}")
         if index not in numbers_processed:
-            evolution_tree, evolution_numbers = get_evolutions(index)
+            evolution_tree, evolution_numbers = get_evolution_line(index)
             print(f"{", ".join(evolution_tree)}")
             #families.append(evolution_tree)
             numbers_processed = numbers_processed + evolution_numbers
@@ -65,11 +65,40 @@ def get_families():
 
 
 #function to get the whole evolution line
-def get_evolutions(input):
+def get_evolution_line(input):
     #print(f"get_evolutions: {input}")
     #variable to fill and return
     evolution_tree = []
     evolution_numbers = []
+    #get the base pokemon
+    base_pokemon, error = get_base_pokemon(input)
+    #check for errors
+    if error is not None:
+        print(f"get_evolution_line: {error}")
+    else:
+        #get the evolution tree
+        get_evolutions(base_pokemon, evolution_tree, evolution_numbers)
+    #return data
+    return evolution_tree, evolution_numbers
+
+
+
+#[names, numbers], error
+def get_evolutions(pokemon_object, evolution_tree, evolution_numbers):
+    evolution_tree.append(pokemon_object.name)
+    evolution_numbers.append(pokemon_object.number)
+    #for each successor
+    for evolution in pokemon_object.successors:
+        #get object
+        successor, error = get_pokemon_data(evolution)
+        #go deeper
+        get_evolutions(successor, evolution_tree, evolution_numbers)
+    return
+
+
+
+#get the lowest level pokemon
+def get_base_pokemon(input):
     #get data of the pokemon
     pokemon, error = get_pokemon_data(input)
     #check for errors
@@ -80,22 +109,9 @@ def get_evolutions(input):
         while len(pokemon.predecessors) > 0:
             pokemon, error = get_pokemon_data(pokemon.predecessors[0])
             if error is not None:
-                print(error)
-                
-        #add pokemon to the tree
-        evolution_tree.append(pokemon.name)
-        evolution_numbers.append(pokemon.number)
-        #check evolutions
-        while len(pokemon.successors) > 0:
-            pokemon, error = get_pokemon_data(pokemon.successors[0])
-            if error is not None:
-                print(error)
-            else:
-                evolution_tree.append(pokemon.name)
-                evolution_numbers.append(pokemon.number)
-
-    return evolution_tree, evolution_numbers
-
+                print(f"get_base_pokemon: {error}")
+        return pokemon, None
+    return None, "get_base_pokemon: Pokemon not found!"
 
 
 #assuming object input
@@ -162,8 +178,7 @@ def describe_pokemon(input):
     #print report
     print(f"Pokemon #{pokemon.number}: {pokemon.name}")
     
-    evolution_tree, _ = get_evolutions(pokemon.name)
-    print(f"Evolution tree: {", ".join(evolution_tree)}")
+    
 
     print(f"Type: {", ".join(pokemon.type)}")
     ability_string = "Abilities: "
@@ -179,6 +194,8 @@ def describe_pokemon(input):
     weakness = get_weakness(pokemon)
     print(f"Weakness: {weakness}")
 
+    evolution_tree, _ = get_evolution_line(pokemon.name)
+    print(f"Evolution tree: {", ".join(evolution_tree)}")
 
 
 #pokemon object, containing information of the pokemon
