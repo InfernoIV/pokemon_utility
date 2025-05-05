@@ -1,18 +1,18 @@
 number,name,form,type,abilities,predecessors,successors
-1,Bulbasaur,,"Grass,Poison","Overgrow,,Chlorophyll","","2"
-2,Ivysaur,,"Grass,Poison","Overgrow,,Chlorophyll","1","3"
-3,Venusaur,,"Grass,Poison","Overgrow,,Chlorophyll","2",""
-4,Charmander,,"Fire,","Blaze,,Solar Power","","5"
-5,Charmeleon,,"Fire,","Blaze,,Solar Power","4","6"
-6,Charizard,,"Fire,Flying","Blaze,,Solar Power","5",""
-7,Squirtle,,"Water,","Torrent,,Rain Dish","","8"
-8,Wartortle,,"Water,","Torrent,,Rain Dish","7","9"
-9,Blastoise,,"Water,","Torrent,,Rain Dish","8",""
-10,Caterpie,,"Bug,","Shield Dust,,Run Away","","11"
-11,Metapod,,"Bug,","Shed Skin,,","10","12"
-12,Butterfree,,"Bug,Flying","Compound Eyes,,Tinted Lens","11",""
-13,Weedle,,"Bug,Poison","Shield Dust,,Run Away","","14"
-14,Kakuna,,"Bug,Poison","Shed Skin,,","13","15"
+1,Bulbasaur,,"Grass,Poison","Overgrow,,Chlorophyll",,2
+2,Ivysaur,,"Grass,Poison","Overgrow,,Chlorophyll",1,3
+3,Venusaur,,"Grass,Poison","Overgrow,,Chlorophyll",2,
+4,Charmander,,"Fire,","Blaze,,Solar Power",,5
+5,Charmeleon,,"Fire,","Blaze,,Solar Power",4,6
+6,Charizard,,"Fire,Flying","Blaze,,Solar Power",5,
+7,Squirtle,,"Water,","Torrent,,Rain Dish",,8
+8,Wartortle,,"Water,","Torrent,,Rain Dish",7,9
+9,Blastoise,,"Water,","Torrent,,Rain Dish",8,
+10,Caterpie,,"Bug,","Shield Dust,,Run Away",,11
+11,Metapod,,"Bug,","Shed Skin,,",10,12
+12,Butterfree,,"Bug,Flying","Compound Eyes,,Tinted Lens",11,
+13,Weedle,,"Bug,Poison","Shield Dust,,Run Away",,14
+14,Kakuna,,"Bug,Poison","Shed Skin,,","13","15
 15,Beedrill,,"Bug,Poison","Swarm,,Sniper","14",""
 16,Pidgey,,"Normal,Flying","Keen Eye,Tangled Feet,Big Pecks","","17"
 17,Pidgeotto,,"Normal,Flying","Keen Eye,Tangled Feet,Big Pecks","16","18"
@@ -107,7 +107,7 @@ number,name,form,type,abilities,predecessors,successors
 84,Doduo,,"Normal,Flying","Run Away,Early Bird,Tangled Feet","","85"
 85,Dodrio,,"Normal,Flying","Run Away,Early Bird,Tangled Feet","84",""
 86,Seel,,"Water,","Thick Fat,Hydration,Ice Body","","87"
-87,Dewgong,,"Water, Ice,","Thick Fat,Hydration,Ice Body","86",""
+87,Dewgong,,"Water,Ice,","Thick Fat,Hydration,Ice Body","86",""
 88,Grimer,,"Poison,","Stench,Sticky Hold,Poison Touch","","89"
 88a,Grimer,Alolan Form,"Poison,Dark","Poison Touch,Gluttony,Power of Alchemy","","89a"
 89,Muk,,"Poison,","Stench,Sticky Hold,Poison Touch","88",""
@@ -198,7 +198,7 @@ number,name,form,type,abilities,predecessors,successors
 199a,Slowking,Galarian Form,"Poison,Psychic","Curious Medicine,Own Tempo,Regenerator","80a",""
 208,Steelix,,"Steel,Ground","Rock Head,Sturdy,Sheer Force","95",""
 212,Scizor,,"Bug,Steel","Swarm,Technician,Light Metal","123",""
-230,Kingdra,,"Water,Dragon","Swift Swim, Sniper, Damp", "117",""
+230,Kingdra,,"Water,Dragon","Swift Swim,Sniper,Damp","117",""
 233,Porygon2,,"Normal,","Trace,Download,Analytic","137","474"
 236,Tyrogue,,"Fighting,","Guts,Steadfast,Vital Spirit","","106,107,237"
 237,Hitmontop,,"Fighting,","Intimidate,Technician,Steadfast","236",""
@@ -206,7 +206,10 @@ number,name,form,type,abilities,predecessors,successors
 239,Elekid,,"Electirc,","Static,,Vital Spirit","","125"
 240,Magby,,"Fire,","Flame Body,,Vital Spirit","","126"
 242,Blissey,,"Normal,","Natural Cure,Serene Grace,Healer","113",""
-439,Mime Jr.,"","Psychic,Fairy","Soundproof,Filter,Technician","","122, 122a"
+290,Nincada,,"Bug,Ground","Compound Eyes,,Run Away",,"291,292"
+291,Ninjask,,"Bug,Flying","Speed Boost,,Infiltrator",290,
+292,Shedinja,,"Bug,Ghost","Wonder Guard,,",290,
+439,Mime Jr.,,"Psychic,Fairy","Soundproof,Filter,Technician","","122,122a"
 440,Happiny,,"Normal,","Natural Cure,Serene Grace,Friend Guard","","113"
 446,Munchlax,,"Normal,","Pickup,Thick Fat,Gluttony","","143"
 462,Magnezone,,"Electric,Steel","Magnet Pull,Sturdy,Analytic","82",""

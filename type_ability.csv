@@ -1,0 +1,10 @@
+Ability,Type,Modifier
+Dry Skin,"Fire,Water","1.25,0.75"
+Earth Eater,Ground,-1
+Flash Fire,Fire,0
+Levitate,Ground,0
+Lightning Rod,Electric,0
+Sap Sipper,Grass,0
+Storm Drain,Water",0
+Volt Absorb,Electric,-1
+Water Absorb,Water,-1
