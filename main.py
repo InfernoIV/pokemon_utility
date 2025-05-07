@@ -1,5 +1,8 @@
 #usage
-#python3 main.py
+#python3 main.py families
+#python3 main.py pokemon pikachu
+#python3 main.py pokemon all
+
 
 #imports
 import sys

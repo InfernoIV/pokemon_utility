@@ -1,224 +1,224 @@
-number,name,form,type,abilities,predecessors,successors
-1,Bulbasaur,,"Grass,Poison","Overgrow,,Chlorophyll",,2
-2,Ivysaur,,"Grass,Poison","Overgrow,,Chlorophyll",1,3
-3,Venusaur,,"Grass,Poison","Overgrow,,Chlorophyll",2,
-4,Charmander,,"Fire,","Blaze,,Solar Power",,5
-5,Charmeleon,,"Fire,","Blaze,,Solar Power",4,6
-6,Charizard,,"Fire,Flying","Blaze,,Solar Power",5,
-7,Squirtle,,"Water,","Torrent,,Rain Dish",,8
-8,Wartortle,,"Water,","Torrent,,Rain Dish",7,9
-9,Blastoise,,"Water,","Torrent,,Rain Dish",8,
-10,Caterpie,,"Bug,","Shield Dust,,Run Away",,11
-11,Metapod,,"Bug,","Shed Skin,,",10,12
-12,Butterfree,,"Bug,Flying","Compound Eyes,,Tinted Lens",11,
-13,Weedle,,"Bug,Poison","Shield Dust,,Run Away",,14
-14,Kakuna,,"Bug,Poison","Shed Skin,,","13","15
-15,Beedrill,,"Bug,Poison","Swarm,,Sniper","14",""
-16,Pidgey,,"Normal,Flying","Keen Eye,Tangled Feet,Big Pecks","","17"
-17,Pidgeotto,,"Normal,Flying","Keen Eye,Tangled Feet,Big Pecks","16","18"
-18,Pidgeot,,"Normal,Flying","Keen Eye,Tangled Feet,Big Pecks","17",""
-19,Rattata,,"Normal,","Run Away,Guts,Hustle","","20"
-19a,Rattata,Alolan Form,"Dark,Normal","Gluttony,Hustle,Thick Fat","","20a"
-20,Raticate,,"Normal,","Run Away,Guts,Hustle","19",""
-20a,Raticate,Alolan Form,"Dark,Normal","Gluttony,Hustle,Thick Fat","19a",""
-21,Spearow,,"Normal,Flying","Keen Eye,,Sniper","","22"
-22,Fearow,,"Normal,Flying","Keen Eye,,Sniper","21",""
-23,Ekans,,"Poison,","Intimidate,Shed Skin,Unnerve","","24"
-24,Arbok,,"Poison,","Intimidate,Shed Skin,Unnerve","23",""
-25,Pikachu,,"Electric,","Static,,Lightning Rod","172","26,26a"
-26,Raichu,,"Electric,","Static,,Lightning Rod","25",""
-26a,Raichu,Alolan Form,"Electric,Psychic","Surge Surfer,,","25",""
-27,Sandshrew,,"Ground,","Sand Veil,,Sand Rush","","28"
-27a,Sandshrew,Alolan Form,"Ice,Steel","Snow Cloak,,Slush Rush","","28a"
-28,Sandslash,,"Ground,","Sand Veil,,Sand Rush","27",""
-28a,Sandslash,Alolan Form,"Ice,Steel","Snow Cloak,,Slush Rush","27a",""
-29,Nidoran♀,,"Poison,","Poison Point,Rivalry,Hustle","","30"
-30,Nidorina,,"Poison,","Poison Point,Rivalry,Hustle","29","31"
-31,Nidoqueen,,"Poison,Ground","Poison Point,Rivalry,Sheer Force","30",""
-32,Nidoran♂,,"Poison,","Poison Point,Rivalry,Hustle","","33"
-33,Nidorino,,"Poison,","Poison Point,Rivalry,Hustle","32","34"
-34,Nidoking,,"Poison,Ground","Poison Point,Rivalry,Sheer Force","33",""
-35,Clefairy,,"Fairy,","Cute Charm,Magic Guard,Friend Guard","","36"
-36,Clefable,,"Fairy,","Cute Charm,Magic Guard,Unaware","35",""
-37,Vulpix,,"Fire,","Flash Fire,,Drought","","38"
-37a,Vulpix,Alolan  Form,"Ice,","Snow Cloak,,Snow Warning","","38a"
-38,Ninetales,,"Fire,","Flash Fire,,Drought","37",""
-38a,Ninetales,Alolan  Form,"Ice,Fairy","Snow Cloak,,Snow Warning","37a",""
-39,Jigglypuff,,"Normal,Fairy","Cute Charm,Competitive,Friend Guard","174","40"
-40,Wigglytuff,,"Normal,Fairy","Cute Charm,Competitive,Frisk","39",""
-41,Zubat,,"Poison,Flying","Inner Focus,,Infiltrator","","42"
-42,Golbat,,"Poison,Flying","Inner Focus,,Infiltrator","41","169"
-43,Oddish,,"Grass,Poison","Chlorophyll,,Run Away","","44"
-44,Gloom,,"Grass,Poison","Chlorophyll,,Stench","43","45,182"
-45,Vileplume,,"Grass,Poison","Chlorophyll,,Effect Spore","44",""
-46,Paras,,"Bug,Grass","Effect Spore,Dry Skin,Damp","","47"
-47,Parasect,,"Bug,Grass","Effect Spore,Dry Skin,Damp","46",""
-48,Venonat,,"Bug,Poison","Compound Eyes,Tinted Lens,Run Away","","49"
-49,Venomoth,,"Bug,Poison","Shield Dust,Tinted Lens,Wonder Skin","48",""
-50,Diglett,,"Ground,","Sand Veil,Arena Trap,Sand Force","","51"
-50a,Diglett,Alolan Form,"Ground,Steel","Sand Veil,Tangling Hair,Sand Force","","51a"
-51,Dugtrio,,"Ground,","Sand Veil,Arena Trap,Sand Force","50",""
-51a,Dugtrio,Alolan Form,"Ground,Steel","Sand Veil,Tangling Hair,Sand Force","50a",""
-52,Meowth,,"Normal,","Pickup,Technician,Unnerve","","53"
-52a,Meowth,Alolan Form,"Dark,","Pickup,Technician,Rattled","","53a"
-52b,Meowth,Galarian Form,"Steel,","Pickup,Tough Claws,Unnerve","",""
-53,Persian,,"Normal,","Limber,Technician,Unnerve","52",""
-53a,Persian,Alolan Form,"Dark,","Fur Coat,Technician,Rattled","52a",""
-54,Psyduck,,"Water,","Damp,Cloud Nine,Swift Swim","","55"
-55,Golduck,,"Water,","Damp,Cloud Nine,Swift Swim","54",""
-56,Mankey,,"Fighting,","Vital Spirit,Anger Point,Defiant","","57"
-57,Primeape,,"Fighting,","Vital Spirit,Anger Point,Defiant","56",""
-58,Growlithe,,"Fire,","Intimidate,Flash Fire,Justified","","59"
-58a,Growlithe,Hisuian Form,"Fire,Rock",",,","","59a"
-59,Arcanine,,"Fire,","Intimidate,Flash Fire,Justified","58",""
-59a,Arcanine,Hisuian Form,"Fire,Rock",",,","58a",""
-60,Poliwag,,"Water,","Water Absorb,Damp,Swift Swim","","61"
-61,Poliwhirl,,"Water,","Water Absorb,Damp,Swift Swim","60","62,186"
-62,Poliwrath,,"Water,","Water Absorb,Damp,Swift Swim","61",""
-63,Abra,,"Psychic,","Synchronize,Inner Focus,Magic Guard","","64"
-64,Kadabra,,"Psychic,","Synchronize,Inner Focus,Magic Guard","63","65"
-65,Alakazam,,"Psychic,","Synchronize,Inner Focus,Magic Guard","64",""
-66,Machop,,"Fighting,","Guts,No Guard,Steadfast","","67"
-67,Machoke,,"Fighting,","Guts,No Guard,Steadfast","66","68"
-68,Machamp,,"Fighting,","Guts,No Guard,Steadfast","67",""
-69,Bellsprout,,"Grass,Poison","Chlorophyll,,Gluttony","","70"
-70,Weepinbell,,"Grass,Poison","Chlorophyll,,Gluttony","69","71"
-71,Victreebel,,"Grass,Poison","Chlorophyll,,Gluttony","70",""
-72,Tentacool,,"Water,Poison","Clear Body,Liquid Ooze,Rain Dish","","73"
-73,Tentacruel,,"Water,Poison","Clear Body,Liquid Ooze,Rain Dish","72",""
-74,Geodude,,"Rock,Ground","Rock Head,Sturdy,Sand Veil","","75"
-74a,Geodude,Alolan Form,"Rock,Electric","Magnet Pull,Sturdy,Galvanize","","75a"
-75,Graveler,,"Rock,Ground","Rock Head,Sturdy,Sand Veil","74","76"
-75a,Graveler,Alolan Form,"Rock,Electric","Magnet Pull,Sturdy,Galvanize","74a","76a"
-76,Golem,,"Rock,Ground","Rock Head,Sturdy,Sand Veil","75",""
-76a,Golem,Alolan Form,"Rock,Electric","Magnet Pull,Sturdy,Galvanize","75a",""
-77,Ponyta,,"Fire,","Run Away,Flash Fire,Flame Body","","78"
-77a,Ponyta,Galarian Form,"Psychic,","Run Away,Pastel Veil,Anticipation","","78a"
-78,Rapidash,,"Fire,","Run Away,Flash Fire,Flame Body","77",""
-78a,Rapidash,Galarian Form,"Psychic,Fairy","Run Away,Pastel Veil,Anticipation","77a",""
-79,Slowpoke,,"Water,Psychic","Oblivious,Own Tempo,Regenerator","","80"
-79a,Slowpoke,Galarian Form,"Psychic,","Gluttony,Own Tempo,Regenerator","","80a"
-80,Slowbro,,"Water,Psychic","Oblivious,Own Tempo,Regenerator","79","199"
-80a,Slowbro,Galarian Form,"Poison,Psychic","Quick Draw,Own Tempo,Regenerator","79a","199a"
-81,Magnemite,,"Electric,Steel","Magnet Pull,Sturdy,Analytic","","82"
-82,Magneton,,"Electric,Steel","Magnet Pull,Sturdy,Analytic","81","462"
-83,Farfetch'd,,"Normal,Flying","Keen Eye,Inner Focus,Defiant","",""
-83a,Farfetch'd,Galarian Form,"Fighting,","Steadfast,,Scrappy","",""
-84,Doduo,,"Normal,Flying","Run Away,Early Bird,Tangled Feet","","85"
-85,Dodrio,,"Normal,Flying","Run Away,Early Bird,Tangled Feet","84",""
-86,Seel,,"Water,","Thick Fat,Hydration,Ice Body","","87"
-87,Dewgong,,"Water,Ice,","Thick Fat,Hydration,Ice Body","86",""
-88,Grimer,,"Poison,","Stench,Sticky Hold,Poison Touch","","89"
-88a,Grimer,Alolan Form,"Poison,Dark","Poison Touch,Gluttony,Power of Alchemy","","89a"
-89,Muk,,"Poison,","Stench,Sticky Hold,Poison Touch","88",""
-89a,Muk,Alolan Form,"Poison,Dark","Poison Touch,Gluttony,Power of Alchemy","88a",""
-90,Shellder,,"Water,","Shell Armor,Skill Link,Overcoat","","91"
-91,Cloyster,,"Water,Ice","Shell Armor,Skill Link,Overcoat","90",""
-92,Gastly,,"Ghost,Poison","Levitate,,","","93"
-93,Haunter,,"Ghost,Poison","Levitate,,","92","94"
-94,Gengar,,"Ghost,Poison","Cursed Body,,","93",""
-95,Onix,,"Rock,Ground","Rock Head,Sturdy,Weak Armor","","208"
-96,Drowzee,,"Psychic,","Insomnia,Forewarn,Inner Focus","","97"
-97,Hypno,,"Psychic,","Insomnia,Forewarn,Inner Focus","96",""
-98,Krabby,,"Water,","Hyper Cutter,Shell Armor,Sheer Force","","99"
-99,Kingler,,"Water,","Hyper Cutter,Shell Armor,Sheer Force","98",""
-100,Voltorb,,"Electric,","Soundproof,Static,Aftermath","","101"
-100a,Voltorb,Hisuian Form,"Electric,Grass",",,","","101a"
-101,Electrode,,"Electric,","Soundproof,Static,Aftermath","100",""
-101a,Electrode,Hisuian Form,"Electric,Grass",",,","100a",""
-102,Exeggcute,,"Grass,Psychic","Chlorophyll,,Harvest","","103,103a"
-103,Exeggutor,,"Grass,Psychic","Chlorophyll,,Harvest","102",""
-103a,Exeggutor,Alolan Form,"Grass,Dragon","Frisk,Frisk,Harvest","102",""
-104,Cubone,,"Ground,","Rock Head,Lightning Rod,Battle Armor","","105,105a"
-105,Marowak,,"Ground,","Rock Head,Lightning Rod,Battle Armor","104",""
-105a,Marowak,Alolan Form,"Fire,Ghost","Cursed Body,Lightning Rod,Rock Head","104",""
-106,Hitmonlee,,"Fighting,","Limber,Reckless,Unburden","236",""
-107,Hitmonchan,,"Fighting,","Keen Eye,Iron Fist,Inner Focus","236",""
-108,Lickitung,,"Normal,","Own Tempo,Oblivious,Cloud Nine","","463"
-109,Koffing,,"Poison,","Levitate,Neutralizing Gas,Stench","","110,110a"
-110,Weezing,,"Poison,","Levitate,Neutralizing Gas,Stench","109",""
-110a,Weezing,Galarian Form,"Poison,Fairy","Levitate,Neutralizing Gas,Misty Surge","109",""
-111,Rhyhorn,,"Rock,Ground","Lightning Rod,Rock Head,Reckless","","112"
-112,Rhydon,,"Rock,Ground","Lightning Rod,Rock Head,Reckless","111","464"
-113,Chansey,,"Normal,","Natural Cure,Serene Grace,Healer","440","242"
-114,Tangela,,"Grass,","Chlorophyll,Leaf Guard,Regenerator","","465"
-115,Kangaskhan,,"Normal,","Early Bird,Scrappy,Inner Focus","",""
-116,Horsea,,"Water,","Swift Swim,Sniper,Damp","","117"
-117,Seadra,,"Water,","Poison Point,Sniper,Damp","116","230"
-118,Goldeen,,"Water,","Swift Swim,Water Veil,Lightning Rod","","119"
-119,Seaking,,"Water,","Swift Swim,Water Veil,Lightning Rod","118",""
-120,Staryu,,"Water,","Illuminate,Natural Cure,Analytic","","121"
-121,Starmie,,"Water,Psychic","Illuminate,Natural Cure,Analytic","120",""
-122,Mr.Mime,,"Psychic,Fairy","Soundproof,Filter,Technician","439",""
-122a,Mr.Mime,Galarian Form,"Ice,Psychic","Vital Spirit,Screen Cleaner,Ice Body","439",""
-123,Scyther,,"Bug,Flying","Swarm,Technician,Steadfast","","212"
-124,Jynx,,"Ice,Psychic","Oblivious,Forewarn,Dry Skin","238",""
-125,Electabuzz,,"Electric,","Static,,Vital Spirit","239","466"
-126,Magmar,,"Fire,","Flame Body,,Vital Spirit","240","467"
-127,Pinsir,,"Bug,","Hyper Cutter,Mold Breaker,Moxie","",""
-128,Tauros,,"Normal,","Intimidate,Anger Point,Sheer Force","",""
-128,Tauros,Paldean Combat Form,"Fighting,","Intimidate,Anger Point,Cud Chew","",""
-128,Tauros,Paldean Blaze Form,"Fighting,Fire","Intimidate,Anger Point,Cud Chew","",""
-128,Tauros,Paldean Aqua Form,"Fighting,Water","Intimidate,Anger Point,Cud Chew","",""
-129,Magikarp,,"Water,","Swift Swim,,Rattled","","130"
-130,Gyarados,,"Water,Flying","Intimidate,,Moxie","129",""
-131,Lapras,,"Water,Ice","Water Absorb,Shell Armor,Hydration","",""
-132,Ditto,,"Normal,","Limber,,Imposter","",""
-133,Eevee,,"Normal,","Run Away,Adaptability,Anticipation","","134,135,136,196,197,470,471,700"
-134,Vaporeon,,"Water,","Water Absorb,,Hydration","133",""
-135,Jolteon,,"Electric,","Volt Absorb,,Quick Feet","133",""
-136,Flareon,,"Fire,","Flash Fire,,Guts","133",""
-137,Porygon,,"Normal,","Trace,Download,Analytic","","233"
-138,Omanyte,,"Rock,Water","Swift Swim,Shell Armor,Weak Armor","","139"
-139,Omastar,,"Rock,Water","Swift Swim,Shell Armor,Weak Armor","138",""
-140,Kabuto,,"Rock,Water","Swift Swim,Battle Armor,Weak Armor","","141"
-141,Kabutops,,"Rock,Water","Swift Swim,Battle Armor,Weak Armor","140",""
-142,Aerodactyl,,"Rock,Flying","Rock Head,Pressure,Unnerve","",""
-143,Snorlax,,"Normal,","Immunity,Thick Fat,Gluttony","446",""
-144,Articuno,,"Ice,Flying","Pressure,,Snow Cloak","",""
-144,Articuno,Galarian Form,"Psychic,Flying","Competitive,,","",""
-145,Zapdos,,"Electric,Flying","Pressure,,Static","",""
-145,Zapdos,Galarian Form,"Fighting,Flying","Defiant,,","",""
-146,Moltres,,"Fire,Flying","Pressure,,Flame Body","",""
-146,Moltres,Galarian Form,"Dark,Flying","Berserk,,","",""
-147,Dratini,,"Dragon,","Shed Skin,,Marvel Scale","","148"
-148,Dragonair,,"Dragon,","Shed Skin,,Marvel Scale","147","149"
-149,Dragonite,,"Dragon,Flying","Inner Focus,,Multiscale","148",""
-150,Mewtwo,,"Psychic,","Pressure,,Unnerve","",""
-151,Mew,,"Psychic,","Synchronize,,","",""
-169,Crobat,,"Poison,Flying","Inner Focus,,Infiltrator","42",""
-172,Pichu,,"Electric,","Static,,Lightning Rod","","25"
-173,Cleffa,,"Fairy,","Cute Charm,Magic Guard,Friend Guard","","35"
-174,Igglybuff,,"Normal,Fairy","Cute Charm,Competitive,Friend Guard","","39"
-182,Bellossom,,"Grass,","Chlorophyll,,Healer","44",""
-186,Politoed,,"Water,","Water Absorb,Damp,Drizzle","61",""
-196,Espeon,,"Psychic,","Synchronize,,Magic Bounce","133",""
-197,Umbreon,,"Dark,","Synchronize,,Inner Focus","133",""
-199,Slowking,,"Water,Psychic","Oblivious,Own Tempo,Regenerator","80",""
-199a,Slowking,Galarian Form,"Poison,Psychic","Curious Medicine,Own Tempo,Regenerator","80a",""
-208,Steelix,,"Steel,Ground","Rock Head,Sturdy,Sheer Force","95",""
-212,Scizor,,"Bug,Steel","Swarm,Technician,Light Metal","123",""
-230,Kingdra,,"Water,Dragon","Swift Swim,Sniper,Damp","117",""
-233,Porygon2,,"Normal,","Trace,Download,Analytic","137","474"
-236,Tyrogue,,"Fighting,","Guts,Steadfast,Vital Spirit","","106,107,237"
-237,Hitmontop,,"Fighting,","Intimidate,Technician,Steadfast","236",""
-238,Smoochum,,"Ice,Psychic","Oblivious,Forewarn,Hydration","","124"
-239,Elekid,,"Electirc,","Static,,Vital Spirit","","125"
-240,Magby,,"Fire,","Flame Body,,Vital Spirit","","126"
-242,Blissey,,"Normal,","Natural Cure,Serene Grace,Healer","113",""
-290,Nincada,,"Bug,Ground","Compound Eyes,,Run Away",,"291,292"
-291,Ninjask,,"Bug,Flying","Speed Boost,,Infiltrator",290,
-292,Shedinja,,"Bug,Ghost","Wonder Guard,,",290,
-439,Mime Jr.,,"Psychic,Fairy","Soundproof,Filter,Technician","","122,122a"
-440,Happiny,,"Normal,","Natural Cure,Serene Grace,Friend Guard","","113"
-446,Munchlax,,"Normal,","Pickup,Thick Fat,Gluttony","","143"
-462,Magnezone,,"Electric,Steel","Magnet Pull,Sturdy,Analytic","82",""
-463,Lickilicky,,"Normal,","Own Tempo,Oblivious,Cloud Nine","108",""
-464,Rhyperior,,"Ground,Rock","Lightning Rod,Solid Rock,Reckless","112",""
-465,Tangrowth,,"Grass,","Chlorophyll,Leaf Guard,Regenerator","114",""
-466,Electivire,,"Electric,","Motor Drive,,Vital Spirit","125",""
-467,Magmortar,,"Fire,","Flame Body,,Vital Spirit","126",""
-470,Leafeon,,"Grass,","Leaf Guard,,Chlorophyll","133",""
-471,Glaceon,,"Ice,","Snow Cloak,,Ice Body","133",""
-474,PorygonZ,,"Normal,","Adaptability,Download,Analytic","233",""
-700,Sylveon,,"Fairy,","Cute Charm,,Pixilate","133",""
+number,name,form-name,form-type,type-1,type-2,ability-1,ability-2,ability-hidden,predecessors,successors
+1,Bulbasaur,,,Grass,Poison,Overgrow,,Chlorophyll,,2
+2,Ivysaur,,,Grass,Poison,Overgrow,,Chlorophyll,1,3
+3,Venusaur,,,Grass,Poison,Overgrow,,Chlorophyll,2,
+4,Charmander,,,Fire,,Blaze,,Solar Power,,5
+5,Charmeleon,,,Fire,,Blaze,,Solar Power,4,6
+6,Charizard,,,Fire,Flying,Blaze,,Solar Power,5,
+7,Squirtle,,,Water,,Torrent,,Rain Dish,,8
+8,Wartortle,,,Water,,Torrent,,Rain Dish,7,9
+9,Blastoise,,,Water,,Torrent,,Rain Dish,8,
+10,Caterpie,,,Bug,,Shield Dust,,Run Away,,11
+11,Metapod,,,Bug,,Shed Skin,,,10,12
+12,Butterfree,,,Bug,Flying,Compound Eyes,,Tinted Lens,11,
+13,Weedle,,,Bug,Poison,Shield Dust,,Run Away,,14
+14,Kakuna,,,Bug,Poison,Shed Skin,,,13,15
+15,Beedrill,,,Bug,Poison,Swarm,,Sniper,14,
+16,Pidgey,,,Normal,Flying,Keen Eye,Tangled Feet,Big Pecks,,17
+17,Pidgeotto,,,Normal,Flying,Keen Eye,Tangled Feet,Big Pecks,16,18
+18,Pidgeot,,,Normal,Flying,Keen Eye,Tangled Feet,Big Pecks,17,
+19,Rattata,,,Normal,,Run Away,Guts,Hustle,,20
+20,Raticate,,,Normal,,Run Away,Guts,Hustle,19,
+21,Spearow,,,Normal,Flying,Keen Eye,,Sniper,,22
+22,Fearow,,,Normal,Flying,Keen Eye,,Sniper,21,
+23,Ekans,,,Poison,,Intimidate,Shed Skin,Unnerve,,24
+24,Arbok,,,Poison,,Intimidate,Shed Skin,Unnerve,23,
+25,Pikachu,,,Electric,,Static,,Lightning Rod,172,"26,26a"
+26,Raichu,,,Electric,,Static,,Lightning Rod,25,
+26a,Raichu,Alolan Form,Regional,Electric,Psychic,Surge Surfer,,,25,
+27,Sandshrew,,,Ground,,Sand Veil,,Sand Rush,,28
+28,Sandslash,,,Ground,,Sand Veil,,Sand Rush,27,
+29,Nidoran♀,,,Poison,,Poison Point,Rivalry,Hustle,,30
+30,Nidorina,,,Poison,,Poison Point,Rivalry,Hustle,29,31
+31,Nidoqueen,,,Poison,Ground,Poison Point,Rivalry,Sheer Force,30,
+32,Nidoran♂,,,Poison,,Poison Point,Rivalry,Hustle,,33
+33,Nidorino,,,Poison,,Poison Point,Rivalry,Hustle,32,34
+34,Nidoking,,,Poison,Ground,Poison Point,Rivalry,Sheer Force,33,
+35,Clefairy,,,Fairy,,Cute Charm,Magic Guard,Friend Guard,,36
+36,Clefable,,,Fairy,,Cute Charm,Magic Guard,Unaware,35,
+37,Vulpix,,,Fire,,Flash Fire,,Drought,,38
+38,Ninetales,,,Fire,,Flash Fire,,Drought,37,
+39,Jigglypuff,,,Normal,Fairy,Cute Charm,Competitive,Friend Guard,174,40
+40,Wigglytuff,,,Normal,Fairy,Cute Charm,Competitive,Frisk,39,
+41,Zubat,,,Poison,Flying,Inner Focus,,Infiltrator,,42
+42,Golbat,,,Poison,Flying,Inner Focus,,Infiltrator,41,169
+43,Oddish,,,Grass,Poison,Chlorophyll,,Run Away,,44
+44,Gloom,,,Grass,Poison,Chlorophyll,,Stench,43,"45,182"
+45,Vileplume,,,Grass,Poison,Chlorophyll,,Effect Spore,44,
+46,Paras,,,Bug,Grass,Effect Spore,Dry Skin,Damp,,47
+47,Parasect,,,Bug,Grass,Effect Spore,Dry Skin,Damp,46,
+48,Venonat,,,Bug,Poison,Compound Eyes,Tinted Lens,Run Away,,49
+49,Venomoth,,,Bug,Poison,Shield Dust,Tinted Lens,Wonder Skin,48,
+50,Diglett,,,Ground,,Sand Veil,Arena Trap,Sand Force,,51
+51,Dugtrio,,,Ground,,Sand Veil,Arena Trap,Sand Force,50,
+52,Meowth,,,Normal,,Pickup,Technician,Unnerve,,53
+53,Persian,,,Normal,,Limber,Technician,Unnerve,52,
+54,Psyduck,,,Water,,Damp,Cloud Nine,Swift Swim,,55
+55,Golduck,,,Water,,Damp,Cloud Nine,Swift Swim,54,
+56,Mankey,,,Fighting,,Vital Spirit,Anger Point,Defiant,,57
+57,Primeape,,,Fighting,,Vital Spirit,Anger Point,Defiant,56,
+58,Growlithe,,,Fire,,Intimidate,Flash Fire,Justified,,59
+59,Arcanine,,,Fire,,Intimidate,Flash Fire,Justified,58,
+60,Poliwag,,,Water,,Water Absorb,Damp,Swift Swim,,61
+61,Poliwhirl,,,Water,,Water Absorb,Damp,Swift Swim,60,"62,186"
+62,Poliwrath,,,Water,,Water Absorb,Damp,Swift Swim,61,
+63,Abra,,,Psychic,,Synchronize,Inner Focus,Magic Guard,,64
+64,Kadabra,,,Psychic,,Synchronize,Inner Focus,Magic Guard,63,65
+65,Alakazam,,,Psychic,,Synchronize,Inner Focus,Magic Guard,64,
+66,Machop,,,Fighting,,Guts,No Guard,Steadfast,,67
+67,Machoke,,,Fighting,,Guts,No Guard,Steadfast,66,68
+68,Machamp,,,Fighting,,Guts,No Guard,Steadfast,67,
+69,Bellsprout,,,Grass,Poison,Chlorophyll,,Gluttony,,70
+70,Weepinbell,,,Grass,Poison,Chlorophyll,,Gluttony,69,71
+71,Victreebel,,,Grass,Poison,Chlorophyll,,Gluttony,70,
+72,Tentacool,,,Water,Poison,Clear Body,Liquid Ooze,Rain Dish,,73
+73,Tentacruel,,,Water,Poison,Clear Body,Liquid Ooze,Rain Dish,72,
+74,Geodude,,,Rock,Ground,Rock Head,Sturdy,Sand Veil,,75
+75,Graveler,,,Rock,Ground,Rock Head,Sturdy,Sand Veil,74,76
+76,Golem,,,Rock,Ground,Rock Head,Sturdy,Sand Veil,75,
+77,Ponyta,,,Fire,,Run Away,Flash Fire,Flame Body,,78
+78,Rapidash,,,Fire,,Run Away,Flash Fire,Flame Body,77,
+79,Slowpoke,,,Water,Psychic,Oblivious,Own Tempo,Regenerator,,80
+80,Slowbro,,,Water,Psychic,Oblivious,Own Tempo,Regenerator,79,199
+81,Magnemite,,,Electric,Steel,Magnet Pull,Sturdy,Analytic,,82
+82,Magneton,,,Electric,Steel,Magnet Pull,Sturdy,Analytic,81,462
+83,Farfetch'd,,,Normal,Flying,Keen Eye,Inner Focus,Defiant,,
+84,Doduo,,,Normal,Flying,Run Away,Early Bird,Tangled Feet,,85
+85,Dodrio,,,Normal,Flying,Run Away,Early Bird,Tangled Feet,84,
+86,Seel,,,Water,,Thick Fat,Hydration,Ice Body,,87
+87,Dewgong,,,Water,Ice,Thick Fat,Hydration,Ice Body,86,
+88,Grimer,,,Poison,,Stench,Sticky Hold,Poison Touch,,89
+89,Muk,,,Poison,,Stench,Sticky Hold,Poison Touch,88,
+90,Shellder,,,Water,,Shell Armor,Skill Link,Overcoat,,91
+91,Cloyster,,,Water,Ice,Shell Armor,Skill Link,Overcoat,90,
+92,Gastly,,,Ghost,Poison,Levitate,,,,93
+93,Haunter,,,Ghost,Poison,Levitate,,,92,94
+94,Gengar,,,Ghost,Poison,Cursed Body,,,93,
+95,Onix,,,Rock,Ground,Rock Head,Sturdy,Weak Armor,,208
+96,Drowzee,,,Psychic,,Insomnia,Forewarn,Inner Focus,,97
+97,Hypno,,,Psychic,,Insomnia,Forewarn,Inner Focus,96,
+98,Krabby,,,Water,,Hyper Cutter,Shell Armor,Sheer Force,,99
+99,Kingler,,,Water,,Hyper Cutter,Shell Armor,Sheer Force,98,
+100,Voltorb,,,Electric,,Soundproof,Static,Aftermath,,101
+101,Electrode,,,Electric,,Soundproof,Static,Aftermath,100,
+102,Exeggcute,,,Grass,Psychic,Chlorophyll,,Harvest,,"103,103a"
+103,Exeggutor,,,Grass,Psychic,Chlorophyll,,Harvest,102,
+104,Cubone,,,Ground,,Rock Head,Lightning Rod,Battle Armor,,"105,105a"
+105,Marowak,,,Ground,,Rock Head,Lightning Rod,Battle Armor,104,
+106,Hitmonlee,,,Fighting,,Limber,Reckless,Unburden,236,
+107,Hitmonchan,,,Fighting,,Keen Eye,Iron Fist,Inner Focus,236,
+108,Lickitung,,,Normal,,Own Tempo,Oblivious,Cloud Nine,,463
+109,Koffing,,,Poison,,Levitate,Neutralizing Gas,Stench,,"110,110a"
+110,Weezing,,,Poison,,Levitate,Neutralizing Gas,Stench,109,
+111,Rhyhorn,,,Rock,Ground,Lightning Rod,Rock Head,Reckless,,112
+112,Rhydon,,,Rock,Ground,Lightning Rod,Rock Head,Reckless,111,464
+113,Chansey,,,Normal,,Natural Cure,Serene Grace,Healer,440,242
+114,Tangela,,,Grass,,Chlorophyll,Leaf Guard,Regenerator,,465
+115,Kangaskhan,,,Normal,,Early Bird,Scrappy,Inner Focus,,
+116,Horsea,,,Water,,Swift Swim,Sniper,Damp,,117
+117,Seadra,,,Water,,Poison Point,Sniper,Damp,116,230
+118,Goldeen,,,Water,,Swift Swim,Water Veil,Lightning Rod,,119
+119,Seaking,,,Water,,Swift Swim,Water Veil,Lightning Rod,118,
+120,Staryu,,,Water,,Illuminate,Natural Cure,Analytic,,121
+121,Starmie,,,Water,Psychic,Illuminate,Natural Cure,Analytic,120,
+122,Mr.Mime,,,Psychic,Fairy,Soundproof,Filter,Technician,439,
+123,Scyther,,,Bug,Flying,Swarm,Technician,Steadfast,,212
+124,Jynx,,,Ice,Psychic,Oblivious,Forewarn,Dry Skin,238,
+125,Electabuzz,,,Electric,,Static,,Vital Spirit,239,466
+126,Magmar,,,Fire,,Flame Body,,Vital Spirit,240,467
+127,Pinsir,,,Bug,,Hyper Cutter,Mold Breaker,Moxie,,
+128,Tauros,,,Normal,,Intimidate,Anger Point,Sheer Force,,
+129,Magikarp,,,Water,,Swift Swim,,Rattled,,130
+130,Gyarados,,,Water,Flying,Intimidate,,Moxie,129,
+131,Lapras,,,Water,Ice,Water Absorb,Shell Armor,Hydration,,
+132,Ditto,,,Normal,,Limber,,Imposter,,
+133,Eevee,,,Normal,,Run Away,Adaptability,Anticipation,,"134,135,136,196,197,470,471,700"
+134,Vaporeon,,,Water,,Water Absorb,,Hydration,133,
+135,Jolteon,,,Electric,,Volt Absorb,,Quick Feet,133,
+136,Flareon,,,Fire,,Flash Fire,,Guts,133,
+137,Porygon,,,Normal,,Trace,Download,Analytic,,233
+138,Omanyte,,,Rock,Water,Swift Swim,Shell Armor,Weak Armor,,139
+139,Omastar,,,Rock,Water,Swift Swim,Shell Armor,Weak Armor,138,
+140,Kabuto,,,Rock,Water,Swift Swim,Battle Armor,Weak Armor,,141
+141,Kabutops,,,Rock,Water,Swift Swim,Battle Armor,Weak Armor,140,
+142,Aerodactyl,,,Rock,Flying,Rock Head,Pressure,Unnerve,,
+143,Snorlax,,,Normal,,Immunity,Thick Fat,Gluttony,446,
+144,Articuno,,,Ice,Flying,Pressure,,Snow Cloak,,
+145,Zapdos,,,Electric,Flying,Pressure,,Static,,
+146,Moltres,,,Fire,Flying,Pressure,,Flame Body,,
+147,Dratini,,,Dragon,,Shed Skin,,Marvel Scale,,148
+148,Dragonair,,,Dragon,,Shed Skin,,Marvel Scale,147,149
+149,Dragonite,,,Dragon,Flying,Inner Focus,,Multiscale,148,
+150,Mewtwo,,,Psychic,,Pressure,,Unnerve,,
+151,Mew,,,Psychic,,Synchronize,,,,
+169,Crobat,,,Poison,Flying,Inner Focus,,Infiltrator,42,
+172,Pichu,,,Electric,,Static,,Lightning Rod,,25
+173,Cleffa,,,Fairy,,Cute Charm,Magic Guard,Friend Guard,,35
+174,Igglybuff,,,Normal,Fairy,Cute Charm,Competitive,Friend Guard,,39
+182,Bellossom,,,Grass,,Chlorophyll,,Healer,44,
+186,Politoed,,,Water,,Water Absorb,Damp,Drizzle,61,
+196,Espeon,,,Psychic,,Synchronize,,Magic Bounce,133,
+197,Umbreon,,,Dark,,Synchronize,,Inner Focus,133,
+199,Slowking,,,Water,Psychic,Oblivious,Own Tempo,Regenerator,80,
+208,Steelix,,,Steel,Ground,Rock Head,Sturdy,Sheer Force,95,
+212,Scizor,,,Bug,Steel,Swarm,Technician,Light Metal,123,
+230,Kingdra,,,Water,Dragon,Swift Swim,Sniper,Damp,117,
+233,Porygon2,,,Normal,,Trace,Download,Analytic,137,474
+236,Tyrogue,,,Fighting,,Guts,Steadfast,Vital Spirit,,"106,107,237"
+237,Hitmontop,,,Fighting,,Intimidate,Technician,Steadfast,236,
+238,Smoochum,,,Ice,Psychic,Oblivious,Forewarn,Hydration,,124
+239,Elekid,,,Electric,,Static,,Vital Spirit,,125
+240,Magby,,,Fire,,Flame Body,,Vital Spirit,,126
+242,Blissey,,,Normal,,Natural Cure,Serene Grace,Healer,113,
+290,Nincada,,,Bug,Ground,Compound Eyes,,Run Away,,"291,292"
+291,Ninjask,,,Bug,Flying,Speed Boost,,Infiltrator,290,
+292,Shedinja,,,Bug,Ghost,Wonder Guard,,,290,
+439,Mime Jr.,,,Psychic,Fairy,Soundproof,Filter,Technician,,"122,122a"
+440,Happiny,,,Normal,,Natural Cure,Serene Grace,Friend Guard,,113
+446,Munchlax,,,Normal,,Pickup,Thick Fat,Gluttony,,143
+462,Magnezone,,,Electric,Steel,Magnet Pull,Sturdy,Analytic,82,
+463,Lickilicky,,,Normal,,Own Tempo,Oblivious,Cloud Nine,108,
+464,Rhyperior,,,Ground,Rock,Lightning Rod,Solid Rock,Reckless,112,
+465,Tangrowth,,,Grass,,Chlorophyll,Leaf Guard,Regenerator,114,
+466,Electivire,,,Electric,,Motor Drive,,Vital Spirit,125,
+467,Magmortar,,,Fire,,Flame Body,,Vital Spirit,126,
+470,Leafeon,,,Grass,,Leaf Guard,,Chlorophyll,133,
+471,Glaceon,,,Ice,,Snow Cloak,,Ice Body,133,
+474,PorygonZ,,,Normal,,Adaptability,Download,Analytic,233,
+700,Sylveon,,,Fairy,,Cute Charm,,Pixilate,133,
+19a,Rattata,Alolan Form,Regional,Dark,Normal,Gluttony,Hustle,Thick Fat,,20a
+20a,Raticate,Alolan Form,Regional,Dark,Normal,Gluttony,Hustle,Thick Fat,19a,
+27a,Sandshrew,Alolan Form,Regional,Ice,Steel,Snow Cloak,,Slush Rush,,28a
+28a,Sandslash,Alolan Form,Regional,Ice,Steel,Snow Cloak,,Slush Rush,27a,
+37a,Vulpix,Alolan Form,Regional,Ice,,Snow Cloak,,Snow Warning,,38a
+38a,Ninetales,Alolan Form,Regional,Ice,Fairy,Snow Cloak,,Snow Warning,37a,
+50a,Diglett,Alolan Form,Regional,Ground,Steel,Sand Veil,Tangling Hair,Sand Force,,51a
+51a,Dugtrio,Alolan Form,Regional,Ground,Steel,Sand Veil,Tangling Hair,Sand Force,50a,
+52a,Meowth,Alolan Form,Regional,Dark,,Pickup,Technician,Rattled,,53a
+53a,Persian,Alolan Form,Regional,Dark,,Fur Coat,Technician,Rattled,52a,
+74a,Geodude,Alolan Form,Regional,Rock,Electric,Magnet Pull,Sturdy,Galvanize,,75a
+75a,Graveler,Alolan Form,Regional,Rock,Electric,Magnet Pull,Sturdy,Galvanize,74a,76a
+76a,Golem,Alolan Form,Regional,Rock,Electric,Magnet Pull,Sturdy,Galvanize,75a,
+88a,Grimer,Alolan Form,Regional,Poison,Dark,Poison Touch,Gluttony,Power of Alchemy,,89a
+89a,Muk,Alolan Form,Regional,Poison,Dark,Poison Touch,Gluttony,Power of Alchemy,88a,
+103a,Exeggutor,Alolan Form,Regional,Grass,Dragon,Frisk,Frisk,Harvest,102,
+105a,Marowak,Alolan Form,Regional,Fire,Ghost,Cursed Body,Lightning Rod,Rock Head,104,
+52b,Meowth,Galarian Form,Regional,Steel,,Pickup,Tough Claws,Unnerve,,
+77a,Ponyta,Galarian Form,Regional,Psychic,,Run Away,Pastel Veil,Anticipation,,78a
+78a,Rapidash,Galarian Form,Regional,Psychic,Fairy,Run Away,Pastel Veil,Anticipation,77a,
+79a,Slowpoke,Galarian Form,Regional,Psychic,,Gluttony,Own Tempo,Regenerator,,80a
+80a,Slowbro,Galarian Form,Regional,Poison,Psychic,Quick Draw,Own Tempo,Regenerator,79a,199a
+83a,Farfetch'd,Galarian Form,Regional,Fighting,,Steadfast,,Scrappy,,
+110a,Weezing,Galarian Form,Regional,Poison,Fairy,Levitate,Neutralizing Gas,Misty Surge,109,
+122a,Mr.Mime,Galarian Form,Regional,Ice,Psychic,Vital Spirit,Screen Cleaner,Ice Body,439,
+144,Articuno,Galarian Form,Regional,Psychic,Flying,Competitive,,,,
+145,Zapdos,Galarian Form,Regional,Fighting,Flying,Defiant,,,,
+146,Moltres,Galarian Form,Regional,Dark,Flying,Berserk,,,,
+199a,Slowking,Galarian Form,Regional,Poison,Psychic,Curious Medicine,Own Tempo,Regenerator,80a,
+58a,Growlithe,Hisuian Form,Regional,Fire,Rock,,,,,59a
+59a,Arcanine,Hisuian Form,Regional,Fire,Rock,,,,58a,
+100a,Voltorb,Hisuian Form,Regional,Electric,Grass,,,,,101a
+101a,Electrode,Hisuian Form,Regional,Electric,Grass,,,,100a,
+128,Tauros,Paldean Combat Form,Regional,Fighting,,Intimidate,Anger Point,Cud Chew,,
+128,Tauros,Paldean Blaze Form,Regional,Fighting,Fire,Intimidate,Anger Point,Cud Chew,,
+128,Tauros,Paldean Aqua Form,Regional,Fighting,Water,Intimidate,Anger Point,Cud Chew,,

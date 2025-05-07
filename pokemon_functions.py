@@ -7,7 +7,7 @@ from type_fuctions import get_weakness
 #https://pypi.org/project/termcolor/
 
 #constants
-___NUMBER_OF_POKEMON___ = 151 #1010
+___NUMBER_OF_POKEMON___ = 1010
 ___CSV_POKEMON____ = "pokemon.csv"
 
 
@@ -20,10 +20,11 @@ def get_pokemon_data(input_raw):
 
     #set to number
     dict_keys = "name"
-    #check if name input
-    if input_sanatized.isdigit():
-        #remove the first '0' by converting to int (and then back to str)
-        input_sanatized = str(int(input_sanatized))
+    #check if name input (if number or not)
+    #check if it starts with a number (normal pokemon do not start with a number)
+    if input_sanatized[0].isdigit():
+        #remove the leading '0's
+        input_sanatized = input_sanatized.lstrip("0")
         dict_keys = "number"
     #debug
     #print(f"get_pokemon_data '{dict_keys}' '{input_sanatized}'")
@@ -73,8 +74,10 @@ def get_families():
 
 #describe all pokemon
 def describe_pokemon_all():
+    #TODO: WHY IS TYPE ABILITIES GROWING???
     #for every pokemon
     for index in range(1, ___NUMBER_OF_POKEMON___):
+        #get 
         pokemon = str(index)
         #describe the pokemon
         describe_pokemon(pokemon)
@@ -110,8 +113,8 @@ def get_evolutions(pokemon_object, evolution_tree, evolution_numbers):
     #determine the name of the pokemon
     name = pokemon_object.name
     #if it is a specific form:
-    if pokemon_object.form != "":
-        name += " " + pokemon_object.form
+    if pokemon_object.form_name != "":
+        name += " " + pokemon_object.form_name
     #add information of the current pokemon
     evolution_tree.append(name)
     evolution_numbers.append(pokemon_object.number)
@@ -131,60 +134,66 @@ def get_evolutions(pokemon_object, evolution_tree, evolution_numbers):
 
 
 #get the lowest level pokemon
-def get_base_pokemon(input):
+def get_base_pokemon(pokemon_id):
     #get data of the pokemon
-    pokemon, error = get_pokemon_data(input)
+    pokemon, error = get_pokemon_data(pokemon_id)
     #check for errors
     if error is not None:
-        print(error)
+        #return the error
+        return None, f"get_base_pokemon: Pokemon not found! {error}"
     else:
         #get to the lowest evolution
+        #if there is a predecessor
         while len(pokemon.predecessors) > 0:
+            #get the (first) predecessor
             pokemon, error = get_pokemon_data(pokemon.predecessors[0])
+            #if error
             if error is not None:
-                print(f"get_base_pokemon: {error}")
+                #return the error
+                return None, f"get_base_pokemon(inner): Pokemon not found! {error}" 
+        #return this pokemon
         return pokemon, None
-    return None, "get_base_pokemon: Pokemon not found!"
-
-
-
-
-
+    
+    
 
 #function the print information to the console
 def describe_pokemon(input):
     #get data of the pokemon
-    pokemon, error = get_pokemon_data(input)
+    pokemon, error = get_pokemon_data(input)    
+    
+    #print(f"pokemon: {str(pokemon)}")
     #check if success
     if error is not None:
         #print error
-        print(error)
+        #print(error)
         #stop
         return
+    
     #print report
     #describe the name
     name = pokemon.name
     #if it is a specific form
-    if pokemon.form != "":
+    if pokemon.form_name != "":
         #add to name
         name += f" ({pokemon.form})"
     #print the number and name
     cprint(f"Pokemon #{pokemon.number}: {pokemon.name}", None, attrs=["bold", "underline"])
     #print types
     type_string = "Type: "
-     #if there is only 1 ability
-    if pokemon.type[1] == "":
+    #if there is only 1 ability
+    if len(pokemon.type) == 1:
         #only print the first one
         type_string += f"{"".join(pokemon.type)}"
     else: 
         #print both abilities
         type_string += f"{", ".join(pokemon.type)}"
-
+    #print the type
     print(f"{type_string}")
+
     #get the abilities
     ability_string = "Abilities: "
     #if there is only 1 ability
-    if pokemon.abilities[1] == "":
+    if len(pokemon.abilities) == 1:
         #only print the first one
         ability_string += f"{"".join(pokemon.abilities)}"
     else: 
@@ -194,18 +203,12 @@ def describe_pokemon(input):
     if pokemon.hidden_ability != "": 
         #add the hidden ability
         ability_string += f" ({pokemon.hidden_ability})"
-    
     #print abilities
     print(ability_string)
 
-    #print evolution tree
-    evolution_tree, _ = get_evolution_line(pokemon.name)
-    print(f"Evolutions: {", ".join(evolution_tree)}")
-
     #get the type match-up
     weaknesses = get_weakness(pokemon)
-    
-    #for each
+    #for each weakness
     for weakness in weaknesses:
         modifier = weakness[0]
         types = ", ".join(weakness[1])
@@ -218,6 +221,11 @@ def describe_pokemon(input):
         elif modifier != float(1):
             cprint(f"Not very effective ({modifier}): {types}", "red")   
 
+    #get the evolution tree
+    evolution_tree, _ = get_evolution_line(pokemon.name)
+    #print the evolution tree
+    print(f"Evolutions: {", ".join(evolution_tree)}")
+
     #empty line
     print("")
 
@@ -225,9 +233,11 @@ def describe_pokemon(input):
 
 #pokemon object, containing information of the pokemon
 class pokemon(object):
+    #properties
     number = -1
     name = ""
-    form = ""
+    form_name = ""
+    form_type = ""
     type = []
     abilities = []
     hidden_ability = ""
@@ -237,20 +247,55 @@ class pokemon(object):
     # The class "constructor" - It's actually an initializer 
     def __init__(self, dict):
         #print(f"dict: {dict}")
-        
+        self.number = -1
+        self.name = ""
+        self.form_name = ""
+        self.form_type = ""
+        self.type = []
+        self.abilities = []
+        self.hidden_ability = ""
+        self.predecessors = []
+        self.successors = []
+
+        #description
+        #add number
         self.number = dict["number"]
+        #add name
         self.name = dict["name"]
-        self.form = dict["form"]
-        self.type = dict["type"].split(",")
+        #add form name (for description)
+        self.form_name = dict["form-name"]
+        #TODO: add form type (to check)
+        self.form_type = dict["form-type"]
 
-        abilities = dict["abilities"].split(",")
-        self.abilities = [abilities[0], abilities[1]]
-        self.hidden_ability = abilities[2]
+        #typing
+        #always add type 1
+        self.type.append(dict["type-1"])        
+        #if it has a secondary type
+        if dict["type-2"] != "":
+            #add it
+            self.type.append(dict["type-2"])
 
-        predecessors_list = dict["predecessors"].split(",")
-        if predecessors_list[0] != '': 
-            self.predecessors = predecessors_list
+        #ability-1,ability-2,ability-hidden,predecessors,successors
+        #abilities
+        #always add ability 1
+        self.abilities.append(dict["ability-1"])
+        #if it has a secondary ability
+        if dict["ability-2"] != "":
+            #add it
+            self.abilities.append(dict["ability-2"])
+        #if it has a hidden ability
+        if dict["ability-hidden"] != "":
+            self.hidden_ability = dict["ability-hidden"]
 
-        successors_list = dict["successors"].split(",")
-        if successors_list[0] != '': 
-            self.successors = successors_list
+        #Evolutions
+        #if it has previous evolutions
+        if dict["predecessors"] != "": 
+            #save them
+            self.predecessors = dict["predecessors"].split(",")
+        #if it has next evolutions
+        if dict["successors"] != "": 
+            #save them
+            self.successors = dict["successors"].split(",")
+    
+    def __repr__(self):
+        return f"number: '{self.number}', name: '{self.name}', form_name: '{self.form_name}', form_type: '{self.form_type}', type: '{self.type}', abilities: '{self.abilities}', hidden_ability: '{self.hidden_ability}', predecessors: '{self.predecessors}', successors: '{self.successors}'"
