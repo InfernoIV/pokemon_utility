@@ -1,11 +1,15 @@
+#script functions that handles all type specific comparisons and calculations
+
+
+
 #imports
 import csv, sys, operator
 
 
 
 #constants
-___CSV_TYPES___ = "types.csv"
-___CSV_TYPE_ABILITIES___ = "type_ability.csv"
+___CSV_TYPES___ = "Data/types.csv"
+___CSV_TYPE_ABILITIES___ = "Data/type_ability.csv"
 
 
 #assuming object pokemon_obj
