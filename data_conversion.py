@@ -288,8 +288,20 @@ class Pokemon(object):
                     #also add the secondary typing
                     total_modifier *= self.matchup[type][1]
                 
-                #add the ability modifier (if changed)
-                total_modifier *= ability_modifier
+                #check for special calculations
+                if matchup == "Wonder Guard":
+                    #if not super effective
+                    if total_modifier <= 1:
+                        #set to 0
+                        total_modifier = 0
+                else:
+                    #check for absorbtion
+                    if ability_modifier == -1:
+                        #set to absorb
+                        total_modifier = -1
+                    else:
+                        #add the ability modifier (if changed)
+                        total_modifier *= ability_modifier
                 #save modifier
                 type_matchups[matchup][type] = total_modifier
         

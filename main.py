@@ -1,6 +1,7 @@
 #usage
 #python3 main.py pokemon haunter
 #python3 main.py pokemon pikachu
+#python3 main.py pokemon shedinja
 #python3 main.py pokemon all
 #python3 main.py form alolan
 #python3 main.py class legendary

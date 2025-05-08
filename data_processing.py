@@ -56,8 +56,10 @@ def describe_pokemon(pokemon_obj):
             
             if modifier > float(1): 
                 cprint(f"Super Effective ({modifier}): {", ".join(types)}", "green")
-            elif modifier <= float(0):
-                cprint(f"Immune ({modifier}): {", ".join(types)}", "red", attrs=["bold","underline"])
+            elif modifier == float(0):
+                cprint(f"No effect ({modifier}): {", ".join(types)}", "red", attrs=["bold"])
+            elif modifier < float(0):
+                cprint(f"Absorb ({modifier}): {", ".join(types)}", "red", attrs=["bold","underline"])
             elif modifier != float(1):
                 cprint(f"Not very effective ({modifier}): {", ".join(types)}", "red") 
             else:
@@ -69,6 +71,8 @@ def describe_pokemon(pokemon_obj):
 
 
 
+
+#function that converst type match to an list with scores which contains the typings instead of typings which contain their score 
 def convert_type_matchups(type_matchups):
     #create list to print later
     type_matchups_modifiers = {}
