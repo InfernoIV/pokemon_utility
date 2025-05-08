@@ -6,6 +6,7 @@
 
 #imports
 import csv, sys, operator
+from termcolor import colored, cprint #https://pypi.org/project/termcolor/
 
 
 
@@ -91,6 +92,7 @@ def lookup_pokemon(filter):
                     matching_pokemon.append(pokemon_object)                                        
         #if exception
         except csv.Error as e:
+            cprint("CSV error", "red")
             #print and exit
             sys.exit('file {}, line {}: {}'.format(filename, reader.line_num, e))
     #return the list of matching pokemon
@@ -102,8 +104,17 @@ def lookup_pokemon(filter):
 class Pokemon(object):
     # The class "constructor" - It's actually an initializer 
     def __init__(self, dict):
-        #print(f"dict: {dict}")
-
+        
+        #guard clause
+        if dict["number"] == "" or \
+        dict["name"] == "" or \
+        dict["type-1"] == "":
+            #missing data
+            cprint("Missing data (either number, name or type) of the following pokemon", "red")
+            #stop
+            sys.exit(f"dict: {dict}")        
+            
+        
         #description
         #add number
         self.number = dict["number"]
@@ -204,6 +215,7 @@ class Pokemon(object):
                         self.matchup[attack_type].append(float(modifier))
             #if exception
             except csv.Error as e:
+                cprint("CSV error", "red")
                 #print and exit
                 sys.exit('file {}, line {}: {}'.format(filename, reader.line_num, e))        
 
@@ -250,6 +262,7 @@ class Pokemon(object):
                             self.ability_type_modifiers[ability][type] = float(modifier)
             #if exception
             except csv.Error as e:
+                cprint("CSV error", "red")
                 #print and exit
                 sys.exit('file {}, line {}: {}'.format(filename, reader.line_num, e))        
         #check for adding the non-affected modifiers

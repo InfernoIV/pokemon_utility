@@ -28,8 +28,6 @@ def describe_pokemon(pokemon_obj):
     #print abilities
     print(f"Abilities: {", ".join(pokemon_obj.all_abilities)}")
 
-
-
     #get the type match-up
     type_matchups = pokemon_obj.calculate_type_matchups()
     #convert for better reporting
@@ -71,7 +69,6 @@ def describe_pokemon(pokemon_obj):
 
 
 
-
 #function that converst type match to an list with scores which contains the typings instead of typings which contain their score 
 def convert_type_matchups(type_matchups):
     #create list to print later
@@ -103,6 +100,5 @@ def convert_type_matchups(type_matchups):
         type_matchups_modifiers[type_matchup] = modifiers_sorted    
     #return the modifiers
     return type_matchups_modifiers
-
 
 
