@@ -1,142 +1,104 @@
-#script functions that handles the data from the CSV file into usable functionalities
-
-
+#script functions that handles all pokemon specific comparisons and calculations
+#to be used:
+# describe_pokemon (described the pokemon)
 
 #imports
-import csv, sys
+import operator
+from termcolor import colored, cprint #https://pypi.org/project/termcolor/
+from data_conversion import get_pokemon
+#from type import determine_type_matchups
 
 
 
-#constants
-___CSV_POKEMON____ = "Data/pokemon.csv"
+#function the print information to the console
+#assuming pokemon object as input
+def describe_pokemon(pokemon_obj): 
+    #describe the name
+    name = pokemon_obj.name
+    #if it is a specific form
+    if pokemon_obj.form_name != "":
+        #add to name
+        name += f" ({pokemon_obj.form_name})"
+    #print the number and name
+    cprint(f"Pokemon #{pokemon_obj.number}: {name}", None, attrs=["bold", "underline"])
+   
+    #print the type
+    print(f"Type: {", ".join(pokemon_obj.type)}")
+
+    #print abilities
+    print(f"Abilities: {", ".join(pokemon_obj.all_abilities)}")
 
 
 
-#function that counts the row of a csv file
-def get_amount_of_rows(csv_file):
-     #use the csv as data source
-    with open(csv_file) as csvfile: 
-        #use a dict
-        reader = csv.Reader(csvfile)
-        #count the rows
-        row_count = sum(1 for row in reader)  # fileObject is your csv.reader
-    #return the row count
-    return row_count
+    #get the type match-up
+    type_matchups = pokemon_obj.calculate_type_matchups()
+    #convert for better reporting
+    modifier_list = convert_type_matchups(type_matchups)
+    #check if we need to create spacing
+    if len(modifier_list) > 1:
+        #empty line
+        print("")
+
+    #for each weakness
+    for matchup in modifier_list:
+        #if there are multiple configs
+        if len(modifier_list) > 1:
+            #print the ability for this config
+            print(f"Modifiers with: {matchup}")
+        #get the modifiers of this matchup
+        modifiers = modifier_list[matchup]
+        #for every modifier
+        for entry in modifiers:
+            #get the modifier
+            modifier = entry[0]
+            #get the types
+            types = entry[1]
+            
+            if modifier > float(1): 
+                cprint(f"Super Effective ({modifier}): {", ".join(types)}", "green")
+            elif modifier <= float(0):
+                cprint(f"Immune ({modifier}): {", ".join(types)}", "red", attrs=["bold","underline"])
+            elif modifier != float(1):
+                cprint(f"Not very effective ({modifier}): {", ".join(types)}", "red") 
+            else:
+                print(f"Effective: ({modifier}): {", ".join(types)}")
+        #empty line
+        print("")
+    #spacer
+    print("------------------------------------------------------------")
 
 
 
-
-#function that gets the amount of lines in the csv file
-def get_amount_of_pokemon():
-    #get the amount of lines in the pokemon csv file
-    return get_amount_of_rows(___CSV_POKEMON____)
-
-
-
-
-#function that gets pokemon according to the filter
-def get_pokemon(filter):
-    #list to hold the matching pokemon
-    matching_pokemon = []
-    #used multiple times
-    filename = ___CSV_POKEMON____
-    #use the csv as data source
-    with open(filename) as csvfile: 
-        #use a dict
-        reader = csv.DictReader(csvfile)
-        try:
-            for row in reader:
-                #set a flag
-                flag_matching = True
-                #for each check
-                for check in filter:
-                    #if not matching the value in the row
-                    if filter[check].lower() not in row[check].lower():
-                        #set flag to false
-                        flag_matching = False
-                        #stop
-                        break
-                #check if matching
-                if flag_matching == True:
-                    #convert the data to an object
-                    pokemon_object = Pokemon(row)
-                    #add object to the list
-                    matching_pokemon.append(pokemon_object)                                        
-        #if exception
-        except csv.Error as e:
-            #print and exit
-            sys.exit('file {}, line {}: {}'.format(filename, reader.line_num, e))
-    #return the list of matching pokemon
-    return matching_pokemon 
+def convert_type_matchups(type_matchups):
+    #create list to print later
+    type_matchups_modifiers = {}
+    #group them, largest modifier first
+    #for every possible ability which affects type
+    for type_matchup in type_matchups:
+        #create list
+        modifiers = {}
+        #get the types
+        types = type_matchups[type_matchup]
+        #for every type
+        for type in types:
+            #get the modifier
+            modifier = types[type]
+            #set to int if possible
+            if modifier % 1 == 0:
+                #convert to whole number (if a whole number)
+                modifier = int(modifier)
+            #check if entry exists
+            if modifier not in modifiers:
+                #create empty list
+                modifiers[modifier] = []
+            #add to list
+            modifiers[modifier].append(type)
+        #reverse sort (highest first)
+        modifiers_sorted = sorted(modifiers.items(), key=operator.itemgetter(0), reverse=True)
+        #add to total list
+        type_matchups_modifiers[type_matchup] = modifiers_sorted    
+    #return the modifiers
+    return type_matchups_modifiers
 
 
 
-#pokemon object, containing information of the pokemon
-class Pokemon(object):
-    #properties
-    number = -1
-    name = ""
-    form_name = ""
-    form_type = ""
-    type = []
-    abilities = []
-    hidden_ability = ""
-    predecessors = []
-    successors = []
-
-    # The class "constructor" - It's actually an initializer 
-    def __init__(self, dict):
-        #print(f"dict: {dict}")
-        self.number = -1
-        self.name = ""
-        self.form_name = ""
-        self.classification = ""
-        self.type = []
-        self.abilities = []
-        self.hidden_ability = ""
-        self.predecessors = []
-        self.successors = []
-
-        #description
-        #add number
-        self.number = dict["number"]
-        #add name
-        self.name = dict["name"]
-        #add form name (for description)
-        self.form_name = dict["form"]
-        #add classification
-        self.classification = dict["classification"]
-
-        #typing
-        #always add type 1
-        self.type.append(dict["type-1"])        
-        #if it has a secondary type
-        if dict["type-2"] != "":
-            #add it
-            self.type.append(dict["type-2"])
-
-        #ability-1,ability-2,ability-hidden
-        #abilities
-        #always add ability 1
-        self.abilities.append(dict["ability-1"])
-        #if it has a secondary ability
-        if dict["ability-2"] != "":
-            #add it
-            self.abilities.append(dict["ability-2"])
-        #if it has a hidden ability
-        if dict["ability-hidden"] != "":
-            self.hidden_ability = dict["ability-hidden"]
-
-        #predecessors,successors
-        #Evolutions
-        #if it has previous evolutions
-        if dict["predecessors"] != "": 
-            #save them
-            self.predecessors = dict["predecessors"].split(",")
-        #if it has next evolutions
-        if dict["successors"] != "": 
-            #save them
-            self.successors = dict["successors"].split(",")
-    
-    def __repr__(self):
-        return f"number: '{self.number}', name: '{self.name}', form_name: '{self.form_name}', form_type: '{self.form_type}', type: '{self.type}', abilities: '{self.abilities}', hidden_ability: '{self.hidden_ability}', predecessors: '{self.predecessors}', successors: '{self.successors}'"

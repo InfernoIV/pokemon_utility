@@ -1,5 +1,6 @@
 #usage
 #python3 main.py pokemon haunter
+#python3 main.py pokemon pikachu
 #python3 main.py pokemon all
 #python3 main.py form alolan
 #python3 main.py class legendary
@@ -9,7 +10,8 @@
 
 #imports
 import sys
-from pokemon import get_pokemon_data, describe_pokemon
+from data_processing import describe_pokemon
+from data_conversion import get_pokemon
 
 
 
@@ -39,15 +41,15 @@ def main():
             #if they want to have all pokemon
             if criteria == "all":
                 #get all pokemon
-                pokemon_list = get_pokemon_data(name="")
+                pokemon_list = get_pokemon(name="")
             #if it is number based
             elif criteria[0].isdigit():
                 #get all pokemon with this number
-                pokemon_list = get_pokemon_data(number=criteria)
+                pokemon_list = get_pokemon(number=criteria)
             #otherwise searching by name 
             else:
                 #get all pokemon with this number
-                pokemon_list = get_pokemon_data(name=criteria)
+                pokemon_list = get_pokemon(name=criteria)
                 #for each pokemon found
             for entry in pokemon_list:
                 #describe the pokemon
@@ -73,7 +75,7 @@ def main():
             #otherwise searching by name 
             #else:
                 #get all pokemon with this number
-            pokemon_list = get_pokemon_data(form=criteria)
+            pokemon_list = get_pokemon(form=criteria)
             #for each pokemon found
             for entry in pokemon_list:
                 #describe the pokemon
@@ -92,7 +94,7 @@ def main():
             #placeholder
             pokemon_list = []
             #get all pokemon with this classification
-            pokemon_list = get_pokemon_data(classification=criteria)
+            pokemon_list = get_pokemon(classification=criteria)
             #for each pokemon found
             for entry in pokemon_list:
                 #describe the pokemon

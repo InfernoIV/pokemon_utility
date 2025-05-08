@@ -1,5 +1,27 @@
 #file with functions to be refactored
 
+
+
+#function that gets the amount of lines in the csv file
+def get_amount_of_pokemon():
+    #get the amount of lines in the pokemon csv file
+    return get_amount_of_rows(___CSV_POKEMON____)
+
+
+
+#function that counts the row of a csv file
+def get_amount_of_rows(csv_file):
+     #use the csv as data source
+    with open(csv_file) as csvfile: 
+        #use a dict
+        reader = csv.Reader(csvfile)
+        #count the rows
+        row_count = sum(1 for row in reader)  # fileObject is your csv.reader
+    #return the row count
+    return row_count
+
+
+
 #function to get all pokemon families
 def get_families():
     numbers_processed = []
@@ -169,3 +191,112 @@ def get_pokemon_form_data(input_raw):
 
 
 
+#assuming object pokemon_obj
+def determine_type_matchups(pokemon_obj):
+    #keep track of scores
+    score = {}
+
+    #get the type modifiers from the abilities
+    ability_type_modifiers = get_ability_type_modifiers(pokemon_obj)
+    
+    #get the list of all abilities, except the abilities that affect the typing matchup
+    ability_list = []
+    print(f"ability_type_modifiers: {ability_type_modifiers}, ability_list: {ability_list}")
+    #for each ability (should be either 1 ability or 2)
+    for ability in pokemon_obj.abilities:
+        #if not in the modifier list
+        if ability not in ability_type_modifiers:
+            #add to ability list
+            ability_list.append(ability)
+    print(f"ability_type_modifiers: {ability_type_modifiers}, ability_list: {ability_list}")
+    #check for hidden ability
+    if pokemon_obj.hidden_ability != "" and pokemon_obj.hidden_ability not in ability_type_modifiers:
+        #add if there is a hidden ability and it is not in the ability type modifier list 
+        ability_list.append(pokemon_obj.hidden_ability)
+    print(f"ability_type_modifiers: {ability_type_modifiers}, ability_list: {ability_list}")
+
+    #used multiple times
+    filename = ___CSV_TYPES___
+    #use the csv as data source
+    with open(filename) as csvfile: 
+        #use a dict
+        reader = csv.DictReader(csvfile)
+        try:
+            for row in reader:
+                #get the information of the type
+                attack_type = row["Type"]
+                                
+                #first defense type
+                multiplier_1 = row[pokemon_obj.type[0]]
+                if multiplier_1 == "":
+                    multiplier_1 = float(1)
+                else:
+                    multiplier_1 = float(multiplier_1)
+                
+                #set second multiplier to 1 (if there is not second type)
+                multiplier_2 = float(1)
+                if len(pokemon_obj.type) > 1 and pokemon_obj.type[1] != "":
+                    multiplier_2 = row[pokemon_obj.type[1]]
+                    if multiplier_2 == "":
+                        multiplier_2 = float(1)
+                    else:
+                        multiplier_2 = float(multiplier_2)
+                
+                #calculate the damage multiplier
+                damage_multiplier = multiplier_1 * multiplier_2
+                #check if we neet to create an entry
+                if damage_multiplier not in score:
+                    #add empty list
+                    score[damage_multiplier] = []
+
+                #print(f"ability_type_modifiers: {ability_type_modifiers}, ability_list: {ability_list}")
+
+                #if there are type_modifiers
+                if len(ability_type_modifiers) > 0:
+                    
+                    #if our ability affects this specific type
+                    if attack_type in ability_type_modifiers:
+                        #get the data 
+                        data = ability_type_modifiers[attack_type]
+                        #set the multiplier
+                        multiplier_3 = float(data["modifier"])
+                        #calculate the damage multiplier for with the ability
+                        damage_multiplier_ability = damage_multiplier * multiplier_3
+                        #if it should absorb
+                        if multiplier_3 == -1:
+                            #set to absorb
+                            damage_multiplier_ability = -1
+                        #check if we need to create an entry
+                        if damage_multiplier_ability not in score:
+                            #add empty list
+                            score[damage_multiplier_ability] = []
+
+
+                        #print(f"ability_list: {ability_list} & {damage_multiplier}")
+                        #print(f"type ability: {data["ability"]} & {damage_multiplier_ability}")
+
+                        #first: if there are other abilities which DO NOT modify typing
+                        if len(ability_list) > 0:
+                            #add the non-affected typing to score list (with the extra text)
+                            score[damage_multiplier].append(attack_type + f" ({", ".join(ability_list)})")
+                            #add the affected typing to score list (with the extra text)
+                            score[damage_multiplier_ability].append(attack_type + f" ({data["ability"]})")
+                        #if there is only 1 ability
+                        else:
+                            #only add the calculation, not the extra text at the attack type
+                            score[damage_multiplier_ability].append(attack_type)                    
+
+                #no ability typing, just add the value
+                else:
+                    #add to score list
+                    score[damage_multiplier].append(attack_type)
+
+        #if exception
+        except csv.Error as e:
+            #print and exit
+            sys.exit('file {}, line {}: {}'.format(filename, reader.line_num, e))
+    
+    #sort dict
+    score_sorted = sorted(score.items(), key=operator.itemgetter(0), reverse=True)
+    #default return value
+    return score_sorted          
