@@ -14,7 +14,7 @@ from termcolor import colored, cprint #https://pypi.org/project/termcolor/
 ___CSV_POKEMON____ = "Data/pokemon.csv"
 ___CSV_TYPES___ = "Data/types.csv"
 ___CSV_TYPE_ABILITIES___ = "Data/type_ability.csv"
-
+___ALLOWED_TYPES___ = ["Normal","Fire","Water","Grass","Electric","Ice","Fighting","Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Dark","Steel","Fairy"]
 
 #function that creates a filter and then retrieves the matching pokemon
 def get_pokemon(**kwargs): 
@@ -105,12 +105,29 @@ class Pokemon(object):
     # The class "constructor" - It's actually an initializer 
     def __init__(self, dict):
         
-        #guard clause
-        if dict["number"] == "" or \
-        dict["name"] == "" or \
-        dict["type-1"] == "":
+        #guard clauses
+        #check the number
+        if dict["number"] == "":
+            #missing number
+            cprint("Missing number of the following pokemon:", "red")
+            #stop
+            sys.exit(f"dict: {dict}")   
+        #check the name
+        if dict["name"] == "":
+            #missing name
+            cprint("Missing name of the following pokemon:", "red")
+            #stop
+            sys.exit(f"dict: {dict}")   
+        #check the typing
+        if dict["type-1"] == "":
             #missing data
-            cprint("Missing data (either number, name or type) of the following pokemon", "red")
+            cprint("Missing type of the following pokemon:", "red")
+            #stop
+            sys.exit(f"dict: {dict}")    
+        #check the typing
+        if dict["type-1"] not in ___ALLOWED_TYPES___:
+            #missing data
+            cprint("Incorrect type of the following pokemon:", "red")
             #stop
             sys.exit(f"dict: {dict}")        
             
