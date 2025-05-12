@@ -104,34 +104,40 @@ def lookup_pokemon(filter):
 class Pokemon(object):
     # The class "constructor" - It's actually an initializer 
     def __init__(self, dict):
-        
         #guard clauses
+        flag_guarded = False
         #check the number
         if dict["number"] == "":
+            #set flag
+            flag_guarded = True 
             #missing number
             cprint("Missing number of the following pokemon:", "red")
-            #stop
-            sys.exit(f"dict: {dict}")   
         #check the name
         if dict["name"] == "":
+            #set flag
+            flag_guarded = True
             #missing name
-            cprint("Missing name of the following pokemon:", "red")
-            #stop
-            sys.exit(f"dict: {dict}")   
+            cprint("Missing name of the following pokemon:", "red")  
         #check the typing
         if dict["type-1"] == "":
+            #set flag
+            flag_guarded = True
             #missing data
             cprint("Missing type of the following pokemon:", "red")
-            #stop
-            sys.exit(f"dict: {dict}")    
         #check the typing
-        if dict["type-1"] not in ___ALLOWED_TYPES___:
+        elif dict["type-1"] not in ___ALLOWED_TYPES___:
+            #set flag
+            flag_guarded = True
             #missing data
             cprint("Incorrect type of the following pokemon:", "red")
-            #stop
-            sys.exit(f"dict: {dict}")        
             
-        
+                  
+        #if there is a guard
+        if flag_guarded == True:
+            #stop the script
+            sys.exit(f"dict: {dict}")  
+
+        #data is correct, start conversion to object 
         #description
         #add number
         self.number = dict["number"]

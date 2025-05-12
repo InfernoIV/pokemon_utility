@@ -386,7 +386,7 @@ number,name,form,classification,type-1,type-2,ability-1,ability-2,ability-hidden
 312,Minun,,,Electric,,Minus,,Volt Absorb,,
 313,Volbeat,,,Bug,,Illuminate,Swarm,Prankster,,
 314,Illumise,,,Bug,,Oblivious,Tinted Lens,Prankster,,
-315,Roselia,,,Grass,Poison,Natural Cure,Poison Point,Leaf Guard,,407
+315,Roselia,,,Grass,Poison,Natural Cure,Poison Point,Leaf Guard,406,407
 316,Gulpin,,,Poison,,Liquid Ooze,Sticky Hold,Gluttony,,317
 317,Swalot,,,Poison,,Liquid Ooze,Sticky Hold,Gluttony,316,
 318,Carvanha,,,Water,Dark,Rough Skin,,Speed Boost,,319
@@ -465,26 +465,86 @@ number,name,form,classification,type-1,type-2,ability-1,ability-2,ability-hidden
 386,Deoxys,Defense Forme,Mythical,Psychic,,Pressure,,,,
 386,Deoxys,Speed Forme,Mythical,Psychic,,Pressure,,,,
 
-
-
-
-
+387,Turtwig,,,Grass,,Overgrow,,Shell Armor,,388
+388,Grotle,,,Grass,,Overgrow,,Shell Armor,387,389
+389,Torterra,,,Grass,Ground,Overgrow,,Shell Armor,388,
+390,Chimchar,,,Fire,,Blaze,,Iron Fist,,391
+391,Monferno,,,Fire,Fighting,Blaze,,Iron Fist,390,392
+392,Infernape,,,Fire,Fighting,Blaze,,Iron Fist,391,
+393,Piplup,,,Water,,Torrent,,Competitive,,394
+394,Prinplup,,,Water,,Torrent,,Competitive,393,395
+395,Empoleon,,,Water,Steel,Torrent,,Competitive,394,
+396,Starly,,,Normal,Flying,Keen Eye,,Reckless,,397
+397,Staravia,,,Normal,Flying,Intimidate,,Reckless,396,398
+398,Staraptor,,,Normal,Flying,Intimidate,,Reckless,397,
+399,Bidoof,,,Normal,,Simple,Unaware,Moody,,400
+400,Bibarel,,,Normal,Water,Simple,Unaware,Moody,399,
+401,Kricketot,,,Bug,,Shed Skin,,Run Away,,402
+402,Kricketune,,,Bug,,Swarm,,Technician,401,
+403,Shinx,,,Electric,,Rivalry,Intimidate,Guts,,404
+404,Luxio,,,Electric,,Rivalry,Intimidate,Guts,403,405
+405,Luxray,,,Electric,,Rivalry,Intimidate,Guts,404,
+406,Budew,,,Grass,Poison,Natural Cure,Poison Point,Leaf Guard,315,
 407,Roserade,,,Grass,Poison,Natural Cure,Poison Point,Technician,315,
-
+408,Cranidos,,,Rock,,Mold Breaker,,Sheer Force,,409
+409,Rampardos,,,Rock,,Mold Breaker,,Sheer Force,408,
+410,Shieldon,,,Rock,Steel,Sturdy,,Soundproof,,411
+411,Bastiodon,,,Rock,Steel,Sturdy,,Soundproof,410,
+412a,Burmy,Plant Cloak,,Bug,,Shed Skin,,Overcoat,,413a
+412b,Burmy,Sandy Cloak,,Bug,,Shed Skin,,Overcoat,,413b
+412c,Burmy,Trash Cloak,,Bug,,Shed Skin,,Overcoat,,413c
+413a,Wormadam,Plant Cloak,,Bug,Grass,Anticipation,,Overcoat,412a,414
+413b,Wormadam,Sandy Cloak,,Bug,Ground,Anticipation,,Overcoat,412b,414
+413c,Wormadam,Trash Cloak,,Bug,Steel,Anticipation,,Overcoat,412c,414
+414,Mothim,,,Bug,Flying,Swarm,,Tinted Lens,"413a,413b,413c",
+415,Combee,,,Bug,Flying,Honey Gather,,Hustle,,416
+416,Vespiquen,,,Bug,Flying,Pressure,,Unnerve,415,
+417,Pachirisu,,,Electric,,Run Away,Pickup,Volt Absorb,,
+418,Buizel,,,Water,,Swift Swim,,Water Veil,,419
+419,Floatzel,,,Water,,Swift Swim,,Water Veil,418,
+420,Cherubi,,,Grass,,Chlorophyll,,,,421
+421,Cherrim,,,Grass,,Flower Gift,,,420,
+422a,Shellos,East Sea,,Water,,Sticky Hold,Storm Drain,Sand Force,,423a
+422b,Shellos,West Sea,,Water,,Sticky Hold,Storm Drain,Sand Force,,423b
+423a,Gastrodon,East Sea,,Water,Ground,Sticky Hold,Storm Drain,Sand Force,422a,
+423b,Gastrodon,West Sea,,Water,Ground,Sticky Hold,Storm Drain,Sand Force,422b,
 424,Ambipom,,,Normal,,Technician,Pickup,Skill Link,190,
-
+425,Drifloon,,,Ghost,Flying,Aftermath,Unburden,Flare Boost,,426
+426,Drifblim,,,Ghost,Flying,Aftermath,Unburden,Flare Boost,425,
+427,Buneary,,,Normal,,Run Away,Klutz,Limber,,428
+428,Lopunny,,,Normal,,Cute Charm,Klutz,Limber,427,
 429,Mismagius,,,Ghost,,Levitate,,,200,
 430,Honchkrow,,,Dark,Flying,Insomnia,,,198,
+431,Glameow,,,Normal,,Limber,,,,432
+432,Purugly,,,Normal,,Thick Fat,,,431,
 433,Chingling,,,Psychic,,Levitate,,,,358
-
+434,Stunky,,,Poison,Dark,Stench,Aftermath,Keen Eye,,435
+435,Skuntank,,,Poison,Dark,Stench,Aftermath,Keen Eye,434,
+436,Bronzor,,,Steel,Psychic,Levitate,Heatproof,Heavy Metal,,437
+437,Bronzong,,,Steel,Psychic,Levitate,Heatproof,Heavy Metal,436,
 438,Bonsly,,,Rock,,Sturdy,Rock Head,Rattled,,185
 439,Mime Jr.,,,Psychic,Fairy,Soundproof,Filter,Technician,,"122,122a"
 440,Happiny,,,Normal,,Natural Cure,Serene Grace,Friend Guard,,113
-
-458,Mantyke,,,Water,Flying,Swift Swim,Water Absorb,Water Veil,,226
-
+441,Chatot,,,Normal,Flying,Keen Eye,Tangled Feet,Big Pecks,,
+442,Spiritomb,,,Ghost,Dark,Pressure,,Infiltrator,,
+443,Gible,,,Dragon,Ground,Sand Veil,,Rough Skin,,444
+444,Gabite,,,Dragon,Ground,Sand Veil,,Rough Skin,443,445
+445,Garchomp,,,Dragon,Ground,Sand Veil,,Rough Skin,444,
 446,Munchlax,,,Normal,,Pickup,Thick Fat,Gluttony,,143
-
+447,Riolu,,,Fighting,,Steadfast,Inner Focus,Prankster,,448
+448,Lucario,,,Fighting,Steel,Steadfast,Inner Focus,Justified,447,
+449,Hippopotas,,,Ground,,Sand Stream,,Sand Force,,450
+450,Hippowdon,,,Ground,,Sand Stream,,Sand Force,449,
+451,Skorupi,,,Poison,Bug,Battle Armor,Sniper,Keen Eye,,452
+452,Drapion,,,Poison,Dark,Battle Armor,Sniper,Keen Eye,451,
+453,Croagunk,,,Poison,Fighting,Anticipation,Dry Skin,Poison Touch,,454
+454,Toxicroak,,,Poison,Fighting,Anticipation,Dry Skin,Poison Touch,453,
+455,Carnivine,,,Grass,,Levitate,,,,
+456,Finneon,,,Water,,Swift Swim,Storm Drain,Water Veil,,457
+457,Lumineon,,,Water,,Swift Swim,Storm Drain,Water Veil,456,
+458,Mantyke,,,Water,Flying,Swift Swim,Water Absorb,Water Veil,,226
+459,Snover,,,Grass,Ice,Snow Warning,,Soundproof,,460
+460,Abomasnow,,,Grass,Ice,Snow Warning,,Soundproof,459,
 461,Weavile,,,Dark,Ice,Pressure,,Pickpocket,215a,
 462,Magnezone,,,Electric,Steel,Magnet Pull,Sturdy,Analytic,82,
 463,Lickilicky,,,Normal,,Own Tempo,Oblivious,Cloud Nine,108,
@@ -503,6 +563,30 @@ number,name,form,classification,type-1,type-2,ability-1,ability-2,ability-hidden
 476,Probopass,,,Rock,Steel,Sturdy,Magnet Pull,Sand Force,299,
 477,Dusknoir,,,Ghost,,Pressure,,Frisk,356,
 478,Froslass,,,Ice,Ghost,Snow Cloak,,Cursed Body,361,
+479,Rotom,Normal,,Electric,Ghost,Levitate,,,,
+479,Rotom,Heat,,Electric,Fire,Levitate,,,,
+479,Rotom,Wash,,Electric,Water,Levitate,,,,
+479,Rotom,Frost,,Electric,Ice,Levitate,,,,
+479,Rotom,Fan,,Electric,Flying,Levitate,,,,
+479,Rotom,Mow,,Electric,Grass,Levitate,,,,
+480,Uxie,,Legendary,Psychic,,Levitate,,,,
+481,Mesprit,,Legendary,Psychic,,Levitate,,,,
+482,Azelf,,Legendary,Psychic,,Levitate,,,,
+483,Dialga,Standard Forme,Legendary,Steel,Dragon,Pressure,,Telepathy,,
+483,Dialga,Origin Forme,Legendary,Steel,Dragon,Pressure,,Telepathy,,
+484,Palkia,Standard Forme,Legendary,Water,Dragon,Pressure,,Telepathy,,
+484,Palkia,Origin Forme,Legendary,Water,Dragon,Pressure,,Telepathy,,
+485,Heatran,,Mythical,Fire,Steel,Flash Fire,,Flame Body,,
+486,Regigigas,,Legendary,Normal,,Slow Start,,,,
+487,Giratina,Standard Forme,Legendary,Ghost,Dragon,Pressure,,Telepathy,,
+487,Giratina,Origin Forme,Legendary,Ghost,Dragon,Pressure,,Telepathy,,
+488,Cresselia,,Legendary,Psychic,,Levitate,,,,
+489,Phione,,,Water,,Hydration,,,,
+490,Manaphy,,,Water,,Hydration,,,,
+491,Darkrai,,Mythical,Dark,,Bad Dreams,,,,
+492,Shaymin,Land Forme,Mythical,Grass,,Natural Cure,,,,
+492,Shaymin,Sky Forme,Mythical,Grass,Flying,Serene Grace,,,,
+493,Arceus,,Legendary,Normal,,Multitype,,,,
 
 700,Sylveon,,,Fairy,,Cute Charm,,Pixilate,133,
 
