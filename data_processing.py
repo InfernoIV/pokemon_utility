@@ -10,6 +10,55 @@ from data_conversion import get_pokemon
 
 
 
+#function to determine the generation of the pokemon
+def determine_generation(pokemon_obj):
+    #check form first, since this can give away the generation
+    #forms for region
+    regional_forms = {
+        "Alolan":7,
+        "Galarian":8,
+        "Hisuian":8,
+        "Paldean":9,
+    }
+    #get the form to check for alternate forms
+    form = pokemon_obj.form_name
+    if form in regional_forms:
+        #return the generation of this form
+        return regional_forms[form]
+    
+    #otherwise normal processing
+    #get the number of the pokemon
+    number = pokemon_obj.number
+    #if it is an alternate form
+    while not number[len(number)-1].isdigit():
+        #remove the last character
+        number = number[:-1]
+    #convert to number
+    number = int(number)
+
+    generation = [
+        1,#-151
+        152,#-251
+        252,#-386
+        387,#-493
+        494,#-649
+        650,#-721
+        722,#-809
+        810,#-905
+        906,#-1010
+    ]
+    #for each generation
+    for gen in range(len(generation)):
+        start_value_of_generation = generation[gen]
+        #if lower than the current generation
+        if number < start_value_of_generation:
+            #return the index (which is 1 lower than the current generation)
+            return gen
+    #return the highest generation
+    return len(generation)    
+
+
+
 #function the print information to the console
 #assuming pokemon object as input
 def describe_pokemon(pokemon_obj): 
@@ -22,6 +71,9 @@ def describe_pokemon(pokemon_obj):
     #print the number and name
     cprint(f"Pokemon #{pokemon_obj.number}: {name}", None, attrs=["bold", "underline"])
    
+    generation = determine_generation(pokemon_obj)
+    cprint(f"Generation: {generation}")
+
     #print the type
     print(f"Type: {", ".join(pokemon_obj.type)}")
 
