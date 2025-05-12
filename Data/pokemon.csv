@@ -901,6 +901,109 @@ number,name,form,classification,type-1,type-2,ability-1,ability-2,ability-hidden
 720b,Hoopa,Hoopa Unbound,,Psychic,Dark,Magician,,,,
 721,Volcanion,,,Fire,Water,Water Absorb,,,,
 
+722,Rowlet,,,Grass,Flying,Overgrow,,Long Reach,,723
+723,Dartrix,,,Grass,Flying,Overgrow,,Long Reach,722,"724a,724b"
+724a,Decidueye,Normal,,Grass,Ghost,Overgrow,,Long Reach,723,
+724b,Decidueye,Hisuian,,Grass,Fighting,,,,723,
+725,Litten,,,Fire,,Blaze,,Intimidate,,726
+726,Torracat,,,Fire,,Blaze,,Intimidate,725,727
+727,Incineroar,,,Fire,Dark,Blaze,,Intimidate,726,
+728,Popplio,,,Water,,Torrent,,Liquid Voice,,729
+729,Brionne,,,Water,,Torrent,,Liquid Voice,728,730
+730,Primarina,,,Water,Fairy,Torrent,,Liquid Voice,729,
+731,Pikipek,,,Normal,Flying,Keen Eye,Skill Link,Pickup,,732
+732,Trumbeak,,,Normal,Flying,Keen Eye,Skill Link,Pickup,731,733
+733,Toucannon,,,Normal,Flying,Keen Eye,Skill Link,Sheer Force,732,
+734,Yungoos,,,Normal,,Stakeout,Strong Jaw,Adaptability,,735
+735,Gumshoos,,,Normal,,Stakeout,Strong Jaw,Adaptability,734,
+736,Grubbin,,,Bug,,Swarm,,,,737
+737,Charjabug,,,Bug,Electric,Battery,,,736,738
+738,Vikavolt,,,Bug,Electric,Levitate,,,,737
+739,Crabrawler,,,Fighting,,Hyper Cutter,Iron Fist,Anger Point,,740
+740,Crabominable,,,Fighting,Ice,Hyper Cutter,Iron Fist,Anger Point,739,
+741a,Oricorio,Baile Style,,Fire,Flying,Dancer,,,,
+741b,Oricorio,Pom-Pom Style,,Electric,Flying,Dancer,,,,
+741c,Oricorio,Pa'u Style,,Psychic,Flying,Dancer,,,,
+741d,Oricorio,Sensu Style,,Ghost,Flying,Dancer,,,,
+742,Cutiefly,,,Bug,Fairy,Honey Gather,Shield Dust,Sweet Veil,,743
+743,Ribombee,,,Bug,,Honey Gather,Shield Dust,Sweet Veil,742,
+744,Rockruff,,,Rock,,Keen Eye,Vital Spirit,Steadfast,,"745a,745b,745c"
+745a,Lycanroc,Midday Form,,Rock,,Keen Eye,Sand Rush,Steadfast,744,
+745b,Lycanroc,Midnight Form,,Rock,,Keen Eye,Vital Spirit,No Guard,744,
+745c,Lycanroc,Dusk Form,,Rock,,Tough Claws,,,744,
+746,Wishiwashi,,,Water,,Schooling,,,,
+747,Mareanie,,,Water,,Merciless,Limber,Regenerator,,748
+748,Toxapex,,,Poison,Water,Merciless,Limber,Regenerator,747,
+749,Mudbray,,,Ground,,Own Tempo,Stamina,Inner Focus,,750
+750,Mudsdale,,,Ground,,Own Tempo,Stamina,Inner Focus,749,
+751,Dewpider,,,Water,Bug,Water Bubble,,Water Absorb,,752
+752,Araquanid,,,Water,Bug,Water Bubble,,Water Absorb,751,
+753,Fomantis,,,Grass,,Leaf Guard,,Contrary,,754
+754,Lurantis,,,Grass,,Leaf Guard,,Contrary,753,
+755,Morelull,,,Grass,Fairy,Illuminate,Effect Spore,Rain Dish,,756
+756,Shiinotic,,,Grass,Fairy,Illuminate,Effect Spore,Rain Dish,755,
+757,Salandit,,,Poison,Fire,Corrosion,,Oblivious,,758
+758,Salazzle,,,Poison,Fire,Corrosion,,Oblivious,757,
+759,Stufful,,,Normal,Fighting,Fluffy,Klutz,Cute Charm,,760
+760,Bewear,,,Normal,Fighting,Fluffy,Klutz,Unnerve,759,
+761,Bounsweet,,,Grass,,Leaf Guard,Oblivious,Sweet Veil,,762
+762,Steenee,,,Grass,,Leaf Guard,Oblivious,Sweet Veil,761,763
+763,Tsareena,,,Grass,,Leaf Guard,Queenly Majesty,Sweet Veil,762,
+764,Comfey,,,Fairy,,Flower Veil,Triage,Natural Cure,,
+765,Oranguru,,,Normal,Psychic,Inner Focus,Telepathy,Symbiosis,,
+766,Passimian,,,Fighting,,Receiver,,Defiant,,
+767,Wimpod,,,Bug,Water,Wimp Out,,,,768
+768,Golisopod,,,Bug,Water,Emergency Exit,,,767,
+769,Sandygast,,,Ghost,Ground,Water Compaction,,Sand Veil,,770
+770,Palossand,,,Ghost,Ground,Water Compaction,,Sand Veil,769,
+771,Pyukumuku,,,Water,,Innards Out,,Unaware,,
+772,Type: Null,,Legendary,Normal,,Battle Armor,,,,773
+773,Silvally,Type: Normal,Legendary,Normal,,RKS System,,,772,
+774a,Minior,Meteor Form,,Rock,Flying,Shields Down,,,,
+774b,Minior,Red Core,,Rock,Flying,Shields Down,,,,
+774c,Minior,Orange Core,,Rock,Flying,Shields Down,,,,
+774d,Minior,Yellow Core,,Rock,Flying,Shields Down,,,,
+774e,Minior,Green Core,,Rock,Flying,Shields Down,,,,
+774f,Minior,Blue Core,,Rock,Flying,Shields Down,,,,
+774g,Minior,Indigo Core,,Rock,Flying,Shields Down,,,,
+774h,Minior,Violet Core,,Rock,Flying,Shields Down,,,,
+775,Komala,,,Normal,,Comatose,,,,
+776,Turtonator,,,Fire,Dragon,Shell Armor,,,,
+777,Togedemaru,,,Electric,Steel,Iron Barbs,Lightning Rod,Sturdy,,
+778,Mimikyu,,,Ghost,Fairy,Disguise,,,,
+779,Bruxish,,,Water,Psychic,Dazzling,Strong Jaw,Wonder Skin,,
+780,Drampa,,,Normal,Dragon,Berserk,Sap Sipper,Cloud Nine,,
+781,Dhelmise,,,Ghost,Grass,Steelworker,,,,
+782,Jangmo-o,,,Dragon,,Bulletproof,Soundproof,Overcoat,,783
+783,Hakamo-o,,,Dragon,Fighting,Bulletproof,Soundproof,Overcoat,782,784
+784,Kommo-o,,,Dragon,Fighting,Bulletproof,Soundproof,Overcoat,783,
+785,Tapu Koko,,Legendary,Electric,Fairy,Electric Surge,,Telepathy,,
+786,Tapu Lele,,Legendary,Psychic,Fairy,Psychic Surge,,Telepathy,,
+787,Tapu Bulu,,Legendary,Grass,Fairy,Grassy Surge,,Telepathy,,
+788,Tapu Fini,,Legendary,Water,Fairy,Misty Surge,,Telepathy,,
+789,Cosmog,,Legendary,Psychic,,Unaware,,,,790
+790,Cosmoem,,Legendary,Psychic,,Sturdy,,,789,"791,792"
+791,Solgaleo,,Legendary,Psychic,Steel,Full Metal Body,,,790,
+792,Lunala,,Legendary,Psychic,Ghost,Shadow Shield,,,790,
+793,Nihilego,,Legendary,Rock,Poison,Beast Boost,,,,
+794,Buzzwole,,Legendary,Bug,Fighting,Beast Boost,,,,
+795,Pheromosa,,Legendary,Bug,Fighting,Beast Boost,,,,
+796,Xurkitree,,Legendary,Electric,,Beast Boost,,,,
+797,Celesteela,,Legendary,Steel,Flying,Beast Boost,,,,
+798,Kartana,,Legendary,Grass,Steel,Beast Boost,,,,
+799,Guzzlord,,Legendary,Dark,Dragon,Beast Boost,,,,
+800,Necrozma,,Legendary,Psychic,,Prism Armor,,,,
+801a,Magearna,,Mythical,Steel,Fairy,Soul-Heart,,,,
+801b,Magearna,Original Color,Mythical,Steel,Fairy,Soul-Heart,,,,
+802,Marshadow,,Mythical,Fighting,Ghost,Technician,,,,
+803,Poipole,,Legendary,Poison,,Beast Boost,,,,804
+804,Naganadel,,Legendary,Poison,Dragon,Beast Boost,,,803,
+805,Stakataka,,Legendary,Rock,Steel,Beast Boost,,,,
+806,Blacephalon,,Legendary,Fire,Ghost,Beast Boost,,,,
+807,Zeraora,,Mythical,Electric,,Volt Absorb,,,,
+808,Meltan,,Mythical,Steel,,Magnet Pull,,,,809
+809,Melmetal,,Mythical,Steel,,Iron Fist,,,808,
+
 862,Obstagoon,,,Dark,Normal,Reckless,Guts,Defiant,264b,
 863,Perrserker,,,Steel,,Battle Armor,Tough Claws,Steely Spirit,52c,
 864,Cursola,,,Ghost,,Weak Armor,,Perish Body,222b,
