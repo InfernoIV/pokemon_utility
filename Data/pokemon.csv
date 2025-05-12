@@ -771,7 +771,135 @@ number,name,form,classification,type-1,type-2,ability-1,ability-2,ability-hidden
 648b,Meloetta,Pirouette Forme,Mythical,Normal,Fighting,Serene Grace,,,,
 649,Genesect,,Mythical,Bug,Steel,Download,,,,
 
+650,Chespin,,,Grass,,Overgrow,,Bulletproof,,651
+651,Quilladin,,,Grass,,Overgrow,,Bulletproof,650,652
+652,Chesnaught,,,Grass,Fighting,Overgrow,,Bulletproof,651,
+653,Fennekin,,,Fire,,Blaze,,Magician,,654
+654,Braixen,,,Fire,,Blaze,,Magician,653,655
+655,Delphox,,,Fire,Psychic,Blaze,,Magician,654,
+656,Froakie,,,Water,,Torrent,,Protean,,657
+657,Frogadier,,,Water,,Torrent,,Protean,656,658a
+658a,Greninja,,,Water,Dark,Torrent,,Protean,657,
+658b,Greninja,Ash-Greninja,,Water,Dark,Battle Bond,,,,
+659,Bunnelby,,,Normal,,Pickup,Cheek Pouch,Huge Power,,660
+660,Diggersby,,,Normal,Ground,Pickup,Cheek Pouch,Huge Power,659,
+661,Fletchling,,,Fire,Flying,Big Pecks,,Gale Wings,,662
+662,Fletchinder,,,Fire,Flying,Flame Body,,Gale Wings,661,663
+663,Talonflame,,,Fire,Flying,Flame Body,,Gale Wings,662,
+664,Scatterbug,,,Bug,,Shield Dust,Compound Eyes,Friend Guard,,665
+665,Spewpa,,,Bug,,Shed Skin,,Friend Guard,664,"666a,666b,666c,666d,666e,666f,666g,666h,666i,666j,666k,666l,666m,666n,666o,666p,666q,666r,666s,666t"
+666a,Vivillon,Pattern: Archipelago,,Bug,Flying,Shield Dust,Compound Eyes,Friend Guard,665,
+666b,Vivillon,Pattern: Continental,,Bug,Flying,Shield Dust,Compound Eyes,Friend Guard,665,
+666c,Vivillon,Pattern: Elegant,,Bug,Flying,Shield Dust,Compound Eyes,Friend Guard,665,
+666d,Vivillon,Pattern: Garden,,Bug,Flying,Shield Dust,Compound Eyes,Friend Guard,665,
+666e,Vivillon,Pattern: High Plains,,Bug,Flying,Shield Dust,Compound Eyes,Friend Guard,665,
+666f,Vivillon,Pattern: Icy Snow,,Bug,Flying,Shield Dust,Compound Eyes,Friend Guard,665,
+666g,Vivillon,Pattern: Jungle,,Bug,Flying,Shield Dust,Compound Eyes,Friend Guard,665,
+666h,Vivillon,Pattern: Marine,,Bug,Flying,Shield Dust,Compound Eyes,Friend Guard,665,
+666i,Vivillon,Pattern: Meadow,,Bug,Flying,Shield Dust,Compound Eyes,Friend Guard,665,
+666j,Vivillon,Pattern: Modern,,Bug,Flying,Shield Dust,Compound Eyes,Friend Guard,665,
+666k,Vivillon,Pattern: Monsoon,,Bug,Flying,Shield Dust,Compound Eyes,Friend Guard,665,
+666l,Vivillon,Pattern: Ocean,,Bug,Flying,Shield Dust,Compound Eyes,Friend Guard,665,
+666m,Vivillon,Pattern: Polar,,Bug,Flying,Shield Dust,Compound Eyes,Friend Guard,665,
+666n,Vivillon,Pattern: River,,Bug,Flying,Shield Dust,Compound Eyes,Friend Guard,665,
+666o,Vivillon,Pattern: Sandstorm,,Bug,Flying,Shield Dust,Compound Eyes,Friend Guard,665,
+666p,Vivillon,Pattern: Savanna,,Bug,Flying,Shield Dust,Compound Eyes,Friend Guard,665,
+666q,Vivillon,Pattern: Sun,,Bug,Flying,Shield Dust,Compound Eyes,Friend Guard,665,
+666r,Vivillon,Pattern: Tundra,,Bug,Flying,Shield Dust,Compound Eyes,Friend Guard,665,
+666s,Vivillon,Pattern: Fancy,,Bug,Flying,Shield Dust,Compound Eyes,Friend Guard,665,
+666t,Vivillon,Pattern: Poké Ball,,Bug,Flying,Shield Dust,Compound Eyes,Friend Guard,665,
+667,Litleo,,,Fire,Normal,Rivalry,Unnerve,Moxie,,668
+668,Pyroar,,,Fire,Normal,Rivalry,Unnerve,Moxie,667,
+669a,Flabébé,Red Flower,,Fairy,,Flower Veil,,Symbiosis,,670a
+669b,Flabébé,Yellow Flower,,Fairy,,Flower Veil,,Symbiosis,,670b
+669c,Flabébé,Orange Flower,,Fairy,,Flower Veil,,Symbiosis,,670c
+669d,Flabébé,Blue Flower,,Fairy,,Flower Veil,,Symbiosis,,670d
+669e,Flabébé,White Flower,,Fairy,,Flower Veil,,Symbiosis,,670e
+670a,Floette,Red Flower,,Fairy,,Flower Veil,,Symbiosis,669a,671a
+670b,Floette,Yellow Flower,,Fairy,,Flower Veil,,Symbiosis,669b,671b
+670c,Floette,Orange Flower,,Fairy,,Flower Veil,,Symbiosis,669c,671c
+670d,Floette,Blue Flower,,Fairy,,Flower Veil,,Symbiosis,669d,671d
+670e,Floette,White Flower,,Fairy,,Flower Veil,,Symbiosis,669e,671e
+671a,Florges,Red Flower,,Fairy,,Flower Veil,,Symbiosis,670a,
+671b,Florges,Yellow Flower,,Fairy,,Flower Veil,,Symbiosis,670b,
+671c,Florges,Orange Flower,,Fairy,,Flower Veil,,Symbiosis,670c,
+671d,Florges,Blue Flower,,Fairy,,Flower Veil,,Symbiosis,670d,
+671e,Florges,White Flower,,Fairy,,Flower Veil,,Symbiosis,670e,
+672,Skiddo,,,Grass,,Sap Sipper,,Grass Pelt,,673
+673,Gogoat,,,Grass,,Sap Sipper,,Grass Pelt,672,
+674,Pancham,,,Fighting,,Iron Fist,Mold Breaker,Scrappy,,675
+675,Pangoro,,,Fighting,Dark,Iron Fist,Mold Breaker,Scrappy,674,
+676a,Furfrou,Natural Form,,Normal,,Fur Coat,,,,
+676b,Furfrou,Heart Trim,,Normal,,Fur Coat,,,,
+676c,Furfrou,Star Trim,,Normal,,Fur Coat,,,,
+676d,Furfrou,Diamond Trim,,Normal,,Fur Coat,,,,
+676e,Furfrou,Debutante Trim,,Normal,,Fur Coat,,,,
+676f,Furfrou,Matron Trim,,Normal,,Fur Coat,,,,
+676g,Furfrou,Dandy Trim,,Normal,,Fur Coat,,,,
+676h,Furfrou,La Reine Trim,,Normal,,Fur Coat,,,,
+676i,Furfrou,Kabuki Trim,,Normal,,Fur Coat,,,,
+676j,Furfrou,Pharaoh Trim,,Normal,,Fur Coat,,,,
+677,Espurr,,,Psychic,,Keen Eye,Infiltrator,Own Tempo,,"678a,678b"
+678a,Meowstic,Male,,Psychic,,Keen Eye,Infiltrator,Prankster,677,
+678b,Meowstic,Female,,Psychic,,Keen Eye,Infiltrator,Competitive,677,
+679,Honedge,,,Steel,Ghost,No Guard,,,,680
+680,Doublade,,,Steel,Ghost,No Guard,,,679,681
+681,Aegislash,Shield Forme,,Steel,Ghost,Stance Change,,,680,
+681,Aegislash,Blade Forme,,Steel,Ghost,Stance Change,,,680,
+682,Spritzee,,,Fairy,,Healer,,Aroma Veil,,683
+683,Aromatisse,,,Fairy,,Healer,,Aroma Veil,682,
+684,Swirlix,,,Fairy,,Sweet Veil,,Unburden,,685
+685,Slurpuff,,,Fairy,,Sweet Veil,,Unburden,684,
+686,Inkay,,,Dark,Psychic,Contrary,Suction Cups,Infiltrator,,687
+687,Malamar,,,Dark,Psychic,Contrary,Suction Cups,Infiltrator,686,
+688,Binacle,,,Rock,Water,Tough Claws,Sniper,Pickpocket,,689
+689,Barbaracle,,,Rock,Water,Tough Claws,Sniper,Pickpocket,688,
+690,Skrelp,,,Poison,Water,Poison Point,Poison Touch,Adaptability,,691
+691,Dragalge,,,Poison,Dragon,Poison Point,Poison Touch,Adaptability,690,
+692,Clauncher,,,Water,,Mega Clauncher,,,,693
+693,Clawitzer,,,Water,,Mega Clauncher,,,692,
+694,Helioptile,,,Electric,Normal,Dry Skin,Sand Veil,Solar Power,,695
+695,Heliolisk,,,Electric,Normal,Dry Skin,Sand Veil,Solar Power,694,
+696,Tyrunt,,,Rock,Dragon,Strong Jaw,,Sturdy,,697
+697,Tyrantrum,,,Rock,Dragon,Strong Jaw,,Rock Head,696,
+698,Amaura,,,Rock,Ice,Refrigerate,,Snow Warning,,699
+699,Aurorus,,,Rock,Ice,Refrigerate,,Snow Warning,698,
 700,Sylveon,,,Fairy,,Cute Charm,,Pixilate,133,
+
+701,Hawlucha,,,Fighting,Flying,Limber,Unburden,Mold Breaker,,
+702,Dedenne,,,Electric,Fairy,Cheek Pouch,Pickup,Plus,,
+703,Carbink,,,Rock,Fairy,Clear Body,,Sturdy,,
+704,Goomy,,,Dragon,,Sap Sipper,Hydration,Gooey,,"705a,705b"
+705a,Sliggoo,Normal,,Dragon,,Sap Sipper,Hydration,Gooey,704,706a
+705b,Sliggoo,Hisuian,,Steel,Dragon,,,,704,706b
+706a,Goodra,Normal,,Dragon,,Sap Sipper,Hydration,Gooey,705a,
+706b,Goodra,Hisuian,,Steel,Dragon,,,,705b,
+707,Klefki,,,Steel,Fairy,Prankster,,Magician,,
+708,Phantump,,,Ghost,Grass,Natural Cure,Frisk,Harvest,,709
+709,Trevenant,,,Ghost,Grass,Natural Cure,Frisk,Harvest,708,
+710a,Pumpkaboo,Small Size,,Ghost,Grass,Pickup,Frisk,Insomnia,,711a
+710b,Pumpkaboo,Average Size,,Ghost,Grass,Pickup,Frisk,Insomnia,,711b
+710c,Pumpkaboo,Large Size,,Ghost,Grass,Pickup,Frisk,Insomnia,,711c
+710d,Pumpkaboo,Super Size,,Ghost,Grass,Pickup,Frisk,Insomnia,,711d
+711a,Gourgeist,Small Size,,Ghost,Grass,Pickup,Frisk,Insomnia,710a,
+711b,Gourgeist,Average Size,,Ghost,Grass,Pickup,Frisk,Insomnia,710b,
+711c,Gourgeist,Large Size,,Ghost,Grass,Pickup,Frisk,Insomnia,710c,
+711d,Gourgeist,Super Size,,Ghost,Grass,Pickup,Frisk,Insomnia,710d,
+712,Bergmite,,,Ice,,Own Tempo,Ice Body,Sturdy,,"713a,713b"
+713a,Avalugg,Normal,,Ice,,Own Tempo,Ice Body,Sturdy,712,
+713b,Avalugg,Hisuian,,Ice,Rock,,,,712,
+714,Noibat,,,Flying,Dragon,Frisk,Infiltrator,Telepathy,,715
+715,Noivern,,,Flying,Dragon,Frisk,Infiltrator,Telepathy,714,
+716a,Xerneas,Neutral Mode,,Fairy,,,Fairy Aura,,,,
+716b,Xerneas,Active Mode,,Fairy,,,Fairy Aura,,,,
+717,Yveltal,,,Dark,Flying,Dark Aura,,,,
+718a,Zygarde,10% Forme,,Dragon,Ground,Aura Break,Power Construct,,,
+718b,Zygarde,50% Forme,,Dragon,Ground,Aura Break,Power Construct,,,
+718c,Zygarde,Complete Forme,,Dragon,Ground,Aura Break,Power Construct,,,
+719,Diancie,,,Rock,Fairy,Clear Body,,,,
+720a,Hoopa,Hoopa Confined,,Psychic,Ghost,Magician,,,,
+720b,Hoopa,Hoopa Unbound,,Psychic,Dark,Magician,,,,
+721,Volcanion,,,Fire,Water,Water Absorb,,,,
 
 862,Obstagoon,,,Dark,Normal,Reckless,Guts,Defiant,264b,
 863,Perrserker,,,Steel,,Battle Armor,Tough Claws,Steely Spirit,52c,
