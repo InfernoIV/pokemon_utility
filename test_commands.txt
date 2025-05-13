@@ -1,0 +1,11 @@
+python3 main.py pokemon haunter
+python3 main.py pokemon applin
+python3 main.py pokemon shedinja
+python3 main.py pokemon all
+
+python3 main.py form alolan
+python3 main.py form alolan
+python3 main.py form hisuian
+
+python3 main.py class legendary
+python3 main.py class mythical

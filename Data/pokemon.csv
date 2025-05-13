@@ -67,11 +67,11 @@ number,name,form,classification,type-1,type-2,ability-1,ability-2,ability-hidden
 54,Psyduck,,,Water,,Damp,Cloud Nine,Swift Swim,,55
 55,Golduck,,,Water,,Damp,Cloud Nine,Swift Swim,54,
 56,Mankey,,,Fighting,,Vital Spirit,Anger Point,Defiant,,57
-57,Primeape,,,Fighting,,Vital Spirit,Anger Point,Defiant,56,
+57,Primeape,,,Fighting,,Vital Spirit,Anger Point,Defiant,56,979
 58a,Growlithe,,,Fire,,Intimidate,Flash Fire,Justified,,59a
-58b,Growlithe,Hisuian,,Fire,Rock,,,,,59b
+58b,Growlithe,Hisuian,,Fire,Rock,Intimidate,Flash Fire,Rock Head,,59b
 59a,Arcanine,,,Fire,,Intimidate,Flash Fire,Justified,58a,
-59b,Arcanine,Hisuian,,Fire,Rock,,,,58b,
+59b,Arcanine,Hisuian,,Fire,Rock,Intimidate,Flash Fire,Rock Head,58b,
 60,Poliwag,,,Water,,Water Absorb,Damp,Swift Swim,,61
 61,Poliwhirl,,,Water,,Water Absorb,Damp,Swift Swim,60,"62,186"
 62,Poliwrath,,,Water,,Water Absorb,Damp,Swift Swim,61,
@@ -123,9 +123,9 @@ number,name,form,classification,type-1,type-2,ability-1,ability-2,ability-hidden
 98,Krabby,,,Water,,Hyper Cutter,Shell Armor,Sheer Force,,99
 99,Kingler,,,Water,,Hyper Cutter,Shell Armor,Sheer Force,98,
 100a,Voltorb,Normal,,Electric,,Soundproof,Static,Aftermath,,101a
-100b,Voltorb,Hisuian,,Electric,Grass,,,,,101b
+100b,Voltorb,Hisuian,,Electric,Grass,Soundproof,Static,Aftermath,,101b
 101a,Electrode,Normal,,Electric,,Soundproof,Static,Aftermath,100a,
-101b,Electrode,Hisuian,,Electric,Grass,,,,100b,
+101b,Electrode,Hisuian,,Electric,Grass,Soundproof,Static,Aftermath,100b,
 102,Exeggcute,,,Grass,Psychic,Chlorophyll,,Harvest,,"103a,103b"
 103,Exeggutor,Normal,,Grass,Psychic,Chlorophyll,,Harvest,102,
 103b,Exeggutor,Alolan,,Grass,Dragon,Frisk,Frisk,Harvest,102,
@@ -193,7 +193,7 @@ number,name,form,classification,type-1,type-2,ability-1,ability-2,ability-hidden
 155,Cyndaquil,,,Fire,,Blaze,,Flash Fire,,156
 156,Quilava,,,Fire,,Blaze,,Flash Fire,155,"157a,157b"
 157a,Typhlosion,Normal,,Fire,,Blaze,,Flash Fire,156,
-157b,Typhlosion,Hisuian,,Fire,Ghost,,,,156,
+157b,Typhlosion,Hisuian,,Fire,Ghost,Blaze,,Frisk,156,
 158,Totodile,,,Water,,Torrent,,Sheer Force,,159
 159,Croconaw,,,Water,,Torrent,,Sheer Force,158,160
 160,Feraligatr,,,Water,,Torrent,,Sheer Force,159,
@@ -277,12 +277,12 @@ number,name,form,classification,type-1,type-2,ability-1,ability-2,ability-hidden
 209,Snubbull,,,Fairy,,Intimidate,Run Away,Rattled,,210
 210,Granbull,,,Fairy,,Intimidate,Quick Feet,Rattled,209,
 211a,Qwilfish,Normal,,Water,Poison,Poison Point,Swift Swim,Intimidate,,
-211b,Qwilfish,Hisuian,,Dark,Poison,,,,,904
+211b,Qwilfish,Hisuian,,Dark,Poison,Poison Point,Swift Swim,Intimidate,,904
 212,Scizor,,,Bug,Steel,Swarm,Technician,Light Metal,123,
 213,Shuckle,,,Bug,Rock,Sturdy,Gluttony,Contrary,,
 214,Heracross,,,Bug,Fighting,Swarm,Guts,Moxie,,
 215a,Sneasel,Normal,,Dark,Ice,Inner Focus,Keen Eye,Pickpocket,,461
-215b,Sneasel,Hisuian,,Fighting,Poison,,,,,903
+215b,Sneasel,Hisuian,,Fighting,Poison,Innfer Focus,Keen Eye,Pickpocket,,903
 216,Teddiursa,,,Normal,,Pickup,Quick Feet,Honey Gather,,217
 217,Ursaring,,,Normal,,Guts,Quick Feet,Unnerve,216,901
 218,Slugma,,,Fire,,Magma Armor,Flame Body,Weak Armor,,219
@@ -598,7 +598,7 @@ number,name,form,classification,type-1,type-2,ability-1,ability-2,ability-hidden
 501,Oshawott,,,Water,,Torrent,,Shell Armor,,502
 502,Dewott,,,Water,,Torrent,,Shell Armor,501,"503a,503b"
 503a,Samurott,Normal,,Water,,Torrent,,Shell Armor,502,
-503b,Samurott,Hisuian,,Water,Dark,,,,502,
+503b,Samurott,Hisuian,,Water,Dark,Torrent,,Sharpness,502,
 504,Patrat,,,Normal,,Run Away,Keen Eye,Analytic,,505
 505,Watchog,,,Normal,,Illuminate,Keen Eye,Analytic,504,
 506,Lillipup,,,Normal,,Vital Spirit,Pickup,Run Away,,507
@@ -645,10 +645,10 @@ number,name,form,classification,type-1,type-2,ability-1,ability-2,ability-hidden
 547,Whimsicott,,,Grass,Fairy,Prankster,Infiltrator,Chlorophyll,546,
 548,Petilil,,,Grass,,Chlorophyll,Own Tempo,Leaf Guard,,"549a,549b"
 549a,Lilligant,Normal,,Grass,,Chlorophyll,Own Tempo,Leaf Guard,548,
-549b,Lilligant,Hisuian,,Grass,Fighting,,,,548,
+549b,Lilligant,Hisuian,,Grass,Fighting,Chlorophyll,Hustle,Leaf Guard,548,
 550a,Basculin,Red-Striped,,Water,,Reckless,Adaptability,Mold Breaker,,"902a,902b"
 550b,Basculin,Blue-Stripedorm,,Water,,Rock Head,Adaptability,Mold Breaker,,"902a,902b"
-550c,Basculin,White-Striped,,Water,,,,,,
+550c,Basculin,White-Striped,,Water,,Rattled,Adaptability,Mold Breaker,,
 551,Sandile,,,Ground,Dark,Intimidate,Moxie,Anger Point,,552
 552,Krokorok,,,Ground,Dark,Intimidate,Moxie,Anger Point,551,553
 553,Krookodile,,,Ground,Dark,Intimidate,Moxie,Anger Point,552,
@@ -674,9 +674,9 @@ number,name,form,classification,type-1,type-2,ability-1,ability-2,ability-hidden
 568,Trubbish,,,Poison,,Stench,Sticky Hold,Aftermath,,569
 569,Garbodor,,,Poison,,Stench,Weak Armor,Aftermath,568,
 570a,Zorua,Normal,,Dark,,Illusion,,,,571a
-570b,Zorua,Hisuian,,Normal,Ghost,,,,,571b
+570b,Zorua,Hisuian,,Normal,Ghost,Illusion,,,,571b
 571a,Zoroark,Normal,,Dark,,Illusion,,,570a,
-571b,Zoroark,Hisuian,,Normal,Ghost,,,,570b,
+571b,Zoroark,Hisuian,,Normal,Ghost,Illusion,,,570b,
 572,Minccino,,,Normal,,Cute Charm,Technician,Skill Link,,573
 573,Cinccino,,,Normal,,Cute Charm,Technician,Skill Link,572,
 574,Gothita,,,Psychic,,Frisk,Competitive,Shadow Tag,,575
@@ -739,11 +739,11 @@ number,name,form,classification,type-1,type-2,ability-1,ability-2,ability-hidden
 622,Golett,,,Ground,Ghost,Iron Fist,Klutz,No Guard,,623
 623,Golurk,,,Ground,Ghost,Iron Fist,Klutz,No Guard,622,
 624,Pawniard,,,Dark,Steel,Defiant,Inner Focus,Pressure,,625
-625,Bisharp,,,Dark,Steel,Defiant,Inner Focus,Pressure,624,
+625,Bisharp,,,Dark,Steel,Defiant,Inner Focus,Pressure,624,983
 626,Bouffalant,,,Normal,,Reckless,Sap Sipper,Soundproof,,
 627,Rufflet,,,Normal,Flying,Keen Eye,Sheer Force,Hustle,,"628a,628b"
 628a,Braviary,Normal,,Normal,Flying,Keen Eye,Sheer Force,Defiant,627,
-628b,Braviary,Hisuian,,Psychic,Flying,,,,627,
+628b,Braviary,Hisuian,,Psychic,Flying,Keen Eye,Sheer Force,Tinted Lens,627,
 629,Vullaby,,,Dark,Flying,Big Pecks,Overcoat,Weak Armor,,630
 630,Mandibuzz,,,Dark,Flying,Big Pecks,Overcoat,Weak Armor,629,
 631,Heatmor,,,Fire,,Gluttony,Flash Fire,White Smoke,,
@@ -871,9 +871,9 @@ number,name,form,classification,type-1,type-2,ability-1,ability-2,ability-hidden
 703,Carbink,,,Rock,Fairy,Clear Body,,Sturdy,,
 704,Goomy,,,Dragon,,Sap Sipper,Hydration,Gooey,,"705a,705b"
 705a,Sliggoo,Normal,,Dragon,,Sap Sipper,Hydration,Gooey,704,706a
-705b,Sliggoo,Hisuian,,Steel,Dragon,,,,704,706b
+705b,Sliggoo,Hisuian,,Steel,Dragon,Sap Sipper,Shell Armor,Gooey,704,706b
 706a,Goodra,Normal,,Dragon,,Sap Sipper,Hydration,Gooey,705a,
-706b,Goodra,Hisuian,,Steel,Dragon,,,,705b,
+706b,Goodra,Hisuian,,Steel,Dragon,Sap sipper,Shell Armor,Gooey,705b,
 707,Klefki,,,Steel,Fairy,Prankster,,Magician,,
 708,Phantump,,,Ghost,Grass,Natural Cure,Frisk,Harvest,,709
 709,Trevenant,,,Ghost,Grass,Natural Cure,Frisk,Harvest,708,
@@ -887,11 +887,11 @@ number,name,form,classification,type-1,type-2,ability-1,ability-2,ability-hidden
 711d,Gourgeist,Super Size,,Ghost,Grass,Pickup,Frisk,Insomnia,710d,
 712,Bergmite,,,Ice,,Own Tempo,Ice Body,Sturdy,,"713a,713b"
 713a,Avalugg,Normal,,Ice,,Own Tempo,Ice Body,Sturdy,712,
-713b,Avalugg,Hisuian,,Ice,Rock,,,,712,
+713b,Avalugg,Hisuian,,Ice,Rock,Strong Jaw,Ice Body,Sturdy,712,
 714,Noibat,,,Flying,Dragon,Frisk,Infiltrator,Telepathy,,715
 715,Noivern,,,Flying,Dragon,Frisk,Infiltrator,Telepathy,714,
-716a,Xerneas,Neutral Mode,,Fairy,,,Fairy Aura,,,,
-716b,Xerneas,Active Mode,,Fairy,,,Fairy Aura,,,,
+716a,Xerneas,Neutral Mode,,Fairy,,Fairy Aura,,,,
+716b,Xerneas,Active Mode,,Fairy,,Fairy Aura,,,,
 717,Yveltal,,,Dark,Flying,Dark Aura,,,,
 718a,Zygarde,10% Forme,,Dragon,Ground,Aura Break,Power Construct,,,
 718b,Zygarde,50% Forme,,Dragon,Ground,Aura Break,Power Construct,,,
@@ -904,7 +904,7 @@ number,name,form,classification,type-1,type-2,ability-1,ability-2,ability-hidden
 722,Rowlet,,,Grass,Flying,Overgrow,,Long Reach,,723
 723,Dartrix,,,Grass,Flying,Overgrow,,Long Reach,722,"724a,724b"
 724a,Decidueye,Normal,,Grass,Ghost,Overgrow,,Long Reach,723,
-724b,Decidueye,Hisuian,,Grass,Fighting,,,,723,
+724b,Decidueye,Hisuian,,Grass,Fighting,Overgrow,,Scrappy,723,
 725,Litten,,,Fire,,Blaze,,Intimidate,,726
 726,Torracat,,,Fire,,Blaze,,Intimidate,725,727
 727,Incineroar,,,Fire,Dark,Blaze,,Intimidate,726,
@@ -1004,21 +1004,190 @@ number,name,form,classification,type-1,type-2,ability-1,ability-2,ability-hidden
 808,Meltan,,Mythical,Steel,,Magnet Pull,,,,809
 809,Melmetal,,Mythical,Steel,,Iron Fist,,,808,
 
+810,Grookey,,,Grass,,Overgrow,,Grassy Surge,,811
+811,Thwackey,,,Grass,,Overgrow,,Grassy Surge,810,812
+812,Rillaboom,,,Grass,,Overgrow,,Grassy Surge,811,
+813,Scorbunny,,,Fire,,Blaze,,Libero,,814
+814,Raboot,,,Fire,,Blaze,,Libero,813,815
+815,Cinderace,,,Fire,,Blaze,,Libero,814,
+816,Sobble,,,Water,,Torrent,,Sniper,,817
+817,Drizzile,,,Water,,Torrent,,Sniper,816,818
+818,Inteleon,,,Water,,Torrent,,Sniper,817,
+819,Skwovet,,,Normal,,Cheek Pouch,,Gluttony,,820
+820,Greedent,,,Normal,,Cheek Pouch,,Gluttony,819,
+821,Rookidee,,,Flying,,Keen Eye,Unnerve,Big Pecks,,822
+822,Corvisquire,,,Flying,,Keen Eye,Unnerve,Big Pecks,821,823
+823,Corviknight,,,Flying,Steel,Pressure,Unnerve,Mirror Armor,822,
+824,Blipbug,,,Bug,,Swarm,Compound Eyes,Telepathy,,825
+825,Dottler,,,Bug,Psychic,Swarm,Compound Eyes,Telepathy,824,826
+826,Orbeetle,,,Bug,Psychic,Swarm,Frisk,Telepathy,825,
+827,Nickit,,,Dark,,Run Away,Unburden,Stakeout,,828
+828,Thievul,,,Dark,,Run Away,Unburden,Stakeout,827,
+829,Gossifleur,,,Grass,,Cotton Down,Regenerator,Effect Spore,,830
+830,Eldegoss,,,Grass,,Cotton Down,Regenerator,Effect Spore,829,
+831,Wooloo,,,Normal,,Fluffy,Run Away,Bulletproof,,832
+832,Dubwool,,,Normal,,Fluffy,Steadfast,Bulletproof,831,
+833,Chewtle,,,Water,,Strong Jaw,Shell Armor,Swift Swim,,834
+834,Drednaw,,,Water,Rock,Strong Jaw,Shell Armor,Swift Swim,833,
+835,Yamper,,,Electric,,Ball Fetch,,Rattled,,836
+836,Boltund,,,Electric,,Strong Jaw,,Competitive,835,
+837,Rolycoly,,,Rock,,Steam Engine,Heatproof,Flash Fire,,838
+838,Carkol,,,Rock,Fire,Steam Engine,Flame Body,Flash Fire,837,839
+839,Coalossal,,,Rock,Fire,Steam Engine,Flame Body,Flash Fire,838,
+840,Applin,,,Grass,Dragon,Ripen,Gluttony,Bulletproof,,"841,842,1011"
+841,Flapple,,,Grass,Dragon,Ripen,Gluttony,Hustle,840,
+842,Appletun,,,Grass,Dragon,Ripen,Gluttony,Thick Fat,840,
+843,Silicobra,,,Ground,,Sand Spit,Shed Skin,Sand Veil,,844
+844,Sandaconda,,,Ground,,Sand Spit,Shed Skin,Sand Veil,843,
+845a,Cramorant,Normal,,Flying,Water,Gulp Missle,,,,
+845b,Cramorant,Gulping Form,,Flying,Water,Gulp Missle,,,,
+845c,Cramorant,Gorging Form,,Flying,Water,Gulp Missle,,,,
+846,Arrokuda,,,Water,,Swift Swim,,Propeller Tail,,847
+847,Barraskewda,,,Water,,Swift Swim,,Propeller Tail,846,
+848,Toxel,,,Electric,Poison,Rattled,Static,Klutz,,"849a,849b"
+849a,Toxtricity,Amped Form,,Electric,Poison,Punk Rock,Plus,Technician,848,
+849b,Toxtricity,Low Key Form,,Electric,Poison,Punk Rock,Minus,Technician,848,
+850,Sizzlipede,,,Fire,Bug,Flash Fire,White Smoke,Flame Body,,851
+851,Centiskorch,,,Fire,Bug,Flash Fire,White Smoke,Flame Body,850,
+852,Clobbopus,,,Fighting,,Limber,,Technician,,853
+853,Grapploct,,,Fighting,,Limber,,Technician,852,
+854a,Sinistea,Phony Form,,Ghost,,Weak Armor,,Cursed Body,,855a
+854b,Sinistea,Antique Form,,Ghost,,Weak Armor,,Cursed Body,,855b
+855a,Polteageist,Phony Form,,Ghost,,Weak Armor,,Cursed Body,854a,
+855b,Polteageist,Antique Form,,Ghost,,Weak Armor,,Cursed Body,854b,
+856,Hatenna,,,Psychic,,Healer,Anticipation,Magic Bounce,,857
+857,Hattrem,,,Psychic,,Healer,Anticipation,Magic Bounce,856,858
+858,Hatterene,,,Psychic,Fairy,Healer,Anticipation,Magic Bounce,857,
+859,Impidimp,,,Dark,Fairy,Prankster,Frisk,Pickpocket,,860
+860,Morgrem,,,Dark,Fairy,Prankster,Frisk,Pickpocket,859,861
+861,Grimmsnarl,,,Dark,Fairy,Prankster,Frisk,Pickpocket,860,
 862,Obstagoon,,,Dark,Normal,Reckless,Guts,Defiant,264b,
 863,Perrserker,,,Steel,,Battle Armor,Tough Claws,Steely Spirit,52c,
 864,Cursola,,,Ghost,,Weak Armor,,Perish Body,222b,
 865,Sirfetch'd,,,Fighting,,Steadfast,,Scrappy,83b,
 866,Mr. Rime,,,Ice,Psychic,Tangled Feet,Screen Cleaner,Ice Body,122b,
+867,Runerigus,,,Ground,Ghost,Wandering Spirit,,,562b,
 
+868,Milcery,,,Fairy,,Sweet Veil,,Aroma Veil,,"869a,869b,869c,869d,869e,869f,869g,869h,869i,869j,869k,869l,869m,869n,869o,869p,869q,869r,869s,869t,869u,869v,869w,869x,869y,869z,869aa,869ab,869ac,869ad,869ae,869af,869ag,869ah,869ai,869aj,869ak,869al,869am,869an,869ao,869ap,869aq,869ar,869as,869at,869au,869av,869aw,869ax,869ay,869az,869ba,869bb,869bc,869bd,869be,869bf,869bg,869bh,869bi,869bj,869bk"
+869a,Alcremie,Vanilla Cream - Strawberry,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869b,Alcremie,Vanilla Cream - Berry,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869c,Alcremie,Vanilla Cream - Love,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869d,Alcremie,Vanilla Cream - Star,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869e,Alcremie,Vanilla Cream - Clover,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869f,Alcremie,Vanilla Cream - Flower,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869g,Alcremie,Vanilla Cream - Ribbon,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869h,Alcremie,Ruby Cream - Strawberry,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869i,Alcremie,Ruby Cream - Berry,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869j,Alcremie,Ruby Cream - Love,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869k,Alcremie,Ruby Cream - Star,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869l,Alcremie,Ruby Cream - Clover,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869m,Alcremie,Ruby Cream - Flower,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869n,Alcremie,Ruby Cream - Ribbon,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869o,Alcremie,Matcha Cream - Strawberry,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869p,Alcremie,Matcha Cream - Berry,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869q,Alcremie,Matcha Cream - Love,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869r,Alcremie,Matcha Cream - Star,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869s,Alcremie,Matcha Cream - Clover,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869t,Alcremie,Matcha Cream - Flower,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869u,Alcremie,Matcha Cream - Ribbon,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869v,Alcremie,Mint Cream - Strawberry,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869w,Alcremie,Mint Cream - Berry,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869x,Alcremie,Mint Cream - Love,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869y,Alcremie,Mint Cream - Star,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869z,Alcremie,Mint Cream - Clover,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869aa,Alcremie,Mint Cream - Flower,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869ab,Alcremie,Mint Cream - Ribbon,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869ac,Alcremie,Lemon Cream - Strawberry,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869ad,Alcremie,Lemon Cream - Berry,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869ae,Alcremie,Lemon Cream - Love,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869af,Alcremie,Lemon Cream - Star,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869ag,Alcremie,Lemon Cream - Clover,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869ah,Alcremie,Lemon Cream - Flower,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869ai,Alcremie,Lemon Cream - Ribbon,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869aj,Alcremie,Salted Cream - Strawberry,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869ak,Alcremie,Salted Cream - Berry,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869al,Alcremie,Salted Cream - Love,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869am,Alcremie,Salted Cream - Star,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869an,Alcremie,Salted Cream - Clover,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869ao,Alcremie,Salted Cream - Flower,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869ap,Alcremie,Salted Cream - Ribbon,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869aq,Alcremie,Ruby Swirl - Strawberry,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869ar,Alcremie,Ruby Swirl - Berry,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869as,Alcremie,Ruby Swirl - Love,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869at,Alcremie,Ruby Swirl - Star,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869au,Alcremie,Ruby Swirl - Clover,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869av,Alcremie,Ruby Swirl - Flower,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869aw,Alcremie,Ruby Swirl - Ribbon,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869ax,Alcremie,Caramel Swirl - Strawberry,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869ay,Alcremie,Caramel Swirl - Berry,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869az,Alcremie,Caramel Swirl - Love,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869ba,Alcremie,Caramel Swirl - Star,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869bb,Alcremie,Caramel Swirl - Clover,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869bc,Alcremie,Caramel Swirl - Flower,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869bd,Alcremie,Caramel Swirl - Ribbon,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869be,Alcremie,Rainbow Swirl - Strawberry,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869bf,Alcremie,Rainbow Swirl - Berry,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869bg,Alcremie,Rainbow Swirl - Love,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869bh,Alcremie,Rainbow Swirl - Star,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869bi,Alcremie,Rainbow Swirl - Clover,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869bj,Alcremie,Rainbow Swirl - Flower,,Fairy,,Sweet Veil,,Aroma Veil,868,
+869bk,Alcremie,Rainbow Swirl - Ribbon,,Fairy,,Sweet Veil,,Aroma Veil,868,
+870,Falinks,,,Fighting,,Battle Armor,,Defiant,,
+871,Pincurchin,,,Electric,,Lightning Rod,,Electric Surge,,
+872,Snom,,,Ice,Bug,Shield Dust,,Ice Scales,,873
+873,Frosmoth,,,Ice,Bug,Shield Dust,,Ice Scales,872,
+874,Stonjourner,,,Rock,,Power Spot,,,,
+875a,Eiscue,Ice Face,,Ice,,Ice Face,,,,
+875b,Eiscue,Noice Face,,Ice,,Ice Face,,,,
+876,Indeedee,Male,,Psychic,Normal,Inner Focus,Synchronize,Psychic Surge,,
+876,Indeedee,Female,,Psychic,Normal,Own Tempo,Synchronize,Psychic Surge,,
+877a,Morpeko,Full Belly Mode,,Electric,Dark,Hunger Switch,,,,
+877b,Morpeko,Hangry Mode,,Electric,Dark,Hunger Switch,,,,
+878,Cufant,,,Steel,,Sheer Force,,Heavy Metal,,879
+879,Copperajah,,,Steel,,Sheer Force,,Heavy Metal,878,
+880,Dracozolt,,,Electric,Dragon,Volt Absorb,Hustle,Sand Rush,,
+881,Arctozolt,,,Electric,Ice,Volt Absorb,Static,Slush Rush,,
+882,Dracovish,,,Water,Dragon,Water Absorb,Strong Jaw,Sand Rush,,
+883,Arctovish,,,Water,Ice,Water Absorb,Ice Body,Slush Rush,,
+884,Duraludon,,,Steel,Dragon,Light Metal,Heavy Metal,Stalwart,,1018
+885,Dreepy,,,Dragon,Ghost,Clear Body,Infiltrator,Cursed Body,,886
+886,Drakloak,,,Dragon,Ghost,Clear Body,Infiltrator,Cursed Body,885,887
+887,Dragapult,,,Dragon,Ghost,Clear Body,Infiltrator,Cursed Body,886,
+888a,Zacian,Hero of Many Battles,Legendary,Fairy,,Intrepid Sword,,,,
+888b,Zacian,Crowned Sword,Legendary,Fairy,Steel,Intrepid Sword,,,,
+889a,Zamazenta,Hero of Many Battles,Legendary,Fighting,,Dauntless Shield,,,,
+889b,Zamazenta,Crowned Shield,Legendary,Fighting,Steel,Dauntless Shield,,,,
+890,Eternatus,,Legendary,Poison,Dragon,Pressure,,,,
+891,Kubfu,,Legendary,Fighting,,Inner Focus,,,,"892a,892b"
+892a,Urshifu,Single Strike Style,Legendary,Fighting,Dark,Unseen Fist,,,891,
+892b,Urshifu,Rapid Strike Style,Legendary,Fighting,Water,Unseen Fist,,,891,
+893,Zarude,,Mythical,Dark,Grass,Leaf Guard,,,,
+893,Zarude,Dada Zarude,Mythical,Dark,Grass,Leaf Guard,,,,
+894,Regieleki,,Legendary,Electric,,Transistor,,,,
+895,Regidrago,,Legendary,Dragon,,Dragon's Maw,,,,
+896,Glastrier,,Legendary,Ice,,Chilling Neigh,,,,
+897,Spectrier,,Legendary,Ghost,,Grim Neigh,,,,
+898a,Calyrex,Normal,Legendary,Psychic,Grass,Unnerve,,,,
+898b,Calyrex,Ice Rider,Legendary,Psychic,Ice,Unnerve,,,,
+898c,Calyrex,Shadow Rider,Legendary,Psychic,Ghost,Unnerve,,,,
 899,Wyrdeer,,,Normal,Psychic,Intimidate,Frisk,Sap Sipper,234,
 900,Kleavor,,,Bug,Rock,Swarm,Sheer Force,Steadfast,123,
-901,Ursaluna,,,Ground,Normal,Guts,Bulletproof,Unnerve,217,
+901a,Ursaluna,Normal,,Ground,Normal,Guts,Bulletproof,Unnerve,217,
+901b,Ursaluna,Bloodmoon,Legendary,Ground,Normal,Guts,Bulletproof,Unnerve,217,
 902a,Basculegion,Male,,Water,Ghost,Rattled,Adaptability,Mold Breaker,"550a,550b",
 902b,Basculegion,Female,,Water,Ghost,Rattled,Adaptability,Mold Breaker,"550a,550b",
-903,Sneasler,,,Fighting,Poison,Pressure,,Poison Touch,215b,
+903,Sneasler,,,Fighting,Poison,Pressure,Unburden,Poison Touch,215b,
 904,Overqwil,,,Dark,Poison,Poison Point,Swift Swim,Intimidate,211b,
+905a,Enamorus,Incarnate Forme,,Fairy,Flying,Healer,,Contrary,,
+905b,Enamorus,Therian Forme,,Fairy,Flying,Overcoat,,Contrary,,
 
+979,Annihilape,,,Fighting,Ghost,Vital Spirit,Inner Focus,Defiant,57,
 980,Clodsire,,,Poison,Ground,Poison Point,Water Absorb,Unaware,194b,
 981,Farigiraf,,,Normal,Psychic,Cud Chew,Armor Tail,Sap Sipper,203,
 982a,Dudunsparce,Two-Segment,,Normal,,Serene Grace,Run Away,Rattled,206,
 982b,Dudunsparce,Three-Segment,,Normal,,Serene Grace,Run Away,Rattled,206,
+983,Kingambit,,,Dark,Steel,Defiant,Supreme Overlord,Pressure,625,
+
+1011,Dipplin,,,Grass,Dragon,Supersweet Syrup,Gluttony,Sticky Hold,,1019
+1018,Archaludon,,,Steel,Dragon,Stamina,Sturdy,Stalwart,884,
+1019,Hydrapple,,,Grass,Dragon,Supersweet Syrup,Regenerator,Sticky Hold,1011,

@@ -130,7 +130,12 @@ class Pokemon(object):
             flag_guarded = True
             #missing data
             cprint("Incorrect type of the following pokemon:", "red")
-            
+        #check the typing
+        if dict["ability-1"] == "":
+            #set flag
+            flag_guarded = True
+            #missing data
+            cprint("Missing ability of the following pokemon:", "red")
                   
         #if there is a guard
         if flag_guarded == True:
