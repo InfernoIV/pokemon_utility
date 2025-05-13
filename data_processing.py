@@ -5,7 +5,8 @@
 #imports
 import operator
 from termcolor import colored, cprint #https://pypi.org/project/termcolor/
-from data_conversion import get_pokemon
+from data_csv_functions import get_pokemon
+from data_json_functions import get_pokemon_from_api
 #from type import determine_type_matchups
 
 
@@ -56,6 +57,15 @@ def determine_generation(pokemon_obj):
             return gen
     #return the highest generation
     return len(generation)    
+
+
+
+#function to describe pokemon using the data from pokeapi
+def describe_pokemon_from_api(pokemon_obj):
+    #get the pokemon from pokemon api
+    pokemon_api_obj = get_pokemon_from_api(pokemon_obj)
+    #describe this
+    describe_pokemon(pokemon_api_obj)
 
 
 
@@ -152,5 +162,3 @@ def convert_type_matchups(type_matchups):
         type_matchups_modifiers[type_matchup] = modifiers_sorted    
     #return the modifiers
     return type_matchups_modifiers
-
-

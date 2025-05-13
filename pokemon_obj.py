@@ -1,109 +1,37 @@
-#script functions that handles the data from the CSV file into usable functionalities
-#to be used:
-# get_pokemon (returns pokemon object)
-
-
-
 #imports
-import csv, sys, operator
 from termcolor import colored, cprint #https://pypi.org/project/termcolor/
-
+import csv, sys
 
 
 #constants
-___CSV_POKEMON____ = "Data/pokemon.csv"
+___ALLOWED_TYPES___ = ["Normal","Fire","Water","Grass","Electric","Ice","Fighting","Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Dark","Steel","Fairy"]
 ___CSV_TYPES___ = "Data/types.csv"
 ___CSV_TYPE_ABILITIES___ = "Data/type_ability.csv"
-___ALLOWED_TYPES___ = ["Normal","Fire","Water","Grass","Electric","Ice","Fighting","Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Dark","Steel","Fairy"]
-
-#function that creates a filter and then retrieves the matching pokemon
-def get_pokemon(**kwargs): 
-    #create the filter
-    filter = create_filter(kwargs)
-    #get the pokemon(s)
-    pokemon_list = lookup_pokemon(filter)
-    #return the pokemon
-    return pokemon_list
-
-
-
-#function that creates the filter
-def create_filter(kwargs):
-    #create local object to keep track of the filters
-    filter = { 
-        "number": "", #number of the pokemon (can be specfic but also be "generic" in case of regional forms) (number)
-        "name": "", #name of the pokemon (name)
-        "form": "", #searching for a specific form (form)
-        "classification": "", #classification for legendary or mythical (classification)
-        "type": "", #specific type (type-1 or type-2)
-        "types": "", #specific type combination (type-1,type-2 or type-2,type-1)
-        "ability": "", #specific ability (ability-1,ability-2,ability-hidden)
-    }
-
-    #for each key that we accept
-    for key in filter:
-        #if it is described
-        if key in kwargs:
-            #copy it
-            filter[key] = kwargs[key]
-    #remove empty keys
-    empty_keys = []
-    for key in filter:
-        #if it is empty
-        if filter[key] == "":
-            #add it to the list
-            empty_keys.append(key)
-    #for each empty filter
-    for key in empty_keys:
-        #delete it
-        del filter[key]
-    #return the filter
-    return filter
-
-
-
-#function that gets pokemon according to the filter
-def lookup_pokemon(filter):
-    #list to hold the matching pokemon
-    matching_pokemon = []
-    #used multiple times
-    filename = ___CSV_POKEMON____
-    #use the csv as data source
-    with open(filename) as csvfile: 
-        #use a dict
-        reader = csv.DictReader(csvfile)
-        try:
-            for row in reader:
-                #set a flag
-                flag_matching = True
-                #for each check
-                for check in filter:
-                    #if not matching the value in the row
-                    if filter[check].lower() not in row[check].lower():
-                        #set flag to false
-                        flag_matching = False
-                        #stop
-                        break
-                #check if matching
-                if flag_matching == True:
-                    #convert the data to an object
-                    pokemon_object = Pokemon(row)
-                    #add object to the list
-                    matching_pokemon.append(pokemon_object)                                        
-        #if exception
-        except csv.Error as e:
-            cprint("CSV error", "red")
-            #print and exit
-            sys.exit('file {}, line {}: {}'.format(filename, reader.line_num, e))
-    #return the list of matching pokemon
-    return matching_pokemon 
 
 
 
 #pokemon object, containing information of the pokemon
 class Pokemon(object):
     # The class "constructor" - It's actually an initializer 
-    def __init__(self, dict):
+    def __init__(self, data, data_type):
+        #if data is dict
+        if data_type == "csv":
+            #use csv init
+            self.init_csv(data)
+        elif data_type == "json":
+            #use json init
+            self.init_json(data)
+        else:
+            print("Error, invalid data_type")
+            #stop the script
+            sys.exit(f"data: {data}")  
+        #calculate other parameters
+        self.get_ability_type_modifiers()
+        self.get_type_matchup()
+        
+
+    #init using CSV
+    def init_csv(self,dict):
         #guard clauses
         flag_guarded = False
         #check the number
@@ -198,7 +126,43 @@ class Pokemon(object):
             #save them
             self.successors = dict["successors"].split(",")
 
-    
+
+    #init using API
+    def init_json(self,json_obj):
+        self.name = json_obj["name"].capitalize()
+        self.number = str(json_obj["order"])
+        #set properties
+        self.all_abilities = []
+        self.abilities = []
+        self.hidden_ability = ""
+        #for each ability
+        for ability in json_obj["abilities"]:
+            #get the desired properties
+            ability_name = ability["ability"]["name"].capitalize()
+            ability_is_hidden = ability["is_hidden"]
+            #add to ability list
+            self.all_abilities.append(ability_name)
+            #check if hidden
+            if ability_is_hidden == True:
+                #set as hidden ability
+                self.hidden_ability = ability_name
+            else:
+                #add as normal abilities
+                self.abilities.append(ability_name)
+        
+        #types
+        self.type = []
+        #get types
+        for type in json_obj["types"]:
+            #get the typing
+            typing = type["type"]["name"].capitalize()
+            #add type to list
+            self.type.append(typing)
+        
+        #todo
+        self.form_name = ""
+
+
 
     #function that will print when converted to str
     def __repr__(self):

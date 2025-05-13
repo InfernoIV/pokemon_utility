@@ -1,7 +1,7 @@
 #imports
 import sys
-from data_processing import describe_pokemon
-from data_conversion import get_pokemon
+from data_csv_functions import get_pokemon
+from data_processing import describe_pokemon, describe_pokemon_from_api
 
 
 
@@ -49,8 +49,11 @@ def main():
                 #for each pokemon found
             for entry in pokemon_list:
                 #describe the pokemon
-                describe_pokemon(entry)
+                describe_pokemon_from_api(entry)
+                #describe_pokemon(entry)
+
             
+
     #looking for legendary or mythical pokemon
     elif command == "class":
         #arg 3 = specific form
