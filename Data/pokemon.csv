@@ -1067,7 +1067,6 @@ number,name,form,classification,type-1,type-2,ability-1,ability-2,ability-hidden
 865,Sirfetch'd,,,Fighting,,Steadfast,,Scrappy,83b,
 866,Mr. Rime,,,Ice,Psychic,Tangled Feet,Screen Cleaner,Ice Body,122b,
 867,Runerigus,,,Ground,Ghost,Wandering Spirit,,,562b,
-
 868,Milcery,,,Fairy,,Sweet Veil,,Aroma Veil,,"869a,869b,869c,869d,869e,869f,869g,869h,869i,869j,869k,869l,869m,869n,869o,869p,869q,869r,869s,869t,869u,869v,869w,869x,869y,869z,869aa,869ab,869ac,869ad,869ae,869af,869ag,869ah,869ai,869aj,869ak,869al,869am,869an,869ao,869ap,869aq,869ar,869as,869at,869au,869av,869aw,869ax,869ay,869az,869ba,869bb,869bc,869bd,869be,869bf,869bg,869bh,869bi,869bj,869bk"
 869a,Alcremie,Vanilla Cream - Strawberry,,Fairy,,Sweet Veil,,Aroma Veil,868,
 869b,Alcremie,Vanilla Cream - Berry,,Fairy,,Sweet Veil,,Aroma Veil,868,
@@ -1178,16 +1177,143 @@ number,name,form,classification,type-1,type-2,ability-1,ability-2,ability-hidden
 902b,Basculegion,Female,,Water,Ghost,Rattled,Adaptability,Mold Breaker,"550a,550b",
 903,Sneasler,,,Fighting,Poison,Pressure,Unburden,Poison Touch,215b,
 904,Overqwil,,,Dark,Poison,Poison Point,Swift Swim,Intimidate,211b,
-905a,Enamorus,Incarnate Forme,,Fairy,Flying,Healer,,Contrary,,
-905b,Enamorus,Therian Forme,,Fairy,Flying,Overcoat,,Contrary,,
+905a,Enamorus,Incarnate Forme,Legendary,Fairy,Flying,Healer,,Contrary,,
+905b,Enamorus,Therian Forme,Legendary,Fairy,Flying,Overcoat,,Contrary,,
 
+906,Sprigatito,,,Grass,,Overgrow,,Protean,,907
+907,Floragato,,,Grass,,Overgrow,,Protean,906,908
+908,Meowscarada,,,Grass,Dark,Overgrow,,Protean,907,
+909,Fuecoco,,,Fire,,Blaze,,Unaware,,910
+910,Crocalor,,,Fire,,Blaze,,Unaware,909,911
+911,Skeledirge,,,Fire,Ghost,Blaze,,Unaware,910,
+912,Quaxly,,,Water,,Torrent,,Moxie,,913
+913,Quaxwell,,,Water,,Torrent,,Moxie,912,914
+914,Quaquaval,,,Water,Fighting,Torrent,,Moxie,913,
+915,Lechonk,,,Normal,,Aroma Veil,Gluttony,Thick Fat,,"916a,916b"
+916a,Oinkologne,Male,,Normal,,Lingering Aroma,Gluttony,Thick Fat,915,
+916b,Oinkologne,Female,,Normal,,Aroma Veil,Gluttony,Thick Fat,915,
+917,Tarountula,,,Bug,,Insomnia,,Stakeout,,918
+918,Spidops,,,Bug,,Insomnia,,Stakeout,917,
+919,Nymble,,,Bug,,Swarm,,Tinted Lens,,920
+920,Lokix,,,Bug,Dark,Swarm,,Tinted Lens,919,
+921,Pawmi,,,Electric,,Static,Natural Cure,Iron Fist,,922
+922,Pawmo,,,Electric,Fighting,Volt Absorb,Natural Cure,Iron Fist,921,923
+923,Pawmot,,,Electric,Fighting,Static,Natural Cure,Iron Fist,922,
+924,Tandemaus,,,Normal,,Run Away,Pickup,Own Tempo,,"925a,925b"
+925a,Maushold,Family of Four,,Normal,,Friend Guard,Cheek Pouch,Technician,924,
+925b,Maushold,Family of Three,,Normal,,Friend Guard,Cheek Pouch,Technician,924,
+926,Fidough,,,Fairy,,Own Tempo,,Klutz,,927
+927,Dachsbun,,,Fairy,,Well-Baked Body,,Aroma Veil,926,
+928,Smoliv,,,Grass,Normal,Early Bird,,Harvest,,929
+929,Dolliv,,,Grass,Normal,Early Bird,,Harvest,928,930
+930,Arboliva,,,Grass,Normal,Seed Sower,,Harvest,929,
+931a,Squawkabilly,Green Plumage,,Normal,Flying,Intimidate,Hustle,Guts,,
+931b,Squawkabilly,Blue Plumage,,Normal,Flying,Intimidate,Hustle,Guts,,
+931c,Squawkabilly,Yellow Plumage,,Normal,Flying,Intimidate,Hustle,Sheer Force,,
+931d,Squawkabilly,White Plumage,,Normal,Flying,Intimidate,Hustle,Sheer Force,,
+932,Nacli,,,Rock,,Purifying Salt,Sturdy,Clear Body,,933
+933,Naclstack,,,Rock,,Purifying Salt,Sturdy,Clear Body,932,934
+934,Garganacl,,,Rock,,Purifying Salt,Sturdy,Clear Body,933,
+935,Charcadet,,,Fire,,Flash Fire,,Flame Body,,"936,937"
+936,Armarouge,,,Fire,Psychic,Flash Fire,,Weak Armor,935,
+937,Ceruledge,,,Fire,Ghost,Flash Fire,,Weak Armor,935,
+938,Tadbulb,,,Electric,,Own Tempo,Static,Damp,,939
+939,Bellibolt,,,Electric,,Electromorphosis,Static,Damp,938,
+940,Wattrel,,,Electric,Flying,Wind Power,Volt Absorb,Competitive,,941
+941,Kilowattrel,,,Electric,Flying,Wind Power,Volt Absorb,Competitive,940,
+942,Maschiff,,,Dark,,Intimidate,Run Away,Stakeout,,943
+943,Mabosstiff,,,Dark,,Intimidate,Guard Dog,Stakeout,942,
+944,Shroodle,,,Poison,Normal,Unburden,Pickpocket,Prankster,,945
+945,Grafaiai,,,Poison,Normal,Unburden,Poison Touch,Prankster,944,
+946,Bramblin,,,Grass,Ghost,Wind Rider,,Infiltrator,,947
+947,Brambleghast,,,Grass,Ghost,Wind Rider,,Infiltrator,946,
+948,Toedscool,,,Ground,Grass,Mycelium Might,,,,949
+949,Toedscruel,,,Ground,Grass,Mycelium Might,,,948,
+950,Klawf,,,Rock,,Anger Shell,Shell Armor,Regenerator,,
+951,Capsakid,,,Grass,,Chlorophyll,Insomnia,Klutz,,952
+952,Scovillain,,,Grass,Fire,Chlorophyll,Insomnia,Moody,951,
+953,Rellor,,,Bug,,Compound Eyes,,Shed Skin,,954
+954,Rabsca,,,Bug,Psychic,Synchronize,,Telepathy,953,
+955,Flittle,,,Psychic,,Anticipation,Frisk,Speed Boost,,956
+956,Espathra,,,Psychic,,Opportunist,Frisk,Speed Boost,955,
+957,Tinkatink,,,Fairy,Steel,Mold Breaker,Own Tempo,Pickpocket,,958
+958,Tinkatuff,,,Fairy,Steel,Mold Breaker,Own Tempo,Pickpocket,957,959
+959,Tinkaton,,,Fairy,Steel,Mold Breaker,Own Tempo,Pickpocket,958,
+960,Wiglett,,,Water,,Gooey,Rattled,Sand Veil,,961
+961,Wugtrio,,,Water,,Gooey,Rattled,Sand Veil,960,
+962,Bombirdier,,,Flying,Dark,Big Pecks,Keen Eye,Rocky Payload,,
+963,Finizen,,,Water,,Water Veil,,,,"964a,964b"
+964a,Palafin,Zero Form,,Water,,Zero to Hero,,,963,
+964b,Palafin,Hero Form,,Water,,Zero to Hero,,,963,
+965,Varoom,,,Steel,Poison,Overcoat,,Slow Start,,966
+966,Revavroom,,,Steel,Poison,Overcoat,,Filter,965,
+967,Cyclizar,,,Dragon,Normal,Shed Skin,,Regenerator,,
+968,Orthworm,,,Steel,,Earth Eater,,Sand Veil,,
+969,Glimmet,,,Rock,Poison,Toxic Debris,,Corrosion,,970
+970,Glimmora,,,Rock,Poison,Toxic Debris,,Corrosion,969,
+971,Greavard,,,Ghost,,Pickup,,Fluffy,,972
+972,Houndstone,,,Ghost,,Sand Rush,,Fluffy,971,
+973,Flamigo,,,Flying,Fighting,Scrappy,Tangled Feet,Costar,,
+974,Cetoddle,,,Ice,,Thick Fat,Snow Cloak,Sheer Force,,975
+975,Cetitan,,,Ice,,Thick Fat,Slush Rush,Sheer Force,974,
+976,Veluza,,,Water,Psychic,Mold Breaker,,Sharpness,,
+977,Dondozo,,,Water,,Unaware,Oblivious,Water Veil,,
+978a,Tatsugiri,Curly Form,,Dragon,Water,Commander,,Storm Drain,,
+978b,Tatsugiri,Droopy Form,,Dragon,Water,Commander,,Storm Drain,,
+978c,Tatsugiri,Stretchy Form,,Dragon,Water,Commander,,Storm Drain,,
 979,Annihilape,,,Fighting,Ghost,Vital Spirit,Inner Focus,Defiant,57,
 980,Clodsire,,,Poison,Ground,Poison Point,Water Absorb,Unaware,194b,
 981,Farigiraf,,,Normal,Psychic,Cud Chew,Armor Tail,Sap Sipper,203,
 982a,Dudunsparce,Two-Segment,,Normal,,Serene Grace,Run Away,Rattled,206,
 982b,Dudunsparce,Three-Segment,,Normal,,Serene Grace,Run Away,Rattled,206,
 983,Kingambit,,,Dark,Steel,Defiant,Supreme Overlord,Pressure,625,
-
+984,Great Tusk,,,Ground,Fighting,Protosynthesis,,,,
+985,Scream Tail,,,Fairy,Psychic,Protosynthesis,,,,
+986,Brute Bonnet,,,Grass,Dark,Protosynthesis,,,,
+987,Flutter Mane,,,Ghost,Fairy,Protosynthesis,,,,
+988,Slither Wing,,,Bug,Fighting,Protosynthesis,,,,
+989,Sandy Shocks,,,Electric,Ground,Protosynthesis,,,,
+990,Iron Treads,,,Ground,Steel,Quark Drive,,,,
+991,Iron Bundle,,,Ice,Water,Quark Drive,,,,
+992,Iron Hands,,,Fighting,Electric,Quark Drive,,,,
+993,Iron Jugulis,,,Dark,Flying,Quark Drive,,,,
+994,Iron Moth,,,Fire,Poison,Quark Drive,,,,
+995,Iron Thorns,,,Rock,Electric,Quark Drive,,,,
+996,Frigibax,,,Dragon,Ice,Thermal Exchange,,Ice Body,,997
+997,Arctibax,,,Dragon,Ice,Thermal Exchange,,Ice Body,996,998
+998,Baxcalibur,,,Dragon,Ice,Thermal Exchange,,Ice Body,997,
+999a,Gimmighoul,Chest Form,,Ghost,,Rattled,,,,1000
+999b,Gimmighoul,Roaming Form,,Ghost,,Run Away,,,,
+1000,Gholdengo,,,Ghost,Steel,Good as Gold,,,,
+1001,Wo-Chien,,Legendary,Dark,Grass,Tablets of Ruin,,,,
+1002,Chien-Pao,,Legendary,Dark,Ice,Sword of Ruin,,,,
+1003,Ting-Lu,,Legendary,Dark,Ground,Vessel of Ruin,,,,
+1004,Chi-Yu,,Legendary,Dark,Fire,Beads of Ruin,,,,
+1005,Roaring Moon,,Legendary,Dragon,Dark,Protosynthesis,,,,
+1006,Iron Valiant,,Legendary,Fairy,Fighting,Quark Drive,,,,
+1007,Koraidon,,Legendary,Fighting,Dragon,Orichalcum Pulse,,,,
+1008,Miraidon,,Legendary,Electric,Dragon,Hadron Engine,,,,
+1009,Walking Wake,Legendary,,Water,Dragon,Protosynthesis,,,
+1010,Iron Leaves,,Legendary,Grass,Psychic,Quark Drive,,,,
 1011,Dipplin,,,Grass,Dragon,Supersweet Syrup,Gluttony,Sticky Hold,,1019
+1012a,Poltchageist,Counterfeit Form,,Grass,Ghost,Hospitality,,Heatproof,,1013a
+1012b,Poltchageist,Artisan Form,,Grass,Ghost,Hospitality,,Heatproof,,1013b
+1013a,Sinistcha,Counterfeit Form,,Grass,Ghost,Hospitality,,Heatproof,1012a,
+1013b,Sinistcha,Artisan Form,,Grass,Ghost,Hospitality,,Heatproof,1012b,
+1014,Okidogi,,Legendary,Poison,Fighting,Toxic Chain,,Guard Dog,,
+1015,Munkidori,,Legendary,Poison,Psychic,Toxic Chain,,Frisk,,
+1016,Fezandipiti,,Legendary,Poison,Fairy,Toxic Chain,,Technician,,
+1017a,Ogerpon,Teal Mask,Legendary,Grass,,Defiant,,,,
+1017b,Ogerpon,Wellspring Mask,Legendary,Grass,Water,Water Absorb,,,,
+1017c,Ogerpon,Hearthflame Mask,Legendary,Grass,Fire,Mold Breaker,,,,
+1017d,Ogerpon,Cornerstone Mask,Legendary,Grass,Rock,Sturdy,,,,
 1018,Archaludon,,,Steel,Dragon,Stamina,Sturdy,Stalwart,884,
 1019,Hydrapple,,,Grass,Dragon,Supersweet Syrup,Regenerator,Sticky Hold,1011,
+1020,Gouging Fire,,Legendary,Fire,Dragon,Protosynthesis,,,,
+1021,Raging Bolt,,Legendary,Electric,Dragon,Protosynthesis,,,,
+1022,Iron Boulder,,Legendary,Rock,Psychic,Quark Drive,,,,
+1023,Iron Crown,,Legendary,Steel,Psychic,Quark Drive,,,,
+1024a,Terapagos,Normal Form,Legendary,Normal,,Tera Shift,,,,
+1024b,Terapagos,Terastal Form,Legendary,Normal,,Tera Shell,,,,
+1024c,Terapagos,Stellar Form,Legendary,Normal,,Teraform Zero,,,,
+1025,Pecharunt,,Legendary,Poison,Ghost,Poison Puppeteer,,,,

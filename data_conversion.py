@@ -190,11 +190,11 @@ class Pokemon(object):
         self.predecessors = []
         self.successors = []
         #if it has previous evolutions
-        if dict["predecessors"] != "": 
+        if dict["predecessors"] != "" and dict["predecessors"] != None: 
             #save them
             self.predecessors = dict["predecessors"].split(",")
         #if it has next evolutions
-        if dict["successors"] != "": 
+        if dict["successors"] != "" and dict["successors"] != None: 
             #save them
             self.successors = dict["successors"].split(",")
 
