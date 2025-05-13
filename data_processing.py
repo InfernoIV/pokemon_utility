@@ -6,7 +6,7 @@
 import operator
 from termcolor import colored, cprint #https://pypi.org/project/termcolor/
 from data_csv_functions import get_pokemon
-from data_json_functions import get_pokemon_from_api
+from data_json_functions import get_pokemon_from_api, get_ability_data
 #from type import determine_type_matchups
 
 
@@ -78,17 +78,20 @@ def describe_pokemon(pokemon_obj):
     if pokemon_obj.form_name != "":
         #add to name
         name += f" ({pokemon_obj.form_name})"
-    #print the number and name
-    cprint(f"Pokemon #{pokemon_obj.number}: {name}", None, attrs=["bold", "underline"])
-   
+    #get the generation
     generation = determine_generation(pokemon_obj)
-    cprint(f"Generation: {generation}")
-
-    #print the type
-    print(f"Type: {", ".join(pokemon_obj.type)}")
+    #print the number and name
+    cprint(f"Pokemon #{pokemon_obj.number} (gen {generation}): {name}", None, attrs=["bold", "underline"])
 
     #print abilities
-    print(f"Abilities: {", ".join(pokemon_obj.all_abilities)}")
+    cprint(f"Abilities: ", None ,attrs=["underline"])#{", ".join(pokemon_obj.all_abilities)}")
+
+    for ability in pokemon_obj.all_abilities:
+        ability_data = get_ability_data(ability)
+        print(f"{ability_data.name}: {ability_data.effect}")
+
+    #print the type
+    cprint(f"Type: {", ".join(pokemon_obj.type)}", None ,attrs=["underline"])
 
     #get the type match-up
     type_matchups = pokemon_obj.calculate_type_matchups()
