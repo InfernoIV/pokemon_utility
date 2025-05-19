@@ -13,27 +13,29 @@ def get_config():
     if os.path.isfile(___CONFIG_FILE___):
         # Read the configuration from the 'config.ini' file
         config_object.read(___CONFIG_FILE___)
-    #no config exists, create one
+    #no config exists
     else: 
-        #Create a ConfigParser object
-        config_object = ConfigParser()
-        #create object
-        config_object["DATABASE"] = {
-        "mode": ___OPERATING_MODE_LOCAL___,
-        }
-        # Write the configuration to a file named 'config.ini' with 
-        with open(___CONFIG_FILE___, 'w') as conf: 
-            config_object.write(conf)
-
+        #create default config
+        set_default_config()
     #return the config
     return config_object
 
 
 
+#function that gets the operating mode
 def get_operating_mode():
+    #get the config
     config = get_config()
+    #get the operating mode
     operating_mode = config["DATABASE"]["mode"]
-    return operating_mode
+    #if not a correct config
+    if operating_mode != ___OPERATING_MODE_LOCAL___ and operating_mode != ___OPERATING_MODE_ONLINE___:
+        #set config back to default
+        set_default_config()
+        #return error
+        return None, ValueError(f"Incorrect operating_mode config: {operating_mode}, reverting to {___OPERATING_MODE_LOCAL___}")
+    #return operating mode
+    return operating_mode, None
 
 
 
@@ -56,9 +58,11 @@ def set_operating_mode(arguments):
     config_object = ConfigParser()
     # Read the configuration from the 'config.ini' file
     config_object.read(___CONFIG_FILE___)
-    # Access the USERINFO section
+    
+    # Access the database section
     userinfo = config_object["DATABASE"]
-    #if the config is not the same
+    
+    #if the current config is not the same
     if userinfo["mode"] != operating_mode:
         # Update the password in the USERINFO section
         userinfo["mode"] = operating_mode
@@ -72,3 +76,15 @@ def set_operating_mode(arguments):
     return None
 
 
+
+#function that writes default config
+def set_default_config():
+    #Create a ConfigParser object
+        config_object = ConfigParser()
+        #create object
+        config_object["DATABASE"] = {
+        "mode": ___OPERATING_MODE_LOCAL___,
+        }
+        # Write the configuration to a file named 'config.ini' with 
+        with open(___CONFIG_FILE___, 'w') as conf: 
+            config_object.write(conf)

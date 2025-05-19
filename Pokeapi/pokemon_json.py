@@ -1,9 +1,7 @@
 #imports
 from termcolor import cprint #https://pypi.org/project/termcolor/
 from pokemon_obj import Pokemon
-
-#constants
-___ALLOWED_TYPES___ = ["Normal","Fire","Water","Grass","Electric","Ice","Fighting","Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Dark","Steel","Fairy"]
+from constants import ___ALLOWED_TYPES___
 
 
 
@@ -53,5 +51,4 @@ class Pokemon_JSON(Pokemon):
         self.get_ability_type_modifiers()
         self.get_type_matchup()
         
-
 

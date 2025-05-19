@@ -2,11 +2,7 @@
 from termcolor import cprint #https://pypi.org/project/termcolor/
 import sys
 from pokemon_obj import Pokemon
-
-#constants
-___ALLOWED_TYPES___ = ["Normal","Fire","Water","Grass","Electric","Ice","Fighting","Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Dark","Steel","Fairy"]
-___CSV_TYPES___ = "Local/types.csv"
-___CSV_TYPE_ABILITIES___ = "Local/type_ability.csv"
+from constants import ___ALLOWED_TYPES___, ___CSV_TYPES___, ___CSV_TYPE_ABILITIES___
 
 
 
@@ -71,8 +67,6 @@ class Pokemon_CSV(Pokemon):
             #add it
             self.type.append(dict["type-2"])
 
-        #get the type matchup
-        self.get_type_matchup()
 
         #ability-1,ability-2,ability-hidden
         #abilities

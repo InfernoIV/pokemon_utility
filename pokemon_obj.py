@@ -1,21 +1,33 @@
 #imports
 from termcolor import cprint #https://pypi.org/project/termcolor/
 import csv, sys
+from constants import ___ALLOWED_TYPES___, ___CSV_TYPES___, ___CSV_TYPE_ABILITIES___
 
 
 
 #base pokemon object, containing information of the pokemon
 class Pokemon(object):
-    #constants
-    ___ALLOWED_TYPES___ = ["Normal","Fire","Water","Grass","Electric","Ice","Fighting","Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Dark","Steel","Fairy"]
-    ___CSV_TYPES___ = "Local/types.csv"
-    ___CSV_TYPE_ABILITIES___ = "Local/type_ability.csv"
+
+    #initial values
+    number = ""
+    name = ""
+    form = ""
+    classification = ""
+    type = []
+    all_abilities = []
+    abilities = []
+    hidden_ability = ""
+    ability_type_modifiers = []
+    
+    predecessors = []
+    successors = []
+    
+    
 
     # The class "constructor" - It's actually an initializer 
     def __init__(self):
-        #to be filled in by successors
+        #to be filled in by implementors   
         pass
-
 
 
     #function that will print when converted to str
@@ -37,7 +49,7 @@ class Pokemon(object):
         #value to fill
         self.matchup = {}
         #used multiple times
-        filename = self.___CSV_TYPES___
+        filename = ___CSV_TYPES___
         #use the csv as data source
         with open(filename) as csvfile: 
             #use a dict
@@ -74,7 +86,7 @@ class Pokemon(object):
         #create a list to keep track of abilities not affecting type modifiers
         abilities_not_foud = self.all_abilities.copy()
         #used multiple times
-        filename = self.___CSV_TYPE_ABILITIES___
+        filename = ___CSV_TYPE_ABILITIES___
         #use the csv as data source
         with open(filename) as csvfile: 
             #use a dict
@@ -196,3 +208,4 @@ class Pokemon(object):
 
     def describe(self):
         print(self)
+
