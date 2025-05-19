@@ -5,14 +5,9 @@
 
 
 #imports
-import csv, sys
-from termcolor import colored, cprint #https://pypi.org/project/termcolor/
-from pokemon_obj import Pokemon
-
-
-
-#constants
-___CSV_POKEMON____ = "Data/pokemon.csv"
+import csv
+from Local.pokemon_csv import Pokemon_CSV as Pokemon
+from constants import ___CSV_POKEMON____
 
 
 
@@ -21,9 +16,9 @@ def get_pokemon(**kwargs):
     #create the filter
     filter = create_filter(kwargs)
     #get the pokemon(s)
-    pokemon_list = lookup_pokemon(filter)
+    pokemon_list, error = lookup_pokemon(filter)
     #return the pokemon
-    return pokemon_list
+    return pokemon_list, error
 
 
 
@@ -63,6 +58,7 @@ def create_filter(kwargs):
 
 
 #function that gets pokemon according to the filter
+#returns pokemon_list, error
 def lookup_pokemon(filter):
     #list to hold the matching pokemon
     matching_pokemon = []
@@ -87,13 +83,14 @@ def lookup_pokemon(filter):
                 #check if matching
                 if flag_matching == True:
                     #create pokemon object
-                    pokemon_object = Pokemon(row, "csv")
+                    pokemon_object = Pokemon(row)
                     #add object to the list
                     matching_pokemon.append(pokemon_object)                                        
         #if exception
         except csv.Error as e:
-            cprint("CSV error", "red")
-            #print and exit
-            sys.exit('file {}, line {}: {}'.format(filename, reader.line_num, e))
+            #return the error
+            return None, 'file {}, line {}: {}'.format(filename, reader.line_num, e)
     #return the list of matching pokemon
-    return matching_pokemon 
+    return matching_pokemon, None 
+
+

@@ -1,166 +1,20 @@
 #imports
-from termcolor import colored, cprint #https://pypi.org/project/termcolor/
+from termcolor import cprint #https://pypi.org/project/termcolor/
 import csv, sys
 
 
-#constants
-___ALLOWED_TYPES___ = ["Normal","Fire","Water","Grass","Electric","Ice","Fighting","Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Dark","Steel","Fairy"]
-___CSV_TYPES___ = "Data/types.csv"
-___CSV_TYPE_ABILITIES___ = "Data/type_ability.csv"
 
-
-
-#pokemon object, containing information of the pokemon
+#base pokemon object, containing information of the pokemon
 class Pokemon(object):
+    #constants
+    ___ALLOWED_TYPES___ = ["Normal","Fire","Water","Grass","Electric","Ice","Fighting","Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Dark","Steel","Fairy"]
+    ___CSV_TYPES___ = "Local/types.csv"
+    ___CSV_TYPE_ABILITIES___ = "Local/type_ability.csv"
+
     # The class "constructor" - It's actually an initializer 
-    def __init__(self, data, data_type):
-        #if data is dict
-        if data_type == "csv":
-            #use csv init
-            self.init_csv(data)
-        elif data_type == "json":
-            #use json init
-            self.init_json(data)
-        else:
-            print("Error, invalid data_type")
-            #stop the script
-            sys.exit(f"data: {data}")  
-        #calculate other parameters
-        self.get_ability_type_modifiers()
-        self.get_type_matchup()
-        
-
-    #init using CSV
-    def init_csv(self,dict):
-        #guard clauses
-        flag_guarded = False
-        #check the number
-        if dict["number"] == "":
-            #set flag
-            flag_guarded = True 
-            #missing number
-            cprint("Missing number of the following pokemon:", "red")
-        #check the name
-        if dict["name"] == "":
-            #set flag
-            flag_guarded = True
-            #missing name
-            cprint("Missing name of the following pokemon:", "red")  
-        #check the typing
-        if dict["type-1"] == "":
-            #set flag
-            flag_guarded = True
-            #missing data
-            cprint("Missing type of the following pokemon:", "red")
-        #check the typing
-        elif dict["type-1"] not in ___ALLOWED_TYPES___:
-            #set flag
-            flag_guarded = True
-            #missing data
-            cprint("Incorrect type of the following pokemon:", "red")
-        #check the typing
-        if dict["ability-1"] == "":
-            #set flag
-            flag_guarded = True
-            #missing data
-            cprint("Missing ability of the following pokemon:", "red")
-                  
-        #if there is a guard
-        if flag_guarded == True:
-            #stop the script
-            sys.exit(f"dict: {dict}")  
-
-        #data is correct, start conversion to object 
-        #description
-        #add number
-        self.number = dict["number"]
-        #add name
-        self.name = dict["name"]
-        #add form name (for description)
-        self.form_name = dict["form"]
-        #add classification
-        self.classification = dict["classification"]
-
-        #typing
-        #always add type 1
-        self.type = [dict["type-1"]]
-        #if it has a secondary type
-        if dict["type-2"] != "":
-            #add it
-            self.type.append(dict["type-2"])
-
-        #get the type matchup
-        self.get_type_matchup()
-
-        #ability-1,ability-2,ability-hidden
-        #abilities
-        #always add ability 1
-        self.abilities = [dict["ability-1"]]
-        #if it has a secondary ability
-        if dict["ability-2"] != "":
-            #add it
-            self.abilities.append(dict["ability-2"])
-        #copy the current list to all abilities
-        self.all_abilities = self.abilities.copy()
-        
-        #save the hidden ability
-        self.hidden_ability = dict["ability-hidden"]
-        #if it has a hidden ability
-        if dict["ability-hidden"] != "":
-            #add to the ability list
-            self.all_abilities.append(self.hidden_ability)
-        
-        #get the typing of specific abilities
-        self.get_ability_type_modifiers()
-
-        #predecessors,successors
-        #Evolutions
-        self.predecessors = []
-        self.successors = []
-        #if it has previous evolutions
-        if dict["predecessors"] != "" and dict["predecessors"] != None: 
-            #save them
-            self.predecessors = dict["predecessors"].split(",")
-        #if it has next evolutions
-        if dict["successors"] != "" and dict["successors"] != None: 
-            #save them
-            self.successors = dict["successors"].split(",")
-
-
-    #init using API
-    def init_json(self,json_obj):
-        self.name = json_obj["name"].capitalize()
-        self.number = str(json_obj["order"])
-        #set properties
-        self.all_abilities = []
-        self.abilities = []
-        self.hidden_ability = ""
-        #for each ability
-        for ability in json_obj["abilities"]:
-            #get the desired properties
-            ability_name = ability["ability"]["name"].capitalize()
-            ability_is_hidden = ability["is_hidden"]
-            #add to ability list
-            self.all_abilities.append(ability_name)
-            #check if hidden
-            if ability_is_hidden == True:
-                #set as hidden ability
-                self.hidden_ability = ability_name
-            else:
-                #add as normal abilities
-                self.abilities.append(ability_name)
-        
-        #types
-        self.type = []
-        #get types
-        for type in json_obj["types"]:
-            #get the typing
-            typing = type["type"]["name"].capitalize()
-            #add type to list
-            self.type.append(typing)
-        
-        #todo
-        self.form_name = ""
+    def __init__(self):
+        #to be filled in by successors
+        pass
 
 
 
@@ -183,7 +37,7 @@ class Pokemon(object):
         #value to fill
         self.matchup = {}
         #used multiple times
-        filename = ___CSV_TYPES___
+        filename = self.___CSV_TYPES___
         #use the csv as data source
         with open(filename) as csvfile: 
             #use a dict
@@ -220,7 +74,7 @@ class Pokemon(object):
         #create a list to keep track of abilities not affecting type modifiers
         abilities_not_foud = self.all_abilities.copy()
         #used multiple times
-        filename = ___CSV_TYPE_ABILITIES___
+        filename = self.___CSV_TYPE_ABILITIES___
         #use the csv as data source
         with open(filename) as csvfile: 
             #use a dict
@@ -339,3 +193,6 @@ class Pokemon(object):
         
         #return the values
         return combined_type_matchups
+
+    def describe(self):
+        print(self)

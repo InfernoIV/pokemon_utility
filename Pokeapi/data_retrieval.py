@@ -1,36 +1,49 @@
 #imports
 import requests
-from pokemon_obj import Pokemon
-
-
+from Pokeapi.pokemon_json import Pokemon_JSON as Pokemon
+from constants import __BASE_URL___
 
 #global constants
-__BASE_URL___ = "https://pokeapi.co/api/v2/"
+
 
 
 
 #function that gets pokemon information from https://pokeapi.co/
-def get_pokemon_from_api(pokemon_obj):
-    #only use the name
-    name = pokemon_obj.name
+def get_pokemon(criteria):
     #get pokemon json data
-    json_pokemon, err = get_JSON("pokemon", name)
+    json_pokemon, error = get_JSON("pokemon", criteria)
     #if error
-    if err != None:
+    if error != None:
         #stop
-        return
-    json_species, err = get_JSON("pokemon-species", name)
+        return None, error
+    #get the name
+    name = json_pokemon["name"]
+    #number = json_pokemon["id"]
+
+    #get species info
+    json_species, error = get_JSON("pokemon-species", name)
     #if error
-    if err != None:
+    if error != None:
         #stop
-        return
+        return None, error
+    
+    #check for evolution URL
+    evolution_url = json_species["evolution_chain"]["url"]
+    url_elements = evolution_url.split('/')
+    evolution_chain_number = url_elements[len(url_elements)-2]
+    #get evolution info
+    json_evolutions, error = get_JSON("evolution-chain", evolution_chain_number)
+    #if error
+    if error != None:
+        #stop
+        return None, error
     
     #merge json
-    json_pokemon = json_pokemon | json_species
+    json_pokemon = json_pokemon | json_species | json_evolutions
     #convert to object
-    pokemon_api_obj = Pokemon(json_pokemon, "json")
+    pokemon_api_obj = Pokemon(json_pokemon)
     #return the value
-    return pokemon_api_obj
+    return [pokemon_api_obj], None
 
 
 
