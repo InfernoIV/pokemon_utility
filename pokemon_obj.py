@@ -21,7 +21,7 @@ class Pokemon(object):
     hidden_ability = ""
     ability_type_modifiers = []
     type = []
-
+    games = []
     
 
     # The class "constructor" - It's actually an initializer 
@@ -350,6 +350,8 @@ class Pokemon(object):
             #empty line
             print("")
 
+         #print the type
+        cprint(f"Games: {", ".join(self.games)}", None, attrs=["underline"])
         #spacer
         print("------------------------------------------------------------")
 

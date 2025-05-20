@@ -87,11 +87,11 @@ def lookup_pokemon(arguments, operating_mode):
         return "No pokemon found!"
     else:
         #debug
-        print(f"Found {len(pokemon_list)} pokemon")
+        #print(f"Found {len(pokemon_list)} pokemon")
         #for each pokemon found
         for pokemon_entry in pokemon_list:
             #describe the pokemon
-            #pokemon_entry.describe()
+            pokemon_entry.describe()
             pass
         
     #return

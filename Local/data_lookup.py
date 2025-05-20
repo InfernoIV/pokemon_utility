@@ -7,7 +7,7 @@
 #imports
 import csv, sys
 from pokemon_obj import Pokemon as pokemon_obj
-from constants import ___CSV_POKEMON____, ___CSV_ABILITIES____, ___ALLOWED_TYPES___, ___CSV_TYPES___, ___CSV_TYPE_ABILITIES___
+from constants import ___CSV_POKEMON____, ___CSV_ABILITIES____, ___ALLOWED_TYPES___, ___CSV_TYPES___, ___CSV_TYPE_ABILITIES___, ___GAME_LIST___, ___CATCH_SYMBOLS___
 from termcolor import cprint #https://pypi.org/project/termcolor/ 
 
 
@@ -179,7 +179,7 @@ class Pokemon(pokemon_obj):
         #add name
         self.name = dict["name"]
         #add form name (for description)
-        self.form_name = dict["form"]
+        self.form = dict["form"]
         #add classification
         self.classification = dict["classification"]
 
@@ -226,6 +226,19 @@ class Pokemon(pokemon_obj):
             #save them
             self.successors = dict["successors"].split(",")
 
+
+        #add games
+        self.games = []
+        #for every game
+        for game in ___GAME_LIST___:
+            #get the method
+            method = dict[game]
+            #if it can be caught
+            if method in ___CATCH_SYMBOLS___:
+                #add the game
+                self.games.append(f"{game}")# ({method})")
+
         #calculate other parameters
         self.get_ability_type_modifiers()
         self.get_type_matchup()
+

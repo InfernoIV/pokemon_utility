@@ -1,0 +1,10 @@
+Pokemon information:
+    pokemondb.net
+    serebii.net
+    bulbapedia.net
+    pokeapi.co
+    
+Tools
+    Excel
+    Notepad++
+    https://stackoverflow.com/questions/17392392/replace-regexp-capture-group-in-notepad
