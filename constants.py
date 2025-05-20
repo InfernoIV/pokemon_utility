@@ -5,6 +5,7 @@ ___OPERATING_MODE_ONLINE___ = "online"
 
 #local (CSV) constants
 ___CSV_POKEMON____ = "Local/pokemon.csv"
+___CSV_ABILITIES____ = "Local/abilities.csv"
 
 #online (pokeapi) constants
 __BASE_URL___ = "https://pokeapi.co/api/v2/"

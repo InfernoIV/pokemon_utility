@@ -1,10 +1,8 @@
 #imports
 import requests
-from Pokeapi.pokemon_json import Pokemon_JSON as Pokemon
-from constants import __BASE_URL___
-
-#global constants
-
+from termcolor import cprint #https://pypi.org/project/termcolor/
+from pokemon_obj import Pokemon as pokemon_obj
+from constants import __BASE_URL___, ___ALLOWED_TYPES___
 
 
 
@@ -18,10 +16,11 @@ def get_pokemon(criteria):
         return None, error
     #get the name
     name = json_pokemon["name"]
-    #number = json_pokemon["id"]
 
     #get species info
-    json_species, error = get_JSON("pokemon-species", name)
+    species_url = json_pokemon["species"]["url"].split('/')
+    species_name = species_url[len(species_url)-2]
+    json_species, error = get_JSON("pokemon-species", species_name)
     #if error
     if error != None:
         #stop
@@ -40,6 +39,8 @@ def get_pokemon(criteria):
     
     #merge json
     json_pokemon = json_pokemon | json_species | json_evolutions
+    #overwrite back the name
+    json_pokemon["name"] = name
     #convert to object
     pokemon_api_obj = Pokemon(json_pokemon)
     #return the value
@@ -67,63 +68,95 @@ def get_JSON(type, name):
 
 
 #function that gets the data of an ability
-def get_ability_data(ability_name):
+def get_ability_description(ability_name):
     #convert spaces to dash
     ability_name_converted = ability_name.replace(' ','-')
     #get the data
-    json_ability, err = get_JSON("ability",ability_name_converted)
+    json_ability, error = get_JSON("ability",ability_name_converted)
     #if error
-    if err != None:
+    if error != None:
         #stop
-        return
-    #create ability
-    ability = Ability(ability_name, json_ability)
-    return ability
+        return None, error
+    #for each data entry
+    for effect_entry in json_ability["effect_entries"]:
+        #only use the entry which is english
+        if effect_entry["language"]["name"] == "en":
+            #remove the extra lines
+            effect_formatted = effect_entry["effect"].replace('\n', ' ').replace('\r', '')
+            #copy this description
+            effect = effect_formatted
+            #return the effect
+            return effect, None
+    #ability not found, should not happen
+    return None, LookupError(f"Ability '{ability_name}' not found!")
+    
 
 
 
 #pokemon object, containing information of the pokemon
-class Ability(object):
+class Pokemon(pokemon_obj):
+    #get the ability description
+    def get_ability(self, ability_name):
+        #get and return the values
+        return get_ability_description(ability_name)
+        
+
+    
     # The class "constructor" - It's actually an initializer 
-    def __init__(self, ability_name, data):#, data_type="json"):
-        #if data is dict
-        #if data_type == "csv":
-            #use csv init
-            #self.init_csv(ability_name, data)
-        #elif data_type == "json":
-            #use json init
-        self.init_json(ability_name, data)
-    
-    def init_json(self, ability_name, data):
-        #set name
-        self.name = ability_name
-        #for each entry
-        for effect_entry in data["effect_entries"]:
-            #only use the entry which is english
-            if effect_entry["language"]["name"] == "en":
-                #remove the extra lines
-                effect_formatted = effect_entry["effect"].replace('\n', ' ').replace('\r', '')
-                #copy this description
-                self.effect = effect_formatted
+    def __init__(self, json_obj):
+        #get the components of the name
+        full_name = json_obj["name"].capitalize().split('-')
+        #the first component is the name
+        self.name = full_name[0]
+        #set default value for form
+        self.form = ""
+        #if we have a form component
+        if len(full_name) > 1:
+            #set the form name
+            self.form = full_name[1]
+        
+        self.number = str(json_obj["order"])
+        #set properties
+        self.all_abilities = []
+        self.abilities = []
+        self.hidden_ability = ""
+        #for each ability
+        for ability in json_obj["abilities"]:
+            #get the desired properties
+            ability_name = ability["ability"]["name"].capitalize()
+            ability_is_hidden = ability["is_hidden"]
+            #add to ability list
+            self.all_abilities.append(ability_name)
+            #check if hidden
+            if ability_is_hidden == True:
+                #set as hidden ability
+                self.hidden_ability = ability_name
+            else:
+                #add as normal abilities
+                self.abilities.append(ability_name)
+        
+        #types
+        self.type = []
+        #get types
+        for type in json_obj["types"]:
+            #get the typing
+            typing = type["type"]["name"].capitalize()
+            #add type to list
+            self.type.append(typing)
+        
+        #evolutions
+        self.predecessors = []
+        self.successors = []
 
-        #copy the pokemon list
-        self.pokemon = []
-        #
-        for pokemon in data["pokemon"]:
-            self.pokemon.append(pokemon["pokemon"]["name"])
-            
+        #classification
+        self.classification = ""
+        if json_obj["is_legendary"] == True:
+            self.classification = "Legendary"
+        elif json_obj["is_mythical"] == True:
+            self.classification = "Mythical"
 
-        #debug
-        #print(f"ability: {str(self)}")
+        #calculate other parameters
+        self.get_ability_type_modifiers()
+        self.get_type_matchup()
+        
 
-    
-    #function that will print when converted to str
-    def __repr__(self):
-        #string to return
-        string = ""
-        #for each attribute
-        for attr, value in self.__dict__.items():
-            #add to return string
-            string += f"'{attr}': '{value}', "
-        #remove string while removing the last ', ' 
-        return string[:-2]
