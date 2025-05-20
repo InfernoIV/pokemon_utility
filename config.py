@@ -1,7 +1,7 @@
 #imports
 import os
 from configparser import ConfigParser
-from constants import ___CONFIG_FILE___, ___OPERATING_MODE_LOCAL___, ___OPERATING_MODE_ONLINE___ 
+from constants import ___CONFIG_FILE___, ___OPERATING_MODE_LOCAL___, ___OPERATING_MODE_ONLINE___, ___LOOKUP_LIMIT___
 
 
 
@@ -16,7 +16,7 @@ def get_config():
     #no config exists
     else: 
         #create default config
-        set_default_config()
+        repair_config()
     #return the config
     return config_object
 
@@ -27,15 +27,26 @@ def get_operating_mode():
     #get the config
     config = get_config()
     #get the operating mode
-    operating_mode = config["DATABASE"]["mode"]
+    operating_mode = config.get("DATABASE", "mode", fallback=___OPERATING_MODE_LOCAL___) #config["DATABASE"]["mode"]
     #if not a correct config
     if operating_mode != ___OPERATING_MODE_LOCAL___ and operating_mode != ___OPERATING_MODE_ONLINE___:
         #set config back to default
-        set_default_config()
+        repair_config()
         #return error
         return None, ValueError(f"Incorrect operating_mode config: {operating_mode}, reverting to {___OPERATING_MODE_LOCAL___}")
     #return operating mode
     return operating_mode, None
+
+
+
+#function that gets the limit of online retrieval
+def get_retrieval_limit():
+    #get the config
+    config = get_config()
+    #get the operating mode
+    retrieval_limit = config.get("ONLINE", "limit", fallback=___LOOKUP_LIMIT___)
+    #return operating mode
+    return int(retrieval_limit)
 
 
 
@@ -77,14 +88,36 @@ def set_operating_mode(arguments):
 
 
 
-#function that writes default config
-def set_default_config():
-    #Create a ConfigParser object
-        config_object = ConfigParser()
-        #create object
-        config_object["DATABASE"] = {
-        "mode": ___OPERATING_MODE_LOCAL___,
-        }
-        # Write the configuration to a file named 'config.ini' with 
-        with open(___CONFIG_FILE___, 'w') as conf: 
-            config_object.write(conf)
+#check and add missing config
+def repair_config():
+    #create a empty config parser
+    config_object = ConfigParser()
+    #check if config exists
+    if os.path.isfile(___CONFIG_FILE___):
+        #get the config instead
+        config_object = get_config()    
+
+    #for each desired section
+    sections = ["DATABASE", "ONLINE"]
+    #for each section
+    for section in sections:
+        #if section does not exist
+        if not config_object.has_section(section):
+            #add the section
+            config_object.add_section(section)
+
+    #get and set the values
+    operating_mode = config_object.get("DATABASE", "mode", fallback=___OPERATING_MODE_LOCAL___)
+    #if not an allowed value
+    if operating_mode != ___OPERATING_MODE_LOCAL___ and operating_mode != ___OPERATING_MODE_ONLINE___:
+        #set back to local
+        operating_mode = ___OPERATING_MODE_LOCAL___
+
+    #set the values
+    config_object.set("DATABASE", "mode", operating_mode)
+    config_object.set("ONLINE", "limit", config_object.get("ONLINE", "limit", fallback=f"{___LOOKUP_LIMIT___}"))
+    # Write the configuration to a file named 'config.ini' with 
+    with open(___CONFIG_FILE___, 'w') as conf: 
+        config_object.write(conf)
+
+

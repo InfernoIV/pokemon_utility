@@ -2,7 +2,7 @@
 import requests
 from termcolor import cprint #https://pypi.org/project/termcolor/
 from pokemon_obj import Pokemon as pokemon_obj
-from constants import __BASE_URL___, ___ALLOWED_TYPES___
+from constants import ___BASE_URL___, ___ALLOWED_TYPES___
 
 
 
@@ -49,9 +49,15 @@ def get_pokemon(criteria):
 
 
 #function that performs and http request and returns JSON
-def get_JSON(type, name):
+def get_JSON(type, criteria):
     #create URL
-    url = __BASE_URL___ + type + "/" + name.lower()
+    url = ___BASE_URL___ + type + "/"
+    #check if it is number
+    if isinstance(criteria, int):
+        url += f"{criteria}"
+    else:
+        url += criteria.lower()
+
     #perform a get message
     response = requests.get(url)
     #check if everything went well

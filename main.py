@@ -1,12 +1,15 @@
 #imports
 import sys
 from commands import lookup_pokemon, lookup_pokemon_form, lookup_pokemon_classification
-from config import get_operating_mode, set_operating_mode
+from config import get_operating_mode, set_operating_mode, repair_config
 
 
 
 #main function
 def main():
+    #check for config
+    repair_config()
+
     #handle the program
     error = handle_program(sys.argv)
     #if there is an error
