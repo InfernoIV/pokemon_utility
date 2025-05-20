@@ -98,7 +98,7 @@ def repair_config():
         config_object = get_config()    
 
     #for each desired section
-    sections = ["DATABASE", "ONLINE"]
+    sections = ["DATABASE", "ONLINE", "GAMES"]
     #for each section
     for section in sections:
         #if section does not exist
@@ -116,8 +116,22 @@ def repair_config():
     #set the values
     config_object.set("DATABASE", "mode", operating_mode)
     config_object.set("ONLINE", "limit", config_object.get("ONLINE", "limit", fallback=f"{___LOOKUP_LIMIT___}"))
+    config_object.set("GAMES", "games_with_hidden_ability", config_object.get("GAMES", "games_with_hidden_ability", fallback="False"))
+    config_object.set("GAMES", "games_with_beast_ball", config_object.get("GAMES", "games_with_beast_ball", fallback="False"))
+
     # Write the configuration to a file named 'config.ini' with 
     with open(___CONFIG_FILE___, 'w') as conf: 
         config_object.write(conf)
+
+
+def get_game_search_filters():
+    #get the config instead
+    config_object = get_config()    
+    #get config for hidden ability
+    hidden_ability = config_object.get("GAMES", "games_with_hidden_ability", fallback="False")
+    #get config for beast ball
+    beast_ball = config_object.get("GAMES", "games_with_beast_ball", fallback="False")
+    #return the flags
+    return hidden_ability == "True", beast_ball == "True"
 
 

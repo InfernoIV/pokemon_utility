@@ -7,8 +7,9 @@
 #imports
 import csv, sys
 from pokemon_obj import Pokemon as pokemon_obj
-from constants import ___CSV_POKEMON____, ___CSV_ABILITIES____, ___ALLOWED_TYPES___, ___CSV_TYPES___, ___CSV_TYPE_ABILITIES___, ___GAME_LIST___, ___CATCH_SYMBOLS___
+from constants import ___CSV_POKEMON____, ___CSV_ABILITIES____, ___ALLOWED_TYPES___, ___CSV_TYPES___, ___CSV_TYPE_ABILITIES___, ___GAME_LIST___, ___CATCH_SYMBOLS___, ___GAMES_WITH_HIDDEN_ABILITY___, ___GAMES_WITH_BEAST_BALL___
 from termcolor import cprint #https://pypi.org/project/termcolor/ 
+from config import get_game_search_filters
 
 
 
@@ -226,11 +227,29 @@ class Pokemon(pokemon_obj):
             #save them
             self.successors = dict["successors"].split(",")
 
-
         #add games
         self.games = []
-        #for every game
-        for game in ___GAME_LIST___:
+        #get the config
+        hidden_ability, beast_ball = get_game_search_filters()
+        #create a list
+        game_list = ___GAME_LIST___
+        #if either value is set
+        if hidden_ability or beast_ball:
+            #empty the list
+            game_list = []
+            #if hidden ability games
+            if hidden_ability:
+                #add hidden ability games to the list
+                game_list += ___GAMES_WITH_HIDDEN_ABILITY___
+            #if beast ball games
+            if beast_ball:
+                #add beast ball games to the list
+                game_list += ___GAMES_WITH_BEAST_BALL___
+        #remove duplicates
+        game_list = list(dict.fromkeys(game_list))
+
+        #for every game in the desired list
+        for game in game_list:
             #get the method
             method = dict[game]
             #if it can be caught

@@ -17,16 +17,32 @@ ___LOOKUP_LIMIT___ = 50
 ___ALLOWED_TYPES___ = ["Normal","Fire","Water","Grass","Electric","Ice","Fighting","Poison","Ground","Flying","Psychic","Bug","Rock","Ghost","Dragon","Dark","Steel","Fairy"]
 ___CSV_TYPES___ = "Local/types.csv"
 ___CSV_TYPE_ABILITIES___ = "Local/type_ability.csv"
-___GAME_LIST___ = ["Red","Green","Blue","Yellow",
-                   "Gold","Silver","Crystal",
-                   "Ruby","Sapphire","Fire Red","Leaf Green","Emerald","Colosseum","XD",
-                   "Diamond","Pearl","Platinum","Heart Gold","Soul Silver",
-                   "Black","White","Black 2","White 2",
-                   "X","Y","Omega Ruby","Alpha Sapphire",
-                   "Sun","Moon","Ultra Sun","Ultra Moon",
-                   "Let's Go Pikachu!","Let's Go Eevee!","Sword","Shield","Brilliant Diamond","Shining Pearl","Legends Arceus",
-                   "Scarlet","Violet"
+___GAME_LIST___ = [
+    "Red","Green","Blue","Yellow",
+    "Gold","Silver","Crystal",
+    "Ruby","Sapphire","Fire Red","Leaf Green","Emerald","Colosseum","XD",
+    "Diamond","Pearl","Platinum","Heart Gold","Soul Silver",
+    "Black","White","Black 2","White 2",
+    "X","Y","Omega Ruby","Alpha Sapphire",
+    "Sun","Moon","Ultra Sun","Ultra Moon",
+    "Let's Go Pikachu!","Let's Go Eevee!","Sword","Shield","Brilliant Diamond","Shining Pearl","Legends Arceus",
+    "Scarlet","Violet"
 ]
+
+___GAMES_WITH_HIDDEN_ABILITY___ = [
+    "Black","White","Black 2","White 2",
+    "X","Y","Omega Ruby","Alpha Sapphire",
+    "Sun","Moon","Ultra Sun","Ultra Moon",
+    "Sword","Shield","Brilliant Diamond","Shining Pearl",
+    "Scarlet","Violet"
+]
+
+___GAMES_WITH_BEAST_BALL___ = [
+    "Sun","Moon","Ultra Sun","Ultra Moon",
+    "Sword","Shield",
+    "Scarlet","Violet"
+]
+
 ___CATCH_SYMBOLS___ = ["C", "S", "D", "E", "B", "CD", "DA", "CC", "FS", "EV"]
 
 #Symbol	Meaning
